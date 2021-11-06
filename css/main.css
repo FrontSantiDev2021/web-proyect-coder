@@ -1,0 +1,42 @@
+/*--Colors--/*/
+/*/*/
+/*-----LISTAS----/*/
+body {
+  font-family: "Bebas Neue", cursive;
+}
+
+header p {
+  font-style: italic;
+  text-align: center;
+  color: black;
+  width: 100%;
+  font-size: large;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(31%, #1441d2), color-stop(56%, #f6813f), color-stop(75%, #ced082));
+  background: linear-gradient(#1441d2 31%, #f6813f 56%, #ced082 75%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  size: 2rem;
+  font-family: "Bebas Neue", cursive;
+}
+
+header nav {
+  background-color: black;
+  letter-spacing: 1px;
+  word-spacing: 10px;
+  text-align: center;
+}
+
+header nav .navbar {
+  -webkit-box-shadow: #0dcaf0;
+          box-shadow: #0dcaf0;
+}
+
+header nav .menu {
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  height: 20px;
+}
+/*# sourceMappingURL=main.css.map */

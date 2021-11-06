@@ -1,0 +1,23 @@
+
+@mixin text($estilo,$alineacion,$color,$ancho) {
+    font-style: $estilo;
+    text-align: $alineacion;
+    color: $color;
+    width: $ancho;
+    font-size: large;
+    background: linear-gradient($color-gradiente);
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+}
+@mixin navIndex($fondo,$letraEspacio,$palabraEspacio,$alineacion){
+    background-color:$fondo;
+    letter-spacing: $letraEspacio;
+    word-spacing: $palabraEspacio;
+    text-align: $alineacion;
+}
+@mixin menuIndex($display,$espacio,$ancho,$alto) {
+    display: $display;
+    justify-content: $espacio;
+    width: $ancho;
+    height: $alto
+}

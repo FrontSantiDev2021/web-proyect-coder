@@ -1,0 +1,27 @@
+
+header{  
+    p{
+        @include text(italic,center,$color-primary,100%);
+        size: 2rem;
+        font-family: $font;      
+        
+    }
+    nav{
+        @include navIndex($color-primary,1px,10px,center);
+        .navbar{
+            box-shadow: $cyan;
+        }
+        .menu{
+            @include menuIndex(flex,space-evenly,100%,20px);
+            
+            .submenu{
+            
+            }
+        }
+    }
+
+
+
+
+    
+}
