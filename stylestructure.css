@@ -6,7 +6,7 @@
 
 body{
     font-family: 'Bebas Neue', cursive;
-    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+
 }
 .presentacion{
     width:100%;
@@ -108,43 +108,93 @@ nav{
     width: 80%;
     
 }
+.encabezado{
+    background-color: black;
+    padding-top: 4%;
+    padding-bottom: 8%;
+    height: 100px;
+    width: 100%;
+    display: inline-block;
+}
 .encabezado-h1{
     text-align: center;
     color: rgb(247, 211, 211);
-    background-color: black;
-    padding-top: 4%;
-    padding-bottom: 4%;
+
 }
 .encabezado-h1__textoLorem{
-    display: inline-block;
     text-align: center;
+    color: white;
+    font-stretch: expanded;
 }
 
 /*-------------------hombre index------------------/*/
-.manIndex
-
-.manIndex__subtitle{
-    letter-spacing: 3px;   
-    font-size: 20px;
-    border-radius: 8px;
-    color: rgb(252, 242, 242);
-    background-color:rgb(0, 0, 0);
+.manIndex{
+    padding-top: 5%;
 }
-.manIndex__content{
+.manIndex__h2{
+    height: 49.6px;
+    text-align: center;
+    color: black;
+    background-color: rgb(250, 218, 114);
+    border-radius: 3px;
+}
+
+.contenedorMan{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+}
+.contenedorMan figure{
     position: relative;
-    width: 800px;
-    height: 800px;
+    height: 300px;
+    width: 250px;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0px ,10px,22px rgb(0, 0, 0,0,50);
+    cursor: pointer;
+}
+.contenedorMan figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+.contenedorMan figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(235, 170, 85, 0.6) ;
+    transition: all 500ms ease-out;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.contenedorMan figure:hover >.capa{
+    opacity: 1;
+    visibility: visible;
+
+}
+.contenedorMan figure:hover >.capa h3{
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.contenedorMan figure .capa h3{
+    margin-bottom: 20px;
+    color: royalblue;
+    font-weight: 400px;
+    transition: all 500ms ease-out;
+}
+.contenedorMan figure .capa p{
+    color: silver;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
     margin: auto;
 }
-.manIndex__content__imag{
-    width: 700px;
-    height: 700px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border-radius: 10%;
-}
+
 /*/*/
 
 /*boton estilo/*/
@@ -152,15 +202,16 @@ nav{
     font-family: 'Bebas Neue',cursive;
     text-transform: capitalize;
 	overflow: hidden;
-    padding: 2px 22px;
-    border-radius: 8px;
-    background: linear-gradient(40deg, rgba(20,65,210,1) 21%, rgba(246,129,63,1) 56%, rgba(206,208,130,1) 75%);
-    color: rgb(0, 0, 0);
+    background: hsl(240, 11%, 2%);
+    color: rgb(255, 255, 255);
     position: relative;
     display: inline-block;
     cursor: pointer;
     border: none;
+    border-radius: 5%;
     width: 100px;
+    height: 49.6px;
+
 }
 
 .boton span {
@@ -176,7 +227,7 @@ nav{
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: hsl(240, 11%, 2%);
+	background: linear-gradient(40deg, rgba(20,65,210,1) 21%, rgba(246,129,63,1) 56%, rgba(206,208,130,1) 75%);
 	transform: scaleX(0);
 	transform-origin: 100% 100%;
 	transition: transform 0.6s cubic-bezier(0.53, 0.21, 0, 1);
@@ -202,19 +253,17 @@ nav{
 /*kid index/*/
 .kidIndex{
     padding-top: 52px;
-    margin: 20px;
-    font-size: 3rem;
+}
+.kidIndex__h2{
+    height: 49.6px;
+    text-align: center;
+    color: black;
+    background-color: rgb(250, 225, 114);
+    border-radius: 3px;
 }
 
-.kidIndex__subtitle{
-    letter-spacing: 3px;   
-    font-size: 20px;
-    border-radius: 8px;
-    color: rgb(252, 242, 242);
-    background-color:rgb(0, 0, 0);
-
-}
 .kidIndex__contenedor{
+    padding-top: 50px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
@@ -392,10 +441,6 @@ nav{
 
 
 
-/*---------------------------fin categoria hombre----------------------------/*/
-
-
-
 
 
 
@@ -419,11 +464,11 @@ nav{
     height: 450px;
 }
 
-/*--------------mujer index------------------------------------------/*/
+/*---------------------------/*/
 .womanIndex{
     padding-top: 52px;
     margin: 10px;
-    font-size: 3rem;
+    width: 100%;
 }
 
 .womanIndex__contenedor{
@@ -458,7 +503,7 @@ nav{
 
 
 
-/*//---------------category kids--------------------------------------------------------//*/
+/*---------------category kids--------------------------------------------------------/*/
 .sectionOne
 
 
@@ -491,7 +536,7 @@ nav{
 
 /*--------------------formulario--------------------------------------------/*/
 .formulary{
-    padding: 5%;
+    padding-top: 5%;
 }
 .formulary__style{
     text-align: center;
@@ -552,160 +597,46 @@ a{
     color: inherit;
 }
 
-/*/----------------AREA---- RESPONSIVE---------------------------------------------------------------/*/
+
+
 @media only screen and (max-width: 480px){
 
     .nav{
         width: 100%;
         margin: auto;
-
-    }
-    h2{
-        font-size: 2rem;
-        margin: 5%;
-        
-    }
-    .subtitle{
-        width: 100%;
-        margin: 8%;
-        margin-left: 12px;
-        font-size:1rem;
-        
-    }
-    
-    .menu{
-        width: 100%;
-    }
-    .manIndex__content{
-        display: grid;
-        grid-template-columns: 20%;
-        grid-template-rows: 1fr;
-        align-items: center;
-
-    }
-    .manIndex__content__imag{
-        align-self: center;
-        width: 100px;
-        height: 80px;
-    }
-    
-    .contenedor{
-        display: flex;
-        flex-direction: column;
-    }
-    .ropa{
-        width: 250px;
-        height: 250px;
-        margin: 20px;
-    }
-    
-    footer form{
-        font-size: 10px;
-        text-align: left;
-        margin: 10%;
-    }
-    p{
-        font-size: 9px;
-        text-align: left;
     }
 
-    h3{
-        font-size: 25px;
-        text-align: left;
-        margin: 2%;
+    .encabezado-h1__textoLorem{
+        text-align: center;
     }
-    #tabla{
-        font-size: 12px;
-    
-    }
-    .model{
-        width: 120px;
-        height: 120px;
-    }
-    .follow{
-        font-size: 12px;
-    }
-
-}
-
-
-
-
-@media only screen and (min-width:1024px){
     .encabezado{
         width: 100%;
+    }
+    
+    .manIndex__content{
+        position: relative;
+        width: 100%;
+        height: 500px;
         margin: auto;
-    }
-    h2{
-        font-size: 3rem;
-        margin: 2%;
-    }
-    .subtitle{
-        width: 100%;
-        margin: 5%;
-        margin-left: 10px;
-    }
-    .menu{
-        width: 100%;
-    }
-    .imagonly{
-        width:700px ;
-        height:600px ;
-        margin-right: 100px;
-    }
-    .contenedor_niño{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin-right: 50px;
-    }
-    .imag{
-        width: 300px;
-        height: 300px;
-    }
-    .niño_description{
-        text-align: center;
-    }
-    .contenedor{
-        display: grid;
-        margin-right: 80px;
-    }
-    .ropa{
-        width:250px ;
-        height: 300px;
-    }
-    footer form{
-        font-size: 1rem;
-        text-align: center;
-        margin: 10%;
-    }
-    p{
-        font-size: 1rem;
-        text-align: center;
-    }
-
-    h3{
-        font-size: 2rem;
-        text-align: center;
-        margin: 2%;
-    }
-    #tabla{
-        font-size: 1rem;
-        text-align: center;
-        
     
     }
-    .model{
-        width: 220px;
-        height: 220px;
-        margin: 50px;
-        margin-right: 12px;
+    .manIndex__content__imag{
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 5%;
     }
-    .follow{
-        font-size: 2rem;
-        text-align: center;
-    }
+
+
 }
+
+
+
+
+
 
 
 
