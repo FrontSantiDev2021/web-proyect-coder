@@ -110,8 +110,8 @@ nav{
 }
 .encabezado{
     background-color: black;
-    padding-top: 4%;
-    padding-bottom: 8%;
+    padding-top: 50px;
+    padding-bottom: 10%;
     height: 100px;
     width: 100%;
     display: inline-block;
@@ -122,9 +122,11 @@ nav{
 
 }
 .encabezado-h1__textoLorem{
+    font-size: 1rem;
     text-align: center;
     color: white;
     font-stretch: expanded;
+    
 }
 
 /*-------------------hombre index------------------/*/
