@@ -6,6 +6,11 @@
 
 body{
     font-family: 'Bebas Neue', cursive;
+    overflow-x: hidden;
+    background-image: url(IMAGENES\ Proyect/pexels-amine-8086086.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
 
 }
 .presentacion{
@@ -56,8 +61,6 @@ header{
     color: #ffba79;
     text-align: left;
 }
-
-
 
 nav{
     letter-spacing: 1px;
