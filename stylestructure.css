@@ -5,12 +5,13 @@
 
 
 body{
-    font-family: 'Bebas Neue', cursive;
+
     overflow-x: hidden;
     background-image: url(IMAGENES\ Proyect/pexels-leo-caldas-9557619.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: 100% 100%;
     background-position: center;
+    font-family: 'Bebas Neue', cursive;
 
 }
 .presentacion{
@@ -565,19 +566,22 @@ nav{
 /*/-------------texto productos---------------*/
 
 .textProducts{
-    background-color:rgb(42,54,59) ;
     font-size: 3rem;
+    color: rgba(  233,234,226);
+    padding: 80px;
 }
 /*----------------------------tABLA INDEX-------------------------------------/*/
 .tablaTodo{
     padding: 100px;
     width: 100%;
-    height: 500px;
-
 }
 #tabla{
-    font-size: 20px;
-    padding-top: 12px;
+    font-size: 2rem;
+
+}
+.tablaProducts{
+    text-align: center;
+    color: blanchedalmond;
 }
 .tablaProducts__model{
     margin: 10px;
@@ -586,21 +590,6 @@ nav{
     color: rgb(0, 0, 0);
 }
 /*-----------------------------------------------------------------/*/
-
-.contactos{
-    background: linear-gradient(40deg, rgba(20,65,210,1) 21%, rgba(246,129,63,1) 56%, rgba(206,208,130,1) 75%);
-    text-align: center;
-    font-size: 1rem;
-    color: azure;
-    margin-bottom: -1%;
-    padding-bottom: 50px;
-}
-.follow{
-    font-size: 2rem;
-    background: linear-gradient(40deg, rgba(20,65,210,1) 21%, rgba(246,129,63,1) 56%, rgba(206,208,130,1) 75%);
-    color: azure;
-
-}
 
 
 /*eliminacion de subrayado y color de enlaces y listas/**/*
@@ -616,37 +605,145 @@ a{
 
 
 @media only screen and (max-width: 480px){
+    .header{
+        width: 100%;
 
+    }
+    hr{
+        color: transparent;
+        padding: 40px;
+    }
     .nav{
         width: 100%;
         margin: auto;
     }
-
+    .encabezado{
+        text-overflow: ellipsis;
+        height: 290px;
+    }
     .encabezado-h1__textoLorem{
         text-align: center;
     }
-    .encabezado{
-        width: 100%;
-    }
-    
-    .manIndex__content{
+    .manIndex .row {
+        display: flex;
+        justify-content: center;
         position: relative;
-        width: 100%;
-        height: 500px;
-        margin: auto;
-    
     }
-    .manIndex__content__imag{
-        width: 300px;
-        height: 200px;
+    .manIndex__h2{
+        display: flex;
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+    }
+    .manIndex .row div .boton{
+    
+        position:absolute ;
+        top: 150%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height:20px;
+    }
+    .contenedorMan{
+        padding-top: 30px;
+        position: relative;
+
+    }
+    .contenedorMan figure img{
+        width: 200px;
+        height: 250px;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
-        border-radius: 5%;
+    }
+    .contenedorMan figure .capa{
+        width: 200px;
+        height: 250px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
     }
 
+    /*-------------------/*/
+    .kidIndex .row{
+        display: flex;
+        justify-items: center;
+        position: relative;
+    }
+    .kidIndex__h2{
+        display: flex;
+        text-align: center;
+        width: 50%;
+        padding: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+    }
+    .kidIndex__boton{
+        position: relative;
+        display: flex;
+    }
+    .kidIndex .row div .boton{
+        position:absolute ;
+        top: 150%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height:20px;
+        
+    }
+    
 
+    .kidIndex__contenedor{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .kidIndex__contenedor__imag{
+        width: 200px;
+        height: 250px;
+        
+    }
+    /*/*/
+    .womanIndex{
+        width: 100%;
+    }
+    .womanIndex__contenedor{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: space-around;
+    }
+    .womanIndex__contenedor_1{
+        align-self: center;
+    }
+    .womanIndex__contenedor_2{
+        align-self: center;
+    }
+    .womanIndex__contenedor_3{
+        align-self: center;
+    }
+    .womanIndex__ropa{
+        width: 300px;
+        height: 300px;
+        border-radius: 5px;
+    }
+    .formulary{
+        width: 100%;
+
+    }
+    .formulary__style{
+        height: 400px;
+        overflow:hidden;
+        text-overflow: ellipsis;
+        font-size: 5px;
+    }
+    .formulary__style:hover{
+        overflow: visible;
+        width: 100%;
+        font-size: 1rem;
+    }
 }
 
 
