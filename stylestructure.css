@@ -574,15 +574,9 @@ nav{
 .tablaTodo{
     padding: 100px;
     width: 100%;
-}
-#tabla{
-    font-size: 2rem;
-
-}
-.tablaProducts{
-    text-align: center;
     color: blanchedalmond;
 }
+
 .tablaProducts__model{
     margin: 10px;
     padding-top: 5%;
