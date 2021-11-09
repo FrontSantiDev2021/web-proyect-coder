@@ -601,14 +601,24 @@ a{
 
 
 @media only screen and (max-width: 480px){
-    .header{
+    header{
         width: 100%;
+    
 
-
+    }
+    header nav div form{
+        height: 40px;
+        font-size: 20px;
     }
     hr{
         color: transparent;
         padding: 40px;
+    }
+    .logoTitulo{
+        font-size: 17px;
+        padding: 7px;
+        word-spacing: 1px;
+        letter-spacing: 1px;
     }
     .nav{
         width: 100%;
