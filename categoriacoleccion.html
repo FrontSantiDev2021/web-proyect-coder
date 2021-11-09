@@ -17,53 +17,61 @@
     <title>Document</title>
 
 </head>
-<body>
+<body class="bg-transparent">
     <!---inicio de pagina--------------------------->
-    <header class="coleccion_background">
-        <div>
-            <p>Bienvenidos a nuestra tienda</p>
-            <h1 class="encabezado">
-                <a href="index.html"> Place Of Body</a>
-            </h1>
+    <header class="site-header sticky-top py-1">
+        <div class="presentacion">
+            <p class="presentacion_texto">tienda Online</p>
         </div>
-        <nav>
-            <div>               
-                <ul class="menu">
-                    <li>
-                        <a href="index.html">
+        <nav class="navbar bg-gradient">
+            <div class=" container d-flex mw-100">
+                <form class="container-fluid d-flex ">
+                    <a href="index.html" class="logoTitulo bg-gradient"> Place Of Body</a>
+                    <input class=" p-2 flex-shrink-3 form-control me-2" type="search" placeholder="" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        
+        
+
+            <!-- ============= COMPONENT ============== -->
+        <nav class=" navbar navbar-expand-lg navbar-dark bg-transparent bg-gradient">
+            <div class=" container ">
+                        <a class="navbar-brand" href="index.html">
                         <i class="fas fa-home"></i>
                         </a>
-                    </li>
-                    <li>
-                        <a href="categoriahombre.html">Hombre</a>
-                        <ul class="submenu">
-                            <li>Indumentaria</li>
-                            <li>Calzados</li>
-                            <li>Acessorios</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="categoriamujer.html">Mujer</a>
-                        <ul class="submenu">
-                            <li>Indumentaria</li>
-                            <li>Calzados</li>
-                            <li>Acessorios</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="categorianiño.html">Niño</a>
-                        <ul class="submenu">
-                            <li>Indumentaria</li>
-                            <li>Calzados</li>
-                            <li>Acessorios</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="categoriacoleccion.html">Coleccion</a>
-                    </li>
-                </ul>
-            </div>
-            
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="navbar-collapse collapse justify-content-center" id="main_nav">
+                    <ul class=" navbar-nav baka">
+                        <li class="nav-item active"> <a class="nav-link dropdown-item" href="index.html">Home </a> </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-item" href="categoriahombre.html">Hombre</a>
+                            <ul class=" submenuBaka dropdown-menu">
+                                <li class="dropdown-item">Indumentaria</li>
+                                <li class="dropdown-item">Calzados</li>
+                                <li class="dropdown-item">Acessorios</li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-item" href="categoriamujer.html"> Mujer </a>
+                            <ul class=" submenuBaka dropdown-menu">
+                                <li class="dropdown-item">Indumentaria</li>
+                                <li class="dropdown-item">Calzados</li>
+                                <li class="dropdown-item">Acessorios</li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-item" href="categorianiño.html"> Niño </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link  dropdown-item" href="categoriacoleccion.html" > Collecion </a>
+                        </li>
+                    </ul>
+                </div> <!-- navbar-collapse.// -->
+            </div> <!-- container-fluid.// -->
         </nav>
     </header>
 
@@ -79,9 +87,9 @@
                 </div>
                 <div class="sectionFour__gridColeccion">
 
-                    <img class="sectionFour__japon" src="IMAGENES seccion coleccion/pexels-yaroslav-shuraev-7958204.jpg" alt="modelojaponesakinoto">
+                    <img class="sectionFour__japon" src="IMAGENES-seccion-coleccion/pexels-yaroslav-shuraev-7958204.jpg" alt="modelojaponesakinoto">
                     
-                    <img class="sectionFour__japon" src="IMAGENES seccion coleccion/pexels-yaroslav-shuraev-7958207.jpg"alt="modelojaponesakinoto2">
+                    <img class="sectionFour__japon" src="IMAGENES-seccion-coleccion/pexels-yaroslav-shuraev-7958207.jpg"alt="modelojaponesakinoto2">
                 
                 </div>          
             </div>

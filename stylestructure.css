@@ -320,6 +320,7 @@ nav{
 .sectionFour__parrafo_style{
     font-size: 1rem;
     padding: 5%;
+    text-align: center;
 }
 .sectionFour__gridColeccion{
     display: grid;
