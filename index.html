@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="stylestructure.css">
 </head>
-<body class="bg-transparent text-white " >
+<body class="bg-transparent " >
     <!---inicio de pagina--------------------------->
     <header class="site-header sticky-top py-1">
         <div class="presentacion">
@@ -37,15 +37,15 @@
         
 
             <!-- ============= COMPONENT ============== -->
-        <nav class=" navbar navbar-expand-lg navbar-dark bg-dark bg-gradient">
-            <div class=" container">
+        <nav class=" navbar navbar-expand-lg navbar-dark bg-transparent bg-gradient">
+            <div class=" container ">
                         <a class="navbar-brand" href="index.html">
                         <i class="fas fa-home"></i>
                         </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
-                <div class="navbar-collapse collapse justify-content-center " id="main_nav">
+                <div class="navbar-collapse collapse justify-content-center" id="main_nav">
                     <ul class=" navbar-nav baka">
                         <li class="nav-item active"> <a class="nav-link dropdown-item" href="#">Home </a> </li>
                         <li class="nav-item">
@@ -135,7 +135,7 @@
         </section>                                   
         <hr>
 
-        <section class="womanIndex">
+        <section class="womanIndex text-white">
             <h2>the best of woman</h2>
             <div>
                 <p>
@@ -168,82 +168,81 @@
             </div>
         </section>
         <hr>
-    </main>
-        
-        <!--Inicio del pie de paginaa-->
-    
-    <section>               
-        <article class="formulary">               <!--- Formulario para newsletter-->
-            <form class="formulary__style w-900 p-3 bw">
-                <div class="lg">   
-                    <h2>contactanos</h2>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Nombre Completo</label>
-                    <input type="text" class="form-control" id="form1" aria-describedby="emailHelp">
-                </div>
 
-                <label for="exampleInputEmail1" class="form-label ">Correo Electronico</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <p>Yo Soy</p>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        genero
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">Hombre</a></li>
-                        <li><a class="dropdown-item" href="#">Mujer</a></li>
-                        <li><a class="dropdown-item" href="#">Ningunodelosanteriores</a></li>
-                    </ul>
-                </div>
-                <br>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </article>
-        <br>
-        <article>
-            <div class="textProducts container ">
-                <div class="row justify-content-center d-flex">
-                    <div class=" col-6 col-md-2 p-2 ">Proba Nuestros Nuevos Productos!</div>                    
-                </div>
-            <div>
+        <section class="formulary text-white">               
+            <article class=" formulary__style ">               <!--- Formulario para newsletter-->
+                <form>
+                    <div class="lg">   
+                        <h2>contactanos</h2>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" id="form1" aria-describedby="emailHelp">
+                    </div>
+
+                    <label for="exampleInputEmail1" class="form-label ">Correo Electronico</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <p>Yo Soy</p>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            genero
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Hombre</a></li>
+                            <li><a class="dropdown-item" href="#">Mujer</a></li>
+                            <li><a class="dropdown-item" href="#">Ningunodelosanteriores</a></li>
+                        </ul>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </article>
+        </section>
             <br>
-        
-            <div id="tabla" >
-                <table class="tablaProducts">
-                    <tr>
-                        <th>modelo</th>
-                        <th>Descripcion</th>
-                        <th>Disponibilidad de Talles</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img class="tablaProducts__model" src="IMAGENES Proyect/pexels-evg-culture-1055691.jpg" alt="vestido_amarillo_model" >
-                            <p>Vestido Luxury </p>
-                        </td>
-                        <td>
-                            Este es un diseño clásico confeccionado en piqué de algodón, Diseño simple y Comodo para tu cuerpo  
+        <section class="tablaTodo container-fluid">
+            <article >
+                <div class=" textProducts ">
+                    <div class="row justify-content-center d-flex">
+                        <div class=" col-6 col-md-2 p-2 ">Proba Nuestros Nuevos Productos!</div>                    
+                    </div>
+                <div>
+                <br>
+            
+                <div id="tabla" >
+                    <table class="tablaProducts">
+                        <tr>
+                            <th>modelo</th>
+                            <th>Descripcion</th>
+                            <th>Disponibilidad de Talles</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="tablaProducts__model" src="IMAGENES Proyect/pexels-evg-culture-1055691.jpg" alt="vestido_amarillo_model" >
+                                <p>Vestido Luxury </p>
                             </td>
-                        <td>Disponibles : M - L -XL</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img class="tablaProducts__model" src="IMAGENES Proyect/pexels-kapturedbysoundz-3841391.jpg" alt="vestido_verde_model">
-                            <p>Vestido Armony</p></td>
-                        <td>Esta Camiseta informal está confeccionada en algodón puro. 
-                            Este modelo de corte holgado está adornado con un motivo de Medusa completamente.</td>
-                        <td>Disponibles: L - M</td>    
-                    </tr>
-                </table>
-            </div>
-        </article>
-    </section>
-    
+                            <td>
+                                Este es un diseño clásico confeccionado en piqué de algodón, Diseño simple y Comodo para tu cuerpo  
+                                </td>
+                            <td>Disponibles : M - L -XL</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="tablaProducts__model" src="IMAGENES Proyect/pexels-kapturedbysoundz-3841391.jpg" alt="vestido_verde_model">
+                                <p>Vestido Armony</p></td>
+                            <td>Esta Camiseta informal está confeccionada en algodón puro. 
+                                Este modelo de corte holgado está adornado con un motivo de Medusa completamente.</td>
+                            <td>Disponibles: L - M</td>    
+                        </tr>
+                    </table>
+                </div>
+            </article>
+        </section>
+    </main>
     <footer class="bg-black text-center py-5">
         <div class="container px-5">
             <div class="text-white-50 small">
