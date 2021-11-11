@@ -21,3 +21,21 @@
     width: $ancho;
     height: $alto
 }
+%presentacionTexto{
+    font-size: 1rem;
+    font-style: italic;
+    text-align: center;
+    color:$color-texto ;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+@mixin presentacion ($ancho,$alto,$fondoSize,$posicion,$animacion){
+    width: $ancho;
+    height: $alto;
+    background-clip: $fondoSize;
+    animation: $animacion;
+    position: $posicion;
+}
