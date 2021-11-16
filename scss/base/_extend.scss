@@ -39,3 +39,7 @@
     animation: $animacion;
     position: $posicion;
 }
+@mixin contenedor-nav($jt-cont,$jt-it){
+    $justify-content:$jt-cont;
+    $justify-items:$jt-it;
+}

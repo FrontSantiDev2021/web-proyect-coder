@@ -17,7 +17,7 @@ body{
 .presentacion{
     width:100%;
     height: 30px;
-    background: linear-gradient(40deg, rgba(20,65,210,1) 21%, rgba(246,129,63,1) 56%, rgba(206,208,130,1) 75%);
+    background: linear-gradient(40deg,  #CC95C0 0%, #eba267  51%, #bb80ae  100%);
     background-size: 200% 200%;
     position: relative;
     animation: degradado 8s ease-in-out infinite;
@@ -318,9 +318,16 @@ nav{
     background-color:rgb(0, 0, 0);
 }
 .sectionFour__parrafo_style{
-    font-size: 1rem;
+    font-size: 2rem;
     padding: 5%;
     text-align: center;
+    text-transform: capitalize;
+
+}
+hr{
+    border: 0;
+    height: 5px;
+    background-image: linear-gradient(to right, transparent, #CCC, transparent);
 }
 .sectionFour__gridColeccion{
     display: grid;
@@ -329,13 +336,61 @@ nav{
     grid-column-gap: 5%;
     justify-content: center;
     margin: 60px 20px;
+    align-items: center;
+    align-content: center;
     
+}
+.gridColeccion-foto{
+    position: relative;
+    height: 500px;
+
+}
+.gridColeccion-foto div{
+    overflow: hidden;
+    border-radius: 4px;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gridColeccion-foto__capa{
+    position: absolute;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background:rgba(205, 255, 226, 0.6) ;
+    transition: all 500ms ease-out;
+    text-align: start;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
 }
 .sectionFour__japon{
     width: 400px;
     height: 400px;
-    justify-self: center;
+    transition: all 500ms ease-out;
 
+}
+.gridColeccion-foto div:hover .sectionFour__japon{
+    transition: all 500ms ease-in-out;
+    width: 350px;
+    height: 350px;
+    transform: translate(0,-7px);
+    border: black;
+}
+.gridColeccion-foto:hover>div{
+    opacity: 1;
+    visibility: visible;
+
+}
+.gridColeccion-foto div:hover >.gridColeccion-foto__capa{
+    opacity: 1;
+    visibility: visible;
+    top: 9%;
+    width: 350px;
+    height: 350px;
+    transform: translate(0,-7px);
+    transition: all 500ms ease-in-out;
 }
 
 
@@ -413,6 +468,13 @@ nav{
     height:400px ;
 
 }
+.fotoBig h5{
+    font-size: 0.8rem;
+    font-style: oblique;
+    text-transform: capitalize;
+    font-weight: lighter;
+    color: rgb(250, 248, 248);
+}
 .fotoBig div{
     overflow: hidden;
     border-radius: 4px;
@@ -424,32 +486,62 @@ nav{
     width: 100%;
     height: 100%;
     background:rgba(102, 97, 104, 0.6) ;
-    transition: all 1s ease-out;
+    transition: all 500ms ease-out;
     text-align: start;
     opacity: 0;
     visibility: hidden;
+    text-align: center;
 }
 .fotoBig div:hover >.fotoBig__capa{
     opacity: 1;
     visibility: visible;
-    top: 85%;
+    top: 90%;
 }
 .fotoBig div:hover >.sectionThree__imageh{
     height:400vh;
     width: 300vh;
     transition: all 500ms ease-in-out;
 }
+
 .vl{
-    border-left: 4px solid rgb(253, 253, 253);
+    border-left: 10px solid rgb(114, 96, 102);
     height: 400px;
 }
 /*---------------------------------------------/*/
 .Fotos{
     position: relative;
-    height: 350px;
+    height: 250px;
     border: 1px black;
-    
+    font-weight: bold;
 }
+
+.Fotos h5{
+    font-size: 0.8rem;
+    font-style: oblique;
+    text-transform: capitalize;
+    font-weight: lighter;
+    color: rgb(250, 248, 248);
+}
+.btn-grad {
+    background-image: linear-gradient(to right, #CC95C0 0%, #DBD4B4  51%, #CC95C0  100%);
+    margin: 10px;
+    padding: 10px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 15px #eee;
+    border: none;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+    
 .Fotos div{
     overflow: hidden;
     border-radius: 4px;
@@ -472,6 +564,7 @@ nav{
     text-align: start;
     opacity: 0;
     visibility: hidden;
+    text-align: center;
 }
 .Fotos:hover>div{
     opacity: 1;
@@ -480,7 +573,7 @@ nav{
 .Fotos div:hover >.Fotos__capa{
     opacity: 1;
     visibility: visible;
-    top: 85%;
+    top: 90%;
 }
 
 .Fotos div:hover >.sectionThree__imageh{
@@ -526,19 +619,19 @@ nav{
     grid-template-areas: "item1" "item2" "item3" "item4";
 
 }
-.contenedorCalzado__newBalance{
+.contenedorCalzado__adidas{
     grid-area: "item1";
 
 }
-.contenedorCalzado__nike{
+.contenedorCalzado__adidas-2{
     grid-area: "item2";
 
 }
-.contenedorCalzado__nike_two{
+.contenedorCalzado__nike{
     grid-area: "item3";
 
 }
-.contenedorCalzado__adidas{
+.contenedorCalzado__newBalance{
     grid-area: "item4";
 
 }
@@ -549,8 +642,16 @@ nav{
     align-self: center;
     padding-top: 20px;
 }
-
-
+.cards{
+    overflow: hidden;
+    box-shadow: 0, 2px,4px rgb(114, 96, 102);
+    transition: all 300ms ease-in-out;
+    border-radius: 8px;
+}
+.cards:hover{
+    transform:translateY(-20px);
+    box-shadow: 0,12px,16px rgb(114, 96, 102);
+}
 
 
 
