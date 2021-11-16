@@ -91,3 +91,133 @@
     list-style: $lista;
     position: $posicion;
 }
+@mixin encabezado_content($bg-color,$relleno-t,$relleno-b,$alto,$ancho,$display) {
+    background-color: $bg-color;
+    padding-top: $relleno-t;
+    padding-bottom: $relleno-b;
+    height:$alto;
+    width: $ancho;
+    display: $display;
+}
+@mixin encabezado_h1($alineacion,$color){
+    text-align: $alineacion;
+    color:$color;
+}
+@mixin lorem($size,$align,$color,$strech) {
+    font-size: $size;
+    text-align:$align ;
+    color:$color ;
+    font-stretch: $strech;
+
+}
+@mixin man-h2($alto,$alineacion,$color,$bg-color,$border) {
+    height: $alto;
+    text-align: $alineacion;
+    color: $color;
+    background-color: $bg-color;
+    border-radius: $border;
+}
+@mixin  contenedor-man($justify,$ancho,$largo) {
+    justify-content: $justify;
+    width: $ancho;
+    height:$largo;
+    display: flex;
+}
+@mixin figura($posicion,$ancho,$alto,$desbordamiento,) {
+    position: $posicion;
+    width: $ancho;
+    height: $alto;
+    overflow: $desbordamiento;
+    border-radius: 4px;
+    box-shadow: 0px ,10px,22px ;
+
+}
+
+@mixin transicion ($todo,$tiempo,$metodo) {
+    transition: $todo, $tiempo, $metodo;
+}
+@mixin capa($posicion,$top,$bg,$alineacion,$opacidad,$visibilidad) {
+    position:$posicion;
+    top: $top;
+    background: $bg;
+    text-align: $alineacion;
+    opacity: $opacidad;
+    visibility: $visibilidad;
+}
+@mixin hover-capa ($visibilidad,$opacidad,){
+    visibility: $visibilidad;
+    opacity: $opacidad;
+}
+@mixin h3 ($margen,$color,$font-w,){
+    margin-bottom: $margen;
+    color: $color;
+    font-weight: $font-w;
+}
+@mixin p ($color,$font-s,$line-h,$ancho,$max-ancho,$margen){
+    color: $color;
+    font-size: $font-s;
+    line-height: $line-h;
+    width: $ancho;
+    max-width: $max-ancho;
+    margin: $margen;
+}
+@mixin kid-h2 ($alto,$alineacion,$color,$bg-color,$border){
+    height: $alto;
+    text-align: $alineacion;
+    color: $color;
+    background-color: $bg-color;
+    border-radius: $border;
+}
+@mixin kid-contenedor ($relleno,$display,$flex,$justify){
+    padding-top: $relleno;
+    display: $display;
+    flex-wrap: $flex;
+    justify-content: $justify;
+}
+@mixin kid-descripcion ($relleno,$size,$align,$color) {
+    padding: $relleno;
+    font-size: $size;
+    text-align: $align;
+    color:$color;
+}
+@mixin kidImag($border,$ancho,$alto) {
+    border-radius: $border;
+    width: $ancho;
+    height:$alto;
+}
+%kidImag{
+    border-radius: 80%;
+    width: 400px;
+    height: 400px;
+}
+@mixin womanContenedor ($display,$columns,$margen,$items) {
+    display: $display;
+    grid-template-columns: $columns;
+    margin: $margen;
+    justify-items: $items;
+    
+}
+@mixin formulario($relleno,$relleno-b,$posicion) {
+    padding-top: $relleno;
+    padding-bottom: $relleno-b;
+    position: $posicion;
+}
+@mixin formulario-style($alineacion,$relleno,$font-s,$border,$posicion,$top,$left) {
+    text-align: $alineacion;
+    padding-top: $relleno;
+    font-size: $font-s;
+    border-radius: $border;
+    position: $posicion;
+    top:$top;
+    left:$left;
+
+}
+@mixin model-tabla($margen,$relleno,$alto,$color) {
+    margin: $margen;
+    padding-top: $relleno;
+    height: $alto;
+    color: $color;
+}
+@mixin subtitle($spacing) {
+    
+}

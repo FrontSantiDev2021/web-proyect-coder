@@ -5,4 +5,12 @@
 body{
     font-family: $font;
     @include cuerpo (hidden,$backgroundImage,repeat,100% 100%,center);
+    ul{
+        list-style:none;
+
+    }
+    a{
+        text-decoration:none;
+        color:inherit;
+    }
 }

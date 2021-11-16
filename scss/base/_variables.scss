@@ -9,6 +9,7 @@ $yellow:  #ffc107;
 $green:   #198754;
 $teal:    #20c997;
 $cyan:    #0dcaf0;
+$silver:  silver;
 
 /*/*/
 $color-texto:white;
@@ -20,12 +21,14 @@ $color-submenu:rgb(255,255,255);
 $color-h1: rgb(247,211,211);
 $color-parrafos:#ffebff;
 $color-divider: rgb(114,96,102);
+$paddingsIndex:52px;
 
 
 $background-index:linear-gradient(40deg, rgba(20,65,210,1) 21%, rgba(246,129,63,1) 56%, rgba(206,208,130,1) 75%);
 $background-coleccion:rgba(205,255,226,0.6);
 $background-btn:linear-gradient (to right,#CC95C0 0%, #DBD4B4  51%, #CC95C0  100%);
 $backgroundMan-capa:rgba(232,206,240,0.6);
+$background-man:rgb(250, 218, 114);
 
 $backgroundImage: url(/IMAGENESProyect/pexels-leo-caldas-9557619.jpg);
 
@@ -34,8 +37,12 @@ $width-logo:80%;
 $width-menu:100%;
 $height-menu:20px;
 
+$transform: translate(-50%,-50%);
+$maxPadding:100%;
+$max-width:100%;
+$max-height:100%;
 /*-----LISTAS----/*/
-$display:(
+$displays:(
     flex,
     grid,
     block,
@@ -47,5 +54,13 @@ $backgrounds:(
     rgba(232,206,240,0.6),
     rgba(205,255,226,0.6),
     linear-gradient(40deg, rgba(20,65,210,1) 21%, rgba(246,129,63,1) 56%, rgba(206,208,130,1) 75%),
+
+);
+
+$text-align:(
+    center,
+    end,
+    left,
+    right,
 
 );
