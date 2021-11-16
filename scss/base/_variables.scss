@@ -27,7 +27,9 @@ $background-coleccion:rgba(205,255,226,0.6);
 $background-btn:linear-gradient (to right,#CC95C0 0%, #DBD4B4  51%, #CC95C0  100%);
 $backgroundMan-capa:rgba(232,206,240,0.6);
 
+$backgroundImage: url(/IMAGENESProyect/pexels-leo-caldas-9557619.jpg);
 
+$width-logo:80%;
 
 $width-menu:100%;
 $height-menu:20px;
@@ -40,11 +42,10 @@ $display:(
     inline,
     inline-block,
 );
+$backgrounds:(
+    linear-gradient (to right,#CC95C0 0%, #DBD4B4  51%, #CC95C0  100%),
+    rgba(232,206,240,0.6),
+    rgba(205,255,226,0.6),
+    linear-gradient(40deg, rgba(20,65,210,1) 21%, rgba(246,129,63,1) 56%, rgba(206,208,130,1) 75%),
 
-
-
-$submenu:(
-    color:$color-submenu,
-    list-style:none,
-    position:relative,
-)
+);

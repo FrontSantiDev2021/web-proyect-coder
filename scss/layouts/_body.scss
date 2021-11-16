@@ -1,0 +1,8 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: $font;
+    @include cuerpo (hidden,$backgroundImage,repeat,100% 100%,center);
+}

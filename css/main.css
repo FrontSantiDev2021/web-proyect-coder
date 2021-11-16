@@ -1,7 +1,38 @@
 /*--Colors--/*/
 /*/*/
 /*-----LISTAS----/*/
-header .presentacion_texto {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Bebas Neue", cursive;
+  overflow-x: hidden;
+  background: url(/IMAGENESProyect/pexels-leo-caldas-9557619.jpg);
+  background-repeat: repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+header .presentacion {
+  background: linear-gradient(40deg, #1441d2 21%, #f6813f 56%, #ced082 75%);
+  width: 100%;
+  height: 30px;
+  background-clip: 200% 200%;
+  position: relative;
+  -webkit-animation: degradado 8s ease-in-out infinite;
+          animation: degradado 8s ease-in-out infinite;
+}
+
+header .presentacion .presentacion_texto {
   font-size: 1rem;
   font-style: italic;
   text-align: center;
@@ -12,64 +43,6 @@ header .presentacion_texto {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-
-body {
-  font-family: "Bebas Neue", cursive;
-}
-
-header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  width: 100%;
-}
-
-header p {
-  font-style: italic;
-  text-align: center;
-  color: black;
-  width: 100%;
-  font-size: large;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(31%, #1441d2), color-stop(56%, #f6813f), color-stop(75%, #ced082));
-  background: linear-gradient(#1441d2 31%, #f6813f 56%, #ced082 75%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  size: 2rem;
-  font-family: "Bebas Neue", cursive;
-}
-
-header nav {
-  background-color: black;
-  letter-spacing: 1px;
-  word-spacing: 10px;
-  text-align: center;
-  display: display;
-}
-
-header nav .navbar {
-  -webkit-box-shadow: #0dcaf0;
-          box-shadow: #0dcaf0;
-}
-
-header nav .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  width: 100%;
-  height: 20px;
-}
-
-header .presentacion {
-  width: 100%;
-  height: 30px;
-  background-clip: 200% 200%;
-  -webkit-animation: degradado 8s ease-in-out infinite;
-          animation: degradado 8s ease-in-out infinite;
-  position: relative;
 }
 
 @-webkit-keyframes degradado {
@@ -94,5 +67,52 @@ header .presentacion {
   100% {
     background-position: 0% 50%;
   }
+}
+
+header nav .logoTitulo {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+  background-color: black;
+  text-align: left;
+  color: #ffba79;
+  width: 80%;
+  letter-spacing: 1px;
+  word-spacing: 10px;
+}
+
+header .navbar .baka {
+  list-style: none;
+  position: relative;
+  color: #f7d3d3;
+}
+
+header .navbar .baka:hover .submenuBaka {
+  display: none;
+  position: absolute;
+  list-style: none;
+  background-color: white;
+}
+
+header .navbar .baka:hover .submenuBaka li {
+  display: inline-block;
+  left: 0;
+  list-style: none;
+  position: relative;
+}
+
+header .navbar .baka:hover .submenuBaka li:hover {
+  display: block;
+  text-align: left;
+}
+
+header .navbar .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  height: 20px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,4 +1,12 @@
 
+@mixin cuerpo ($desbordamiento,$fondo,$fondo-rep,$fondo-tam,$fondo-pos){
+    overflow-x: $desbordamiento;
+    background: $fondo;
+    background-repeat: $fondo-rep;
+    background-size: $fondo-tam;
+    background-position: $fondo-pos;
+
+}
 @mixin text($estilo,$alineacion,$color,$ancho) {
     font-style: $estilo;
     text-align: $alineacion;
@@ -9,11 +17,17 @@
     background-clip:text;
     -webkit-text-fill-color: transparent;
 }
-@mixin navIndex($fondo,$letraEspacio,$palabraEspacio,$alineacion){
-    background-color:$fondo;
+@mixin navIndex($letraEspacio,$palabraEspacio){
     letter-spacing: $letraEspacio;
     word-spacing: $palabraEspacio;
-    text-align: $alineacion;
+}
+@mixin logoTitulo($letra,$size,$fondo,$alineacion,$color,$ancho) {
+    font-family: $letra;
+    font-size: $size;
+    background-color: $fondo;
+    text-align:$alineacion;
+    color: $color;
+    width: $ancho;
 }
 @mixin menuIndex($display,$espacio,$ancho,$alto) {
     display: $display;
@@ -21,25 +35,59 @@
     width: $ancho;
     height: $alto
 }
-%presentacionTexto{
-    font-size: 1rem;
-    font-style: italic;
-    text-align: center;
-    color:$color-texto ;
-    letter-spacing: 2px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+@mixin presentacionTexto($size,$estilo,$alineacion,$color,$espaciado,$posicion,$arriba,$derecha,$transformacion){
+    font-size:$size;
+    font-style: $estilo;
+    text-align: $alineacion;
+    color:$color;
+    letter-spacing: $espaciado;
+    position: $posicion;
+    top:$arriba;
+    left: $derecha;
+    transform: $transformacion;
 }
-@mixin presentacion ($ancho,$alto,$fondoSize,$posicion,$animacion){
+@mixin presentacion ($ancho,$alto,$fondoSize,$posicion,){
     width: $ancho;
     height: $alto;
     background-clip: $fondoSize;
-    animation: $animacion;
     position: $posicion;
 }
-@mixin contenedor-nav($jt-cont,$jt-it){
+@mixin contenedor-nav($display,$jt-cont,$jt-it){
+    $display:$display;
     $justify-content:$jt-cont;
     $justify-items:$jt-it;
+}
+@mixin anima ($nombre,$time,$metodo,$duracion){
+    animation: $nombre $time $metodo $duracion;
+}
+@mixin keyframes($degradado){
+    @-webkit-keyframes #{$degradado} {
+        @content; 
+    }
+    @-moz-keyframes #{$degradado} {
+        @content;
+    }
+    @-ms-keyframes #{$degradado} {
+        @content;
+    }
+    @keyframes #{$degradado} {
+        @content;
+    } 
+}
+@mixin menus($lista,$position,$color) {
+    list-style: $lista;
+    position: $position;
+    color: $color;
+}
+@mixin submenus($display,$posicion,$lista,$bg-color) {
+    display: $display;
+    position: $posicion;
+    list-style: $lista;
+    background-color: $bg-color;
+}
+@mixin lista($display,$izquierda,$lista,$posicion){
+    display: $display;
+    left:$izquierda;
+    list-style: $lista;
+    position: $posicion;
 }

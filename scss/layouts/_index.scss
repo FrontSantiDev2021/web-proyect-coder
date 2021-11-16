@@ -3,33 +3,15 @@ header{
     position: sticky;
     top: 0;
     width:$width-menu ;
-    p{
-        @include text(italic,center,$color-primary,100%);
-        size: 2rem;
-        font-family: $font;      
-        
-    }
-    nav{
-        @include navIndex($color-primary,1px,10px,center);
-        @include contenedor-nav(space-evenly,center);
-        display: nth($list: display, $n:1 );
-
-        .navbar{
-            box-shadow: $cyan;
-        }
-        
-        .baka{
-
-        }
-        .menu{
-            @include menuIndex(flex,space-evenly,100%,20px);
-            
-            
-        }
-    }
     .presentacion{
-        @include presentacion(100%,30px,200% 200%,relative,degradado 8s ease-in-out infinite);
-        @keyframes degradado{
+        .presentacion_texto{
+            @include presentacionTexto(1rem,italic,center,$color-texto,2px,absolute,50%,50%,translate(-50%,-50%));
+        }
+        background:$background-index;
+        @include presentacion(100%,30px,200% 200%,relative);
+        @include anima (degradado, 8s ,ease-in-out, infinite);
+        
+        @include keyframes(degradado) {
             0%{
                 background-position: 0% 50%;
             }
@@ -40,13 +22,39 @@ header{
                 background-position: 0% 50%;
             }
         }
-        &_texto{
-            @extend %presentacionTexto;
+        
+    }
+    nav{
+        .logoTitulo{
+            @include logoTitulo($font,2rem,$color-primary,left,$color-secundary,$width-logo);
+            @include navIndex (1px,10px,);
         }
     }
-
-
-
+    .navbar{
+        .baka{
+            @include menus(none,relative,$color-h1);
+                &:hover{
+                    display: 
+                }
+            .submenuBaka{
+                @include submenus(none,absolute,none,$color-submenu);
+                li{
+                    @include lista(inline-block,0,none,relative);
+                    &:hover{
+                        display: block;
+                        text-align: left;
+                        
+                    }
+                }
+            }
+        }
+        
+        .menu{
+            @include menuIndex(flex,space-evenly,100%,20px);
+            
+            
+        }
+    }
 
     
 }
