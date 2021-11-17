@@ -218,6 +218,10 @@
     height: $alto;
     color: $color;
 }
-@mixin subtitle($spacing) {
-    
+@mixin subtitleCategories($spacing,$size,$border,$color,$bg-color) {
+    letter-spacing: $spacing;
+    font-size: $size;
+    border-radius: $border;
+    color: $color;
+    background-color: $bg-color;
 }

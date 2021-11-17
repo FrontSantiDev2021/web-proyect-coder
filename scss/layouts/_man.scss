@@ -1,7 +1,7 @@
 .sectionThree{
     padding-top: 2%;
     &__subtitle{
-
+        @include subtitleCategories (3px,20px,8px,$color-submenu,rgb(0,0,0));
     }
     &__parrafoStyle{
 
