@@ -130,11 +130,12 @@
     overflow: $desbordamiento;
     border-radius: 4px;
     box-shadow: 0px ,10px,22px ;
-
+    cursor: pointer;
+    box-shadow: 0px ,10px,22px rgba(0, 0,0,50);
 }
 
-@mixin transicion ($todo,$tiempo,$metodo) {
-    transition: $todo, $tiempo, $metodo;
+@mixin transicion ($transition) {
+    transition: $transition;
 }
 @mixin capa($posicion,$top,$bg,$alineacion,$opacidad,$visibilidad) {
     position:$posicion;
@@ -218,10 +219,139 @@
     height: $alto;
     color: $color;
 }
-@mixin subtitleCategories($spacing,$size,$border,$color,$bg-color) {
-    letter-spacing: $spacing;
+@mixin subtitleCategories($espaciado,$size,$borde,$color,$fondo-color){
+    letter-spacing: $espaciado;
     font-size: $size;
+    border-radius: $borde;
+    color: $color;
+    background-color: $fondo-color;
+}
+@mixin parrafo-style ($letra,$relleno) {
+    font-size: $letra;
+    padding: $relleno;
+    text-align: center;
+}
+@mixin modelsMan ($relleno-t,$relleno-b,$display,$justify,$margen-l,$alineacion) {
+    padding-top: $relleno-t;
+    padding-bottom: $relleno-b;
+    display: $display;
+    justify-content: $justify;
+    margin-left: $margen-l;
+    align-content: $alineacion;
+}
+@mixin  Basis ($transition) {
+    transition: $transition;
+}
+@mixin sectionBasis ($basis,$alto) {
+    flex-basis: $basis;
+    height: $alto;
+}
+@mixin imagenBasis ($sombra,$basis,$transformacion,$border){
+    box-shadow: $sombra;
+    flex-basis: $basis;
+    transform: $transformacion;
+    border: $border;
+}
+@mixin transicionBasis ($transition){
+    transition: ($transition);
+}
+@mixin transicionCapa ($transition) {
+    transition: $transition;
+}
+
+
+
+@mixin  h5 ($size,$estilo,$transformacion,$peso){
+    font-size: $size;
+    font-style: $estilo;
+    text-transform: $transformacion;
+    font-weight: $peso;
+}
+@mixin big-capa ($posicion,$top,$ancho,$alto,$alineacion,$opacidad,$visibilidad){
+    position: $posicion;
+    top: $top;
+    width: $ancho;
+    height: $alto;
+    text-align: $alineacion;
+    opacity: $opacidad;
+    visibility: $visibilidad;
+}
+@mixin imageh-capa ($posicion,$top,$ancho,$alto,$alineacion,$opacidad,$visibilidad){
+        position: $posicion;
+        top: $top;
+        width: $ancho;
+        height: $alto;
+        text-align: $alineacion;
+        opacity: $opacidad;
+        visibility: $visibilidad;
+}
+@mixin hoverMans ($opacidad,$visibilidad,$top) {
+    opacity: $opacidad;
+    visibility: $visibilidad;
+    top: $top;
+}
+
+
+
+@mixin fotos ($alto,$borde,$peso) {
+    height: $alto;
+    border: $borde;
+    font-weight: $peso;
+}
+@mixin imageh ($ancho,$alto,$alineacion){
+    width: $ancho;
+    height: $alto;
+    align-self: $alineacion;
+
+}
+@mixin imagehHover($alto,$ancho,$borde,$transformacion) {
+    height: $alto;
+    width: $ancho;
+    border: $borde;
+    transform: $transformacion;
+}
+@mixin urbans($columns,$filas,$column-g,$fila-g,$margen,$justify) {
+    grid-template-columns: $columns;
+    grid-template-rows: $filas;
+    column-gap: $column-g;
+    row-gap: $fila-g;
+    margin: $margen;
+    justify-content: $justify;
+
+}
+@mixin boxShadow($shadow,$borde){
+    box-shadow: $shadow;
+    border-radius: $borde;
+}
+@mixin shoes ($ancho,$alto,$alineacion,$relleno-t) {
+    width: $ancho;
+    height: $alto;
+    align-self: $alineacion;
+    padding-top: $relleno-t;
+}
+
+
+
+/*/-------------------------------------*/
+@mixin boton($border,$color,$cursor,$alto,$ancho,$borde) {
     border-radius: $border;
     color: $color;
-    background-color: $bg-color;
+    cursor: $cursor;
+    height: $alto;
+    width: $ancho;
+    border: $borde;
+}
+@mixin botonBefore($top,$izquierda,$ancho,$alto,$transformacion,$transformacion-o){
+    top: $top;
+    left: $izquierda;
+    width: $ancho;
+    height: $alto;
+    transform: $transformacion;
+    transform-origin: $transformacion-o;
+    
+}
+@mixin mujer-subtile ($spacing,$size,$radius) {
+    letter-spacing: $spacing;
+    font-size: $size;
+    border-radius: $radius;
 }

@@ -481,7 +481,7 @@ hr{
     border-radius: 4px;
     position: relative;
 }
-.fotoBig__capa{
+.fotoBig_capa{
     position: absolute;
     top: 0;
     width: 100%;
@@ -493,7 +493,7 @@ hr{
     visibility: hidden;
     text-align: center;
 }
-.fotoBig div:hover >.fotoBig__capa{
+.fotoBig div:hover >.fotoBig_capa{
     opacity: 1;
     visibility: visible;
     top: 90%;

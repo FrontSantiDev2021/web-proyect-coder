@@ -1,0 +1,14 @@
+.sectionTwo__subtitle{
+    @include mujer-subtitle (3px,20px,8px);
+    color: $color-texto;
+    background-color: $color-primary;
+}
+.sectionTwo__carouselImag{
+    border-radius: 10%;
+    width: $width-max;
+    height: $height-max;
+}
+.sectionTwo__womanRopa{
+    width: $width-max;
+    height: 450px;
+}
