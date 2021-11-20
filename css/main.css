@@ -48,7 +48,7 @@ header .presentacion .presentacion_texto {
   font-size: 1rem;
   font-style: italic;
   text-align: center;
-  color: white;
+  color: #fcf2f2;
   letter-spacing: 2px;
   position: absolute;
   top: 50%;
@@ -147,7 +147,7 @@ main .encabezado .encabezado-h1 {
 main .encabezado .encabezado-h1__textoLorem {
   font-size: 1rem;
   text-align: center;
-  color: white;
+  color: #fcf2f2;
   font-stretch: expanded;
 }
 
@@ -280,7 +280,7 @@ main .kidIndex__niñoDescripcion {
   padding: 32px;
   font-size: 1rem;
   text-align: center;
-  color: white;
+  color: #fcf2f2;
 }
 
 main .womanIndex {
@@ -337,14 +337,14 @@ main .formulary__style {
 }
 
 main .container-fluid .textProducts {
-  color: white;
+  color: #fcf2f2;
   padding: 80px;
   font-size: 3rem;
 }
 
 main .container-fluid .tablaTodo {
   width: 100%;
-  color: white;
+  color: #fcf2f2;
   padding: 100%;
 }
 
@@ -475,7 +475,7 @@ main .sectionThree__modelsMan .fotoBig {
 }
 
 main .sectionThree__modelsMan .fotoBig h5 {
-  color: white;
+  color: #fcf2f2;
   font-size: 0.8rem;
   font-style: oblique;
   text-transform: capitalize;
@@ -538,7 +538,7 @@ main .sectionThree__modelsMan .Fotos {
 }
 
 main .sectionThree__modelsMan .Fotos h5 {
-  color: white;
+  color: #fcf2f2;
   font-size: 0.8rem;
   font-style: oblique;
   text-transform: capitalize;
@@ -648,5 +648,24 @@ main .contenedorCalzado__urbans .cards .contenedorCalzado__shoe {
       -ms-grid-row-align: center;
       align-self: center;
   padding-top: 20px;
+}
+
+main .sectionTwo__subtitle {
+  letter-spacing: 3px;
+  font-size: 20px;
+  border-radius: 8px;
+  color: #fcf2f2;
+  background-color: black;
+}
+
+main .sectionTwo__carouselImag {
+  border-radius: 10%;
+  width: 250px;
+  height: 500px;
+}
+
+main .sectionTwo__womanRopa {
+  width: 250px;
+  height: 450px;
 }
 /*# sourceMappingURL=main.css.map */

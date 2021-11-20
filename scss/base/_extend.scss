@@ -350,7 +350,7 @@
     transform-origin: $transformacion-o;
     
 }
-@mixin mujer-subtile ($spacing,$size,$radius) {
+@mixin mujer-subtitle ($spacing,$size,$radius) {
     letter-spacing: $spacing;
     font-size: $size;
     border-radius: $radius;

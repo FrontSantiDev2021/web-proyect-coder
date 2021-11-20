@@ -1,0 +1,24 @@
+.sectionFour{
+
+    &__subtitle{
+        color: $color-texto;
+        background-color: $color-primary;
+    }
+    &__parrafo_style{
+
+    }
+    &__gridColeccion{
+        display: nth($displays, $n:2 );
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
