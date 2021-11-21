@@ -1,11 +1,28 @@
 .formulary{
-    h2{
-
-    }
-    p{
-
+    @include formulario (20%,300px);
+    position: nth($position, $n:2);
+    .line-wipe{     
+        @media (max-width:480px) {
+            display: block;
+            padding: 40%;
+        }   
+        background: $background-index;
+        @include line-wipe (200% auto,text,transparent);      
+        animation: shine 5s linear infinite;
+        @keyframes shine {
+            to {
+            background-position: 200% center;
+            }
+        }
+        
     }
     &__style{
-
+        background: $background-index;
+        position: nth($position, $n:1);   
+        width: 300px;
+        @include formulario-style (center,10%,20px,5%,50%,50%,translate(-50%,-50%));
+        
+        
+        
     }
 }

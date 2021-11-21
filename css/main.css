@@ -34,8 +34,14 @@ header {
   width: 100%;
 }
 
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  header {
+    width: 100%;
+  }
+}
+
 header .presentacion {
-  background: linear-gradient(40deg, #1441d2 21%, #f6813f 56%, #ced082 75%);
+  background: linear-gradient(40deg, #1441d2 21%, #f6813f 40%, #ced082 60%);
   width: 100%;
   height: 30px;
   background-clip: 200% 200%;
@@ -92,6 +98,20 @@ header nav .logoTitulo {
   word-spacing: 10px;
 }
 
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  header nav .logoTitulo {
+    font-size: 1.5rem;
+    overflow-x: visible;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  header nav {
+    width: 100%;
+    margin: auto;
+  }
+}
+
 header .navbar .baka {
   list-style: none;
   position: relative;
@@ -139,6 +159,13 @@ main .encabezado {
   display: inline-block;
 }
 
+@media (min-width: 480px) and (max-width: 1024px) {
+  main .encabezado {
+    width: 100%;
+    height: 300px;
+  }
+}
+
 main .encabezado .encabezado-h1 {
   text-align: center;
   color: #f7d3d3;
@@ -151,8 +178,26 @@ main .encabezado .encabezado-h1__textoLorem {
   font-stretch: expanded;
 }
 
+@media (min-width: 480px) and (max-width: 1024px) {
+  main .encabezado .encabezado-h1__textoLorem .encabezado-h1__textoLorem {
+    text-align: center;
+  }
+}
+
 main .manIndex {
   padding-top: 5%;
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  main .manIndex .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 main .manIndex__h2 {
@@ -161,6 +206,13 @@ main .manIndex__h2 {
   color: black;
   background-color: #fada72;
   border-radius: 3px;
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  main .manIndex__h2 {
+    width: 100%;
+    height: 90px;
+  }
 }
 
 main .manIndex .contenedorMan {
@@ -172,6 +224,12 @@ main .manIndex .contenedorMan {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  main .manIndex .contenedorMan .contenedorMan {
+    position: relative;
+  }
 }
 
 main .manIndex .contenedorMan figure {
@@ -251,12 +309,26 @@ main .kidIndex {
   padding-top: 52px;
 }
 
+@media (min-width: 480px) and (max-width: 1024px) {
+  main .kidIndex .kidIndex__h2 {
+    width: 100%;
+    height: 300px;
+  }
+}
+
 main .kidIndex__h2 {
   height: 49.6px;
   text-align: center;
   color: black;
   background-color: #fada72;
   border-radius: 3px;
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  main .kidIndex__h2 {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 main .kidIndex__contenedor {
@@ -270,10 +342,31 @@ main .kidIndex__contenedor {
       justify-content: space-around;
 }
 
+@media (min-width: 480px) and (max-width: 1024px) {
+  main .kidIndex__contenedor .kidIndex__contenedor {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 main .kidIndex__contenedor__imag {
   border-radius: 80%;
   width: 400px;
   height: 400px;
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  main .kidIndex__contenedor__imag {
+    width: 300px;
+    height: 350px;
+  }
 }
 
 main .kidIndex__niñoDescripcion {
@@ -303,12 +396,48 @@ main .womanIndex__contenedor_1 {
   grid-area: "item1";
 }
 
+@media (min-width: 480px) and (max-width: 1024px) {
+  main .womanIndex__contenedor_1 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
 main .womanIndex__contenedor_2 {
   grid-area: "item2";
 }
 
+@media (min-width: 480px) and (max-width: 1024px) {
+  main .womanIndex__contenedor_2 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
 main .womanIndex__contenedor_3 {
   grid-area: "item3";
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  main .womanIndex__contenedor_3 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  main .womanIndex__contenedor .womanIndex__contenedor {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: wrap;
+            flex-direction: wrap;
+  }
 }
 
 main .womanIndex__ropa {
@@ -316,30 +445,25 @@ main .womanIndex__ropa {
   height: 300px;
 }
 
-main .formulary {
-  max-width: 100%;
-  padding-top: 20%;
-  padding-bottom: 300px;
-  position: relative;
-}
-
-main .formulary__style {
-  background: linear-gradient(40deg, #1441d2 21%, #f6813f 56%, #ced082 75%);
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  text-align: center;
-  padding-top: 2%;
-  font-size: 20px;
-  border-radius: 5%;
-  position: absolute;
-  top: 60%;
-  left: 50%;
+@media (min-width: 480px) and (max-width: 1024px) {
+  main .womanIndex__ropa {
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+  }
 }
 
 main .container-fluid .textProducts {
   color: #fcf2f2;
   padding: 80px;
   font-size: 3rem;
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  main .container-fluid .textProducts {
+    font-size: 3rem;
+    text-align: center;
+  }
 }
 
 main .container-fluid .tablaTodo {
@@ -353,6 +477,13 @@ main .container-fluid .tablaProducts__model {
   padding-top: 5%;
   height: 350px;
   color: black;
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  main .container-fluid .tablaProducts__model {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 main ul {
@@ -383,7 +514,7 @@ main .boton::before {
   content: "";
   display: block;
   position: absolute;
-  background: linear-gradient(40deg, #1441d2 21%, #f6813f 56%, #ced082 75%);
+  background: linear-gradient(40deg, #1441d2 21%, #f6813f 40%, #ced082 60%);
   top: 0;
   left: 0;
   width: 100%;
@@ -446,13 +577,27 @@ main .sectionThree__subtitle {
 
 main .sectionThree_parrafoStyle {
   color: #ffebff;
-  font-size: 1rem;
+  font-size: 2rem;
   padding: 5%;
   text-align: center;
+  background: linear-gradient(40deg, #1441d2 21%, #f6813f 40%, #ced082 60%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 5s linear infinite;
+          animation: shine 5s linear infinite;
 }
 
-main .sectionThree_parrafoStyle:hover {
-  color: #e487d4;
+@-webkit-keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
 }
 
 main .sectionThree__modelsMan {
@@ -769,5 +914,40 @@ main .sectionTwo__womanRopa {
   height: 350px;
   -webkit-transform: translate(0, -7px);
           transform: translate(0, -7px);
+}
+
+.formulary {
+  padding-top: 20%;
+  padding-bottom: 300px;
+  position: relative;
+}
+
+.formulary .line-wipe {
+  background: linear-gradient(40deg, #1441d2 21%, #f6813f 40%, #ced082 60%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 5s linear infinite;
+          animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.formulary__style {
+  background: linear-gradient(40deg, #1441d2 21%, #f6813f 40%, #ced082 60%);
+  position: absolute;
+  width: 300px;
+  text-align: center;
+  padding-bottom: 10%;
+  font-size: 20px;
+  border-radius: 5%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 /*# sourceMappingURL=main.css.map */

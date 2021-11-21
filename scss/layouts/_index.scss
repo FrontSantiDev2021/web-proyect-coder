@@ -3,6 +3,9 @@ header{
     position: sticky;
     top: 0;
     width:$width-menu ;
+    @media only screen and (min-width:480px) and (max-width:1024px){
+        width: $max-width;
+    }
     .presentacion{
         .presentacion_texto{
             @include presentacionTexto(1rem,italic,center,$color-texto,2px,absolute,50%,50%,translate(-50%,-50%));
@@ -28,6 +31,14 @@ header{
         .logoTitulo{
             @include logoTitulo($font,2rem,$color-primary,left,$color-secundary,$width-logo);
             @include navIndex (1px,10px,);
+            @media only screen and (min-width:480px) and (max-width:1024px){
+                font-size:1.5rem;
+                overflow-x:visible;
+            }
+        }
+        @media only screen and (min-width:480px) and (max-width:1024px){
+            width: $max-width;
+            margin: auto;
         }
     }
     .navbar{
@@ -36,6 +47,10 @@ header{
             @include menuIndex(flex,space-evenly,100%,20px);
             .submenuBaka{
                 @include submenus(none,absolute,none,$color-submenu);
+                @media (max-width:480px) {
+                    display: none;
+                    overflow: hidden;
+                }
                     &:hover{
                         display: block;
                         text-align: left;
@@ -53,23 +68,52 @@ header{
     }
 }
 main{
+    
     .encabezado{
         @include encabezado_content($color-primary,50px,10%,100px,100%,inline-block);
+        @media(min-width:480px) and (max-width:1024px){
+
+            width: $max-width;
+            height:300px;
+            
+        }
         
         .encabezado-h1{
             @include encabezado_h1(center,$color-h1);
             &__textoLorem{
                 @include lorem (1rem,center,$color-texto,expanded);
+
+                @media (min-width:480px) and (max-width:1024px){
+                    .encabezado-h1__textoLorem{
+                    text-align:center;
+                    }
+                }
             }
         }
     }
     .manIndex{
         padding-top: 5%;
+        @media (min-width:480px) and (max-width:1024px){
+            .row{
+                display:nth($displays, $n: 1);
+                position:nth($position, $n: 2);
+                justify-content: center;
+            }
+        }
         &__h2{
             @include man-h2(49.6px,center,$color-primary,$background-man,3px);
+            @media (min-width:480px) and (max-width:1024px) {
+                width:$max-width;
+                height:90px;
+            }
         }
         .contenedorMan{
             @include contenedor-man(center,100%,50vh);
+            @media (min-width:480px) and (max-width:1024px) {
+                .contenedorMan{
+                    position:nth($position, $n: 2);
+                }
+            }
             figure{
                 @include figura (relative,250px,300px,hidden);
                 &:hover>.capa{
@@ -115,13 +159,36 @@ main{
     }
     .kidIndex{
         padding-top: $paddingsIndex;
+        @media  (min-width:480px) and (max-width:1024px){
+            .kidIndex__h2{
+                width: $max-width;
+                height:300px;
+            }
+        }
         &__h2{
             @include kid-h2(49.6px,center,$color-primary,$background-man,3px);
+            @media (min-width:480px) and (max-width:1024px){
+                width:$max-width;
+                text-align:center;
+            }
         }
         &__contenedor{
             @include kid-contenedor (50px,flex,nowrap,space-around);
+            @media (min-width:480px) and (max-width:1024px){
+                .kidIndex__contenedor{
+                    display:nth($displays, $n: 1);
+                    flex-wrap:wrap;
+                    flex-direction:row;
+                }
+            
+            }
             &__imag{
                 @include kidImag (80%,400px,400px);
+                @media (min-width:480px) and (max-width:1024px){
+
+                    width:300px;
+                    height:350px;
+                }
             }
         }
         &__niñoDescripcion{
@@ -140,36 +207,52 @@ main{
             grid-template-areas: "item1" "item2" "item3";
             &_1{
                 grid-area: "item1";
+                @media (min-width:480px) and (max-width:1024px){
+                    align-self: center;
+                }
             }
             &_2{
                 grid-area: "item2";
+                @media (min-width:480px) and (max-width:1024px){
+                    align-self: center;
+                }
             }
             &_3{
                 grid-area: "item3";
+                @media (min-width:480px) and (max-width:1024px){
+                    align-self: center;
+                }
+            }
+            @media (min-width:480px) and (max-width:1024px){
+                .womanIndex__contenedor{
+                    display:nth($displays, $n:1 );
+                    flex-direction: wrap;
+                }
             }
             
         }
         &__ropa{
             width: 300px;
             height: 300px;
+            @media (min-width:480px) and (max-width:1024px){
+                width: 200px;
+                height: 300px;
+                border-radius: 5px;
+
+            }
         }
         
 
-    }
-    .formulary{
-        max-width: 100%;
-        @include formulario (20%,300px,relative);
-        &__style{
-            background: $background-index;
-            transform: $transform;
-            @include formulario-style(center,2%,20px,5%,absolute,60%,50%)
-        }
     }
     .container-fluid{
         .textProducts{
             color: $color-texto;
             padding:80px;
             font-size: 3rem;
+            @media (min-width:480px) and (max-width:1024px){
+                font-size: 3rem;
+                text-align: center;
+            }
         }
         .tablaTodo{
             width: $max-width;
@@ -178,6 +261,10 @@ main{
         }
         .tablaProducts__model{
             @include model-tabla(10px,5%,350px,$color-primary);
+            @media (min-width:480px) and (max-width:1024px){
+                width: 200px;
+                height: 200px;
+            }
         }
     }
     ul{
@@ -231,6 +318,8 @@ main{
             color:$color-h1;
         }
     }
+
+    
 }
 
 

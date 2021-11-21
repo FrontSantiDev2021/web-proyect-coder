@@ -393,3 +393,22 @@
     visibility: $visibilidad;
     
 }
+@mixin formulario($relleno-t,$relleno-b) {
+    padding-top: $relleno-t;
+    padding-bottom:$relleno-b;
+}
+@mixin formulario_style ($alineacion,$relleno-t,$size,$borde,$top,$left,$transformacion) {
+    text-align: $alineacion;
+    padding-bottom: $relleno-t;
+    font-size: $size;
+    border-radius: $borde;
+    top: $top;
+    left: $left;
+    transform: $transformacion;
+    
+}
+@mixin line-wipe ($bg-size,$bg-clip,$text-fill) {
+    background-size: $bg-size;
+    background-clip: $bg-clip;
+    -webkit-text-fill-color: $text-fill;
+}

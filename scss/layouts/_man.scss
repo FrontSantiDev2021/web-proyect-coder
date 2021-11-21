@@ -1,21 +1,41 @@
 main{
     .sectionThree{
         padding-top: 2%;
+        @media (max-width:480px){
+            width: 100%;
+        }
         &__subtitle{
             @include subtitleCategories (3px,20px,8px,$color-submenu,rgb(0,0,0));
         }
         &_parrafoStyle{
             color: $color-parrafos;
-            @include parrafo-style (1rem,5%);
-            &:hover{
-                color:rgb(228, 135, 212);
+            
+            @include parrafo-style (2rem,5%);
+            
+            background: $background-index;
+            @include line-wipe (200% auto,text,transparent);      
+            animation: shine 5s linear infinite;
+            @keyframes shine {
+                to {
+                background-position: 200% center;
+                }
             }
+            
         }
         &__modelsMan{
             @include modelsMan (34px,120px,flex,space-evenly,30px,center);
+            @media (max-width:480px){
+                display: nth($displays, $n: 1);
+                flex-direction: column;
+                justify-items: center;
+                justify-content: space-around;
+            }
             .fotoBig{
                 position: nth($position, $n:2 );
                 height: 400px;
+                @media (max-width:480px){
+                    padding-bottom: 30%;
+                }
                 h5{
                     color:$color-texto;
                     @include h5 (0.8rem,oblique,capitalize,lighter);
@@ -33,6 +53,11 @@ main{
                     .sectionThree__basis{
                         @include transicionBasis (all 300ms ease-in-out);
                         @include sectionBasis (500px,400px);
+                        @media (max-width:480px) {
+                            width: 300px;
+                            height: 300px;
+                            padding-bottom: 15%;
+                        }
     
                         &:hover{
                             @include imagenBasis(10px 10px 5px grey,550px,translate(0,-7px),$color-primary);
@@ -45,6 +70,10 @@ main{
                         background: $backgroundMan-capa;
                         @include transicionBasis (all 500ms ease-out);
                         @include big-capa (absolute,0,100%,100%,start,0,hidden);
+                        @media (max-width:480px) {
+                            width: 300px;
+                            height: 200px;
+                        }
                         
                         
                     }
@@ -54,12 +83,18 @@ main{
             .vl{
                 border-left: 10px solid rgb(114, 96, 102);
                 height: 400px;
+                @media (max-width:480px) {
+                    display: none;
+                }
             }  
                 
         
             .Fotos{
                 position: nth($position, $n:2 );
                 @include fotos(250px,1px black,bold);
+                @media (max-width:480px){
+                    padding-bottom: 30%;
+                }
 
                 h5{
                     color:$color-texto;
@@ -82,12 +117,22 @@ main{
                     .sectionThree__imageh{
                         @include imageh (200px,300px,center);
                         @include transicion (all 500ms ease-out);
+                        @media (max-width:480px){
+                            width: 200px;
+                            height: 200px;
+                            padding-bottom: 15%;
+                            padding-top :15%; 
+                        }
                         
                     }
                     .Fotos__capa{
                         background: $backgroundMan-capa;
                         @include transicionCapa (all 500ms ease-out);
                         @include imageh-capa (absolute,0,100%,100%,center,0,hidden);
+                        @media (max-wdith:480px) {
+                            width: 250px;
+                            padding-top: 100%;
+                        }
                     }
                     
                     
@@ -106,6 +151,9 @@ main{
             display: nth($displays, $n: 2);
             @include urbans(30% 30%,1fr 1fr,12px,20px,40px 0px ,center);
             grid-template-areas: "item1" "item2" "item3" "item4";
+            @media (max-width:480px) {
+                width: 450px;
+            }
             .contenedorCalzado__adidas{
                 grid-area: "item1";
             
@@ -126,12 +174,19 @@ main{
                 overflow: nth($overflow, $n: 2);
                 @include transicionBasis(all 300ms ease-in-out);
                 @include boxShadow (0 2px 4px $color-divider,8px);
+                @media (max-width:480px) {
+                    width: $max-width;
+                }
                 &:hover{
                     transform:translateY(-20px);
                     box-shadow: 0,12px,16px $color-divider;
                 }
                 .contenedorCalzado__shoe{
                     @include shoes(350px,300px,center,20px);
+                    @media (max-width:480px) {
+                        width: 200px;
+                        height: 200px;
+                    }
                 }
             }
         }

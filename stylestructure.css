@@ -949,6 +949,9 @@ a{
     
 
     }
+    .submenuBaka{
+        display: none;
+    }
     header nav div form{
         height: 40px;
         font-size: 20px;
@@ -1104,9 +1107,59 @@ a{
         width: 100%;
 
     }
+    .sectionThree__modelsMan{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: space-around;
+
+    }
+    .fotoBig{
+        padding-bottom: 30%;
+    }
+    .Fotos{
+        padding-bottom: 30%;
+    }
+    .sectionThree__imageh{
+        width: 200px;
+        height: 200px;
+        padding-bottom: 15%;
+        padding-top :15%; 
+    }
+    .sectionThree__basis{
+        width: 300px;
+        height: 300px;
+        padding-bottom: 15%;
+    }
+    .fotoBig_capa{
+        width: 300px;
+        height: 200px;
+    }
+    .Fotos__capa{
+        width: 250px;
+        padding-top: 100%;
+
+    }
+    .vl{
+        display: none;
+    }
+    .cards{
+        width: 100%;
+    }
+    .contenedorCalzado__urbans{
+        width: 450px;
+      
+    }
+
+    .contenedorCalzado__shoe{
+        width: 200px;
+        height: 200px;
+    }
     
 }
-
+@media only screen and (max-width:480px) {
+    
+}
 
 
 
