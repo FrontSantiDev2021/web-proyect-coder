@@ -668,4 +668,106 @@ main .sectionTwo__womanRopa {
   width: 250px;
   height: 450px;
 }
+
+.sectionFour {
+  padding-bottom: 5%;
+}
+
+.sectionFour__japon {
+  width: 400px;
+  height: 400px;
+  -webkit-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+
+.sectionFour__japon:hover {
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  border: black;
+  width: 350px;
+  height: 350px;
+  -webkit-transform: translate(0, -7px);
+          transform: translate(0, -7px);
+}
+
+.sectionFour__subtitle {
+  color: #fcf2f2;
+  background-color: black;
+}
+
+.sectionFour__parrafo_style {
+  font-size: 2rem;
+  padding: 5%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.sectionFour__gridColeccion {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 40%;
+      grid-template-columns: 40% 40%;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-column-gap: 5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 60px 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.sectionFour__gridColeccion_foto {
+  position: relative;
+  height: 500px;
+}
+
+.sectionFour__gridColeccion_foto div {
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sectionFour__gridColeccion_foto div:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sectionFour__gridColeccion_foto div .gridColeccion_foto__capa {
+  position: absolute;
+  background: rgba(205, 255, 226, 0.6);
+  -webkit-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+  top: 0;
+  width: 400px;
+  height: 100%;
+  text-align: start;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.sectionFour__gridColeccion_foto div .gridColeccion_foto__capa:hover {
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  opacity: 1;
+  visibility: visible;
+  top: 9%;
+  width: 350px;
+  height: 350px;
+  -webkit-transform: translate(0, -7px);
+          transform: translate(0, -7px);
+}
 /*# sourceMappingURL=main.css.map */

@@ -277,14 +277,15 @@
     visibility: $visibilidad;
 }
 @mixin imageh-capa ($posicion,$top,$ancho,$alto,$alineacion,$opacidad,$visibilidad){
-        position: $posicion;
-        top: $top;
-        width: $ancho;
-        height: $alto;
-        text-align: $alineacion;
-        opacity: $opacidad;
-        visibility: $visibilidad;
+    position: $posicion;
+    top: $top;
+    width: $ancho;
+    height: $alto;
+    text-align: $alineacion;
+    opacity: $opacidad;
+    visibility: $visibilidad;
 }
+
 @mixin hoverMans ($opacidad,$visibilidad,$top) {
     opacity: $opacidad;
     visibility: $visibilidad;
@@ -354,4 +355,41 @@
     letter-spacing: $spacing;
     font-size: $size;
     border-radius: $radius;
+}
+@mixin div-grid ($borde,$justify,$alineacion) {
+    border-radius: $borde;
+    justify-content: $justify;
+    align-items: $alineacion;
+}
+@mixin grid-coleccion ($columns,$filas,$espacio,$justify,$margen,$alineacion,$alineacion-c) {
+    grid-template-columns: $columns;
+    grid-template-rows: $filas;
+    grid-column-gap:$espacio ;
+    justify-content: $justify;
+    margin: $margen;
+    align-items: $alineacion;
+    align-content:$alineacion-c;
+
+}
+@mixin hover-japon ($ancho,$alto,$transformacion) {
+    width: $ancho;
+    height: $alto;
+    transform: $transformacion;
+}
+@mixin coleccion-hover ($opacidad,$visibilidad,$top,$ancho,$alto,$transformacion) {
+    opacity: $opacidad;
+    visibility: $visibilidad;
+    top: $top;
+    width: $ancho;
+    height: $alto;
+    transform: $transformacion;
+}
+@mixin coleccion-capa ($top,$ancho,$alto,$alineacion,$opacidad,$visibilidad) {
+    top: $top;
+    width: $ancho;
+    height: $alto;
+    text-align: $alineacion;
+    opacity: $opacidad;
+    visibility: $visibilidad;
+    
 }

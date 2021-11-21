@@ -327,7 +327,7 @@ nav{
 hr{
     border: 0;
     height: 5px;
-    background-image: linear-gradient(to right, transparent, #CCC, transparent);
+    background: linear-gradient(to right, transparent, #CCC, transparent);
 }
 .sectionFour__gridColeccion{
     display: grid;
@@ -340,12 +340,12 @@ hr{
     align-content: center;
     
 }
-.gridColeccion-foto{
+.gridColeccion_foto{
     position: relative;
     height: 500px;
 
 }
-.gridColeccion-foto div{
+.gridColeccion_foto div{
     overflow: hidden;
     border-radius: 4px;
     position:relative;
@@ -353,7 +353,7 @@ hr{
     justify-content: center;
     align-items: center;
 }
-.gridColeccion-foto__capa{
+.gridColeccion_foto__capa{
     position: absolute;
     top: 0;
     width: 400px;
@@ -371,19 +371,19 @@ hr{
     transition: all 500ms ease-out;
 
 }
-.gridColeccion-foto div:hover .sectionFour__japon{
+.gridColeccion_foto div:hover .sectionFour__japon{
     transition: all 500ms ease-in-out;
     width: 350px;
     height: 350px;
     transform: translate(0,-7px);
     border: black;
 }
-.gridColeccion-foto:hover>div{
+.gridColeccion_foto:hover>div{
     opacity: 1;
     visibility: visible;
 
 }
-.gridColeccion-foto div:hover >.gridColeccion-foto__capa{
+.gridColeccion_foto div:hover >.gridColeccion_foto__capa{
     opacity: 1;
     visibility: visible;
     top: 9%;

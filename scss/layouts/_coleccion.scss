@@ -1,0 +1,69 @@
+.sectionFour{
+    padding-bottom: 5%;
+    &__japon{
+        width: 400px;
+        height: 400px;
+        @include transicionCapa (all 500ms ease-out);
+        &:hover{
+            @include transicionCapa (all 500ms ease-in-out);
+            border: $color-primary;
+            @include hover-japon (350px,350px,translate(0,-7px));
+        }
+    }
+    
+    &__subtitle{
+        color: $color-texto;
+        background-color: $color-primary;
+    }
+    &__parrafo_style{
+      @include parrafo-style(2rem,5%);
+        text-transform: capitalize;
+    }
+    &__gridColeccion{
+        display: nth($displays, $n:2 );
+        @include grid-coleccion (40% 40%,1fr,5%,center,60px 20px,center,center);
+        
+        &_foto{
+            position: nth($position, $n: 2);
+            height: $height-min;
+
+            div{
+                overflow: nth($overflow, $n: 2);
+                position: nth($position, $n: 2 );
+                display: nth($displays, $n: 1 );
+                @include div-grid (4px,center,center);
+                &:hover{
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .gridColeccion_foto__capa{
+                    position: nth($position, $n: 1);
+                    background: $background-coleccion;
+                    @include transicionCapa (all 500ms ease-out);
+                    @include coleccion-capa(0,400px,100%,start,0,hidden);
+
+                    &:hover{
+                        transition: all 500ms ease-in-out;
+                        @include coleccion-hover (1,visible,9%,350px,350px,translate(0,-7px));
+                    }
+                }
+            
+                
+            }
+            
+        }
+
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
