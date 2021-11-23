@@ -72,3 +72,19 @@ $overflow:(
     scroll,
     visible,
 );
+
+$breakpoints:(
+    sm:480px,
+    md:730px,
+    lg:1024px,
+);
+@mixin mobile-f ($breakpoint) {
+    @media screen and (max-width: map-get($breakpoints,$breakpoint)) {
+        @content;   
+    }
+}
+@mixin mobile-l ($breakpoint) {
+    @media  screen and (min-width: map-get($breakpoints,$breakpoint)){
+        @content;
+    }
+}

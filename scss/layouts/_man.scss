@@ -1,17 +1,20 @@
 main{
     .sectionThree{
         padding-top: 2%;
-        @media (max-width:480px){
+        @include mobile-f (sm){
             width: 100%;
         }
         &__subtitle{
             @include subtitleCategories (3px,20px,8px,$color-submenu,rgb(0,0,0));
+            
         }
         &_parrafoStyle{
             color: $color-parrafos;
             
             @include parrafo-style (2rem,5%);
-            
+            @include mobile-f (sm){
+                font-size: 50px;
+            }
             background: $background-index;
             @include line-wipe (200% auto,text,transparent);      
             animation: shine 5s linear infinite;
@@ -21,10 +24,11 @@ main{
                 }
             }
             
+            
         }
         &__modelsMan{
             @include modelsMan (34px,120px,flex,space-evenly,30px,center);
-            @media (max-width:480px){
+            @include mobile-f (sm){
                 display: nth($displays, $n: 1);
                 flex-direction: column;
                 justify-items: center;
@@ -33,8 +37,12 @@ main{
             .fotoBig{
                 position: nth($position, $n:2 );
                 height: 400px;
-                @media (max-width:480px){
+                @include mobile-f(sm){
                     padding-bottom: 30%;
+                }
+                @include mobile-l (sm){
+                    width: 250px;
+                    height: 200px;
                 }
                 h5{
                     color:$color-texto;
@@ -53,11 +61,12 @@ main{
                     .sectionThree__basis{
                         @include transicionBasis (all 300ms ease-in-out);
                         @include sectionBasis (500px,400px);
-                        @media (max-width:480px) {
-                            width: 300px;
-                            height: 300px;
+                        @include mobile-f(sm) {
+                            width: 250px;
+                            height: 200px;
                             padding-bottom: 15%;
                         }
+                        
     
                         &:hover{
                             @include imagenBasis(10px 10px 5px grey,550px,translate(0,-7px),$color-primary);
@@ -70,8 +79,8 @@ main{
                         background: $backgroundMan-capa;
                         @include transicionBasis (all 500ms ease-out);
                         @include big-capa (absolute,0,100%,100%,start,0,hidden);
-                        @media (max-width:480px) {
-                            width: 300px;
+                        @include mobile-f (sm) {
+                            width: 250px;
                             height: 200px;
                         }
                         
@@ -92,7 +101,7 @@ main{
             .Fotos{
                 position: nth($position, $n:2 );
                 @include fotos(250px,1px black,bold);
-                @media (max-width:480px){
+                @include mobile-f (sm){
                     padding-bottom: 30%;
                 }
 
@@ -107,17 +116,22 @@ main{
                     border-radius: 4px;
                     &:hover>.Fotos__capa{
                         @include hoverMans (1,visible,90%);
+                        
                     }
                     &:hover>.sectionThree__imageh{
                         height: 20rem;
                         width: 15rem;
                         @include transicionBasis (all 300ms ease-in-out);
+                        @include mobile-f (sm){
+                            width: 230px;
+                            height:230px;
+                        }
                         
                     }
                     .sectionThree__imageh{
                         @include imageh (200px,300px,center);
                         @include transicion (all 500ms ease-out);
-                        @media (max-width:480px){
+                        @include mobile-f(sm){
                             width: 200px;
                             height: 200px;
                             padding-bottom: 15%;
@@ -129,12 +143,12 @@ main{
                         background: $backgroundMan-capa;
                         @include transicionCapa (all 500ms ease-out);
                         @include imageh-capa (absolute,0,100%,100%,center,0,hidden);
-                        @media (max-wdith:480px) {
-                            width: 250px;
-                            padding-top: 100%;
+                        @include mobile-f (sm) {
+                            width: 200px;
+                            height: 200px;
                         }
+
                     }
-                    
                     
                 }
             }
@@ -143,16 +157,28 @@ main{
     }
 
     .contenedorCalzado{
+        @include mobile-f(sm){
+            width: 100%;
+            margin-right: 100px;
+        }
         &__subtitulo{
             text-align: center;
             padding: 15vh;
+            @include mobile-f{
+                font-size: 1rem;
+            }
         }
         &__urbans{
             display: nth($displays, $n: 2);
             @include urbans(30% 30%,1fr 1fr,12px,20px,40px 0px ,center);
             grid-template-areas: "item1" "item2" "item3" "item4";
-            @media (max-width:480px) {
-                width: 450px;
+            @include mobile-f (sm){
+                display: grid;
+                grid-template-columns: 28% 28%;
+                grid-template-rows: 1fr 1fr;
+                justify-content: center;
+                align-items: center;
+                column-gap: 50px;
             }
             .contenedorCalzado__adidas{
                 grid-area: "item1";
@@ -174,8 +200,10 @@ main{
                 overflow: nth($overflow, $n: 2);
                 @include transicionBasis(all 300ms ease-in-out);
                 @include boxShadow (0 2px 4px $color-divider,8px);
-                @media (max-width:480px) {
-                    width: $max-width;
+                @include  mobile-f(sm) {
+                    width:150px;
+                    margin:0;
+                    align-self: center;
                 }
                 &:hover{
                     transform:translateY(-20px);
@@ -183,7 +211,7 @@ main{
                 }
                 .contenedorCalzado__shoe{
                     @include shoes(350px,300px,center,20px);
-                    @media (max-width:480px) {
+                    @include mobile-f (sm){
                         width: 200px;
                         height: 200px;
                     }

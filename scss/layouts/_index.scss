@@ -1,9 +1,8 @@
 
 header{  
-    position: sticky;
     top: 0;
     width:$width-menu ;
-    @media only screen and (min-width:480px) and (max-width:1024px){
+    @include mobile-f(sm){
         width: $max-width;
     }
     .presentacion{
@@ -31,51 +30,57 @@ header{
         .logoTitulo{
             @include logoTitulo($font,2rem,$color-primary,left,$color-secundary,$width-logo);
             @include navIndex (1px,10px,);
-            @media only screen and (min-width:480px) and (max-width:1024px){
+            @include mobile-f(sm){
                 font-size:1.5rem;
                 overflow-x:visible;
             }
         }
-        @media only screen and (min-width:480px) and (max-width:1024px){
+        @include mobile-f(sm){
             width: $max-width;
             margin: auto;
         }
-    }
-    .navbar{
-        .baka{
-            @include menus(none,relative,$color-h1);
-            @include menuIndex(flex,space-evenly,100%,20px);
-            .submenuBaka{
-                @include submenus(none,absolute,none,$color-submenu);
-                @media (max-width:480px) {
-                    display: none;
-                    overflow: hidden;
-                }
-                    &:hover{
-                        display: block;
-                        text-align: left;
+        .navBar{
+            .baka{
+                @include menus(none,relative,$color-h1);
+                @include menuIndex(flex,space-evenly,100%,center);
+                
+                .submenuBaka{
+                    @include submenus(none,absolute,none,$color-submenu);
+                    @include mobile-f(sm){
+                        display: none;
+                        overflow: hidden;
                     }
-                li{
-                    @include lista(inline-block,0,none,relative);
-                    &:hover{
-                        display: block;
-                        text-align: left;
-                        
+                        &:hover{
+                            display: block;
+                            text-align: left;
+                        }
+                    li{
+                        @include lista(inline-block,0,none,relative);
+                        &:hover{
+                            display: block;
+                            text-align: left;
+                            color: $color-texto;
+                            
+                        }
                     }
                 }
             }
         }
     }
+    
 }
 main{
     
     .encabezado{
         @include encabezado_content($color-primary,50px,10%,100px,100%,inline-block);
-        @media(min-width:480px) and (max-width:1024px){
+        @include mobile-f (sm){
 
             width: $max-width;
-            height:300px;
+            height:250px;
             
+        }
+        @include mobile-l (sm){
+            height: 250px;
         }
         
         .encabezado-h1{
@@ -83,39 +88,68 @@ main{
             &__textoLorem{
                 @include lorem (1rem,center,$color-texto,expanded);
 
-                @media (min-width:480px) and (max-width:1024px){
-                    .encabezado-h1__textoLorem{
+                @include mobile-f(sm){
                     text-align:center;
-                    }
+                }
+                @include mobile-l (sm){
+                    font-size: 1.5rem;
                 }
             }
         }
     }
     .manIndex{
         padding-top: 5%;
-        @media (min-width:480px) and (max-width:1024px){
-            .row{
-                display:nth($displays, $n: 1);
-                position:nth($position, $n: 2);
-                justify-content: center;
+    
+        @include mobile-f(sm){
+            width: $max-width;
+        }
+        @include mobile-l (sm){
+            padding-bottom: 50px;
+        }
+        .container-fluid{
+                .row{
+                    display:nth($displays, $n: 1);
+                    position:nth($position, $n: 2);
+                    justify-content: center;
+                    @include mobile-f(sm){
+                        display: flex;
+                        justify-content: center;
+                        position: relative;
+                        height: 100px; 
+                    }
+                    @include mobile-l(sm){
+                        display: block;
+                        justify-content: center;
+                        position: relative;
+                    }
+                    .manIndex__h2{
+                        @include man-h2(49.6px,center,$color-primary,$background-man,3px);
+                        @include mobile-f(sm) {
+                            width:$max-width;
+                            display: flex;
+                            text-align: center;
+                            padding: 20px; 
+                        @include mobile-l(sm){
+                            text-align: center;
+                            width: 100%;
+                            height: 90px;
+                        }
+                    }
+                }
             }
         }
-        &__h2{
-            @include man-h2(49.6px,center,$color-primary,$background-man,3px);
-            @media (min-width:480px) and (max-width:1024px) {
-                width:$max-width;
-                height:90px;
-            }
-        }
+        
         .contenedorMan{
             @include contenedor-man(center,100%,50vh);
-            @media (min-width:480px) and (max-width:1024px) {
-                .contenedorMan{
-                    position:nth($position, $n: 2);
-                }
+            @include mobile-f (sm) {
+                position:nth($position, $n: 2);
+                
             }
             figure{
                 @include figura (relative,250px,300px,hidden);
+                @include mobile-f(sm){
+                    padding-bottom: 50px;
+                }
                 &:hover>.capa{
                     opacity: 1;
                     visibility: visible;
@@ -134,10 +168,14 @@ main{
                     height: $max-height;
                     @include capa(absolute,0,$backgroundMan-capa,center,0,hidden);
                     @include transicion(all 500ms ease-out);
+                    @include mobile-f (sm){
+                        height: 250px;
+                    }
                     &:hover{
                         @include hover-capa(visible,1);
                         @include transicion(all 500ms ease-out);
                         padding-top: 80px;
+                        
                     }
                     h3{
                         @include h3(20px,$color-parrafos,400px);
@@ -159,35 +197,38 @@ main{
     }
     .kidIndex{
         padding-top: $paddingsIndex;
-        @media  (min-width:480px) and (max-width:1024px){
-            .kidIndex__h2{
-                width: $max-width;
-                height:300px;
-            }
+        @include mobile-f(sm){
+            width: $max-width;
+            padding-top: 50px;
         }
         &__h2{
             @include kid-h2(49.6px,center,$color-primary,$background-man,3px);
-            @media (min-width:480px) and (max-width:1024px){
-                width:$max-width;
-                text-align:center;
+            @include mobile-f(sm){
+                display: flex;
+                text-align: center;
+                padding: 20px; 
             }
         }
         &__contenedor{
             @include kid-contenedor (50px,flex,nowrap,space-around);
-            @media (min-width:480px) and (max-width:1024px){
-                .kidIndex__contenedor{
-                    display:nth($displays, $n: 1);
-                    flex-wrap:wrap;
-                    flex-direction:row;
-                }
-            
+            @include mobile-f (sm){
+                display: flex;
+                
+            }
+            @include mobile-l (sm){
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
             }
             &__imag{
                 @include kidImag (80%,400px,400px);
-                @media (min-width:480px) and (max-width:1024px){
-
-                    width:300px;
-                    height:350px;
+                @include mobile-f(sm){
+                    width:150px;
+                    height:200px;
+                }
+                @include mobile-l(sm){
+                    height: 300px;
+                    width: 250px;
                 }
             }
         }
@@ -201,57 +242,90 @@ main{
         padding-top: $paddingsIndex;
         margin:10px;
         width: $max-width;
+        div{
+            p{
+                @include mobile-f (sm){
+                    font-size: 2.5vh;
+                    text-align: center;
+                    margin: 12px;
+                }
+            }
+        }
+        .womanIndex__ropa{
+            width: 300px;
+            height: 300px;
+            @include mobile-f (sm){
+                width: 200px;
+                height: 200px;
+                border-radius: 5px;
+                align-items: center;
+    
+            }
+            @include mobile-l (sm){
+                width: 200px;
+                height: 200px;
+            }
+        }
         &__contenedor{
             @include womanContenedor(grid,33% 33% 33%,60px 0px,center);
-        
+            @include mobile-f(sm){
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 20% 20% 20%;
+                column-gap: 40px;
+                
+            }
+            @include mobile-l(sm){
+                display: grid;
+                grid-template-columns: 30% 30% 30%;
+                grid-template-rows: 1fr;
+                column-gap: 40px;
+                row-gap: 30px;
+            }
             grid-template-areas: "item1" "item2" "item3";
             &_1{
                 grid-area: "item1";
-                @media (min-width:480px) and (max-width:1024px){
+                @include mobile-f(sm){
                     align-self: center;
                 }
+            }
+
             }
             &_2{
                 grid-area: "item2";
-                @media (min-width:480px) and (max-width:1024px){
+                @include mobile-f(sm){
                     align-self: center;
                 }
+
             }
             &_3{
                 grid-area: "item3";
-                @media (min-width:480px) and (max-width:1024px){
+                @include mobile-f(sm){
                     align-self: center;
                 }
             }
-            @media (min-width:480px) and (max-width:1024px){
-                .womanIndex__contenedor{
-                    display:nth($displays, $n:1 );
-                    flex-direction: wrap;
-                }
-            }
-            
         }
-        &__ropa{
-            width: 300px;
-            height: 300px;
-            @media (min-width:480px) and (max-width:1024px){
-                width: 200px;
-                height: 300px;
-                border-radius: 5px;
-
-            }
-        }
-        
-
     }
+    
+    
+    
     .container-fluid{
         .textProducts{
             color: $color-texto;
             padding:80px;
             font-size: 3rem;
-            @media (min-width:480px) and (max-width:1024px){
-                font-size: 3rem;
+            @include mobile-f(sm){
+                font-size: 2rem;
                 text-align: center;
+                
+            }
+        }
+        table{
+            @include mobile-f (sm){
+                font-size: 15px;
+                display: block;
+                text-align: left;
+                
             }
         }
         .tablaTodo{
@@ -261,9 +335,9 @@ main{
         }
         .tablaProducts__model{
             @include model-tabla(10px,5%,350px,$color-primary);
-            @media (min-width:480px) and (max-width:1024px){
-                width: 200px;
-                height: 200px;
+            @include mobile-f(sm){
+                width: 150px;
+                height: 150px;
             }
         }
     }
@@ -282,7 +356,9 @@ main{
         background: hsl(0, 3%, 6%);
         @include transicion (all 500ms ease-out);
         @include boton (5%,$color-parrafos,pointer,49.6px,100px,none);
-
+        @include mobile-f(sm){
+            display:none;
+        }
         &::before{
             content: "";
             display:nth($displays, $n:3 );
@@ -297,7 +373,7 @@ main{
             transition: color 0.6s cubic-bezier(0.53, 0.21, 0, 1);
             &::before{
                 transform-origin: 0 0;
-            transform: scaleX(1); 
+                transform: scaleX(1); 
             }
         }
         &:hover::before{
@@ -320,7 +396,7 @@ main{
     }
 
     
-}
+
 
 
 

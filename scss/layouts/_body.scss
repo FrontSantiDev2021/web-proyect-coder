@@ -13,4 +13,9 @@ body{
         text-decoration:none;
         color:inherit;
     }
+    hr{
+        @include mobile-f(sm){
+            display:none;
+        }
+    }
 }

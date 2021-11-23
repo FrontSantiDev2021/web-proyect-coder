@@ -29,11 +29,11 @@
     color: $color;
     width: $ancho;
 }
-@mixin menuIndex($display,$espacio,$ancho,$alto) {
+@mixin menuIndex($display,$espacio,$ancho,$alineacion) {
     display: $display;
     justify-content: $espacio;
     width: $ancho;
-    height: $alto
+    text-align: $alineacion;
 }
 @mixin presentacionTexto($size,$estilo,$alineacion,$color,$espaciado,$posicion,$arriba,$derecha,$transformacion){
     font-size:$size;
@@ -412,3 +412,5 @@
     background-clip: $bg-clip;
     -webkit-text-fill-color: $text-fill;
 }
+
+

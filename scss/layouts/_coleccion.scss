@@ -1,13 +1,18 @@
 .sectionFour{
     padding-bottom: 5%;
+    width: $max-width;
     &__japon{
         width: 400px;
         height: 400px;
         @include transicionCapa (all 500ms ease-out);
-        @media (max-width:480px) {
+        @include mobile-f (sm){
             width: 300px;
             height: 300px;
             padding-bottom: 50px;
+        }
+        @include mobile-l(sm){
+            width: 200px;
+            height: 200px;
         }
         &:hover{
             @include transicionCapa (all 500ms ease-in-out);
@@ -31,15 +36,29 @@
             display: flex;
             flex-direction: column;
             justify-items: center;
-            justify-content: space-around;
-                
+            justify-content: space-around;   
+
+        }
+        @include mobile-l(sm){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            column-gap: 100px;
+            justify-content: center;
 
         }
         
         &_foto{
             position: nth($position, $n: 2);
             height: $height-min;
-
+            @include mobile-l(sm){
+                display: grid;
+                grid-template-columns: 30% 30%;
+                grid-template-rows: 1fr;
+                column-gap: 100px;
+                justify-content: center;
+    
+            }
             div{
                 overflow: nth($overflow, $n: 2);
                 position: nth($position, $n: 2 );
@@ -54,6 +73,9 @@
                     background: $background-coleccion;
                     @include transicionCapa (all 500ms ease-out);
                     @include coleccion-capa(0,400px,100%,start,0,hidden);
+                    @include mobile-f(sm){
+                        display: inline-block;
+                    }
 
                     &:hover{
                         transition: all 500ms ease-in-out;
