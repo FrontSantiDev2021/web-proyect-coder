@@ -349,6 +349,11 @@ main{
         text-decoration:none;
         color:inherit;
     }
+    .boton_footer{
+        background:$background-index;
+        border:none;
+        
+    }
     .boton{
         display: nth($displays, $n: 5);
         overflow: nth($overflow, $n: 2 );

@@ -164,7 +164,7 @@ main{
         &__subtitulo{
             text-align: center;
             padding: 15vh;
-            @include mobile-f{
+            @include mobile-f(sm){
                 font-size: 1rem;
             }
         }

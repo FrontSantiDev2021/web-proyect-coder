@@ -33,6 +33,11 @@ body a {
   }
 }
 
+body .boton_footer {
+  background: linear-gradient(40deg, #1441d2 21%, #f6813f 40%, #ced082 60%);
+  border: none;
+}
+
 header {
   top: 0;
   width: 100%;
@@ -634,6 +639,11 @@ a {
   color: inherit;
 }
 
+.boton_footer {
+  background: linear-gradient(40deg, #1441d2 21%, #f6813f 40%, #ced082 60%);
+  border: none;
+}
+
 .boton {
   display: inline-block;
   overflow: hidden;
@@ -739,6 +749,12 @@ main .sectionThree_parrafoStyle {
           animation: shine 5s linear infinite;
 }
 
+@media screen and (max-width: 480px) {
+  main .sectionThree_parrafoStyle {
+    font-size: 50px;
+  }
+}
+
 @-webkit-keyframes shine {
   to {
     background-position: 200% center;
@@ -788,6 +804,13 @@ main .sectionThree__modelsMan .fotoBig {
 @media screen and (max-width: 480px) {
   main .sectionThree__modelsMan .fotoBig {
     padding-bottom: 30%;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  main .sectionThree__modelsMan .fotoBig {
+    width: 250px;
+    height: 200px;
   }
 }
 
@@ -1087,6 +1110,7 @@ main .sectionTwo__womanRopa {
 
 .sectionFour {
   padding-bottom: 5%;
+  width: 100%;
 }
 
 .sectionFour__japon {
@@ -1096,11 +1120,18 @@ main .sectionTwo__womanRopa {
   transition: all 500ms ease-out;
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .sectionFour__japon {
     width: 300px;
     height: 300px;
     padding-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .sectionFour__japon {
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -1160,9 +1191,41 @@ main .sectionTwo__womanRopa {
   }
 }
 
+@media screen and (min-width: 480px) {
+  .sectionFour__gridColeccion {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    -webkit-column-gap: 100px;
+            column-gap: 100px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .sectionFour__gridColeccion_foto {
   position: relative;
   height: 500px;
+}
+
+@media screen and (min-width: 480px) {
+  .sectionFour__gridColeccion_foto {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 30% 30%;
+        grid-template-columns: 30% 30%;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    -webkit-column-gap: 100px;
+            column-gap: 100px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .sectionFour__gridColeccion_foto div {
@@ -1196,6 +1259,12 @@ main .sectionTwo__womanRopa {
   text-align: start;
   opacity: 0;
   visibility: hidden;
+}
+
+@media screen and (max-width: 480px) {
+  .sectionFour__gridColeccion_foto div .gridColeccion_foto__capa {
+    display: inline-block;
+  }
 }
 
 .sectionFour__gridColeccion_foto div .gridColeccion_foto__capa:hover {
