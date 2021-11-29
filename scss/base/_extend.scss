@@ -117,11 +117,9 @@
     background-color: $bg-color;
     border-radius: $border;
 }
-@mixin  contenedor-man($justify,$ancho,$largo) {
-    justify-content: $justify;
-    width: $ancho;
-    height:$largo;
-    display: flex;
+@mixin  contenedor-man($ancho) {
+    width:$ancho;
+    
 }
 @mixin figura($posicion,$ancho,$alto,$desbordamiento,) {
     position: $posicion;
@@ -197,6 +195,12 @@
     margin: $margen;
     justify-items: $items;
     
+}
+@mixin p-woman ($espaciado,$espaciado-l,$size,){
+    word-spacing: $espaciado;
+    letter-spacing: $espaciado-l;
+    font-size: $size;
+
 }
 @mixin formulario($relleno,$relleno-b,$posicion) {
     padding-top: $relleno;

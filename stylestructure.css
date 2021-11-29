@@ -808,8 +808,10 @@ a{
     text-decoration: none;
     color: inherit;
 }
-@media only screen and (min-width: 480px) and (max-width: 1024px){
-    header{
+@media only screen and (min-width:12px) {
+    
+
+ header{
         width: 100%;
     
     }
@@ -908,7 +910,7 @@ a{
     .womanIndex__contenedor{
         display: flex;
         flex-direction: wrap;
-        
+        flex-wrap: wrap;
         justify-content: space-evenly;
     }
     .womanIndex__contenedor_1{
@@ -944,8 +946,46 @@ a{
         width: 200px;
         height: 200px;
     }
-}
+    .sectionThree__modelsMan{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        row-gap: 20px;
+        width: 100%;
+        margin: 0;
+        padding-bottom: 100px;
+    }
+    
+    .sectionThree__basis{
+        width: 250px;
+        height: 250px;
+    }
+    .sectionThree__imageh{
+        width: 200px;
+        height: 240px;
+    }
+    .fotoBig div:hover >.fotoBig_capa{
+        opacity: 0;
+        visibility: hidden;
+        top: 0;
+    }
+    .fotoBig div:hover >.sectionThree__imageh{
+        height:260px;
+        width: 250px;
+        transition: all 500ms ease-in-out;
+    }
+    .sectionThree__imageh:hover{    
+        transform: translate(0,-7px);
+        border:black;
+    }
+    .Fotos div:hover >.Fotos__capa{
+        opacity: 0;
+        visibility: hidden;
+        top: 0;
+    }
+    
 
+}
 
 @media only screen and (max-width: 480px){
     header{

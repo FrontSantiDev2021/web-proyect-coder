@@ -5,6 +5,9 @@ header{
     @include mobile-f(sm){
         width: $max-width;
     }
+    @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+
+    }
     .presentacion{
         .presentacion_texto{
             @include presentacionTexto(1rem,italic,center,$color-texto,2px,absolute,50%,50%,translate(-50%,-50%));
@@ -35,7 +38,7 @@ header{
                 overflow-x:visible;
             }
         }
-        @include mobile-f(sm){
+        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
             width: $max-width;
             margin: auto;
         }
@@ -72,128 +75,159 @@ header{
 main{
     
     .encabezado{
-        @include encabezado_content($color-primary,50px,10%,100px,100%,inline-block);
+        @include encabezado_content($color-primary,50px,10%,200px,100%,inline-block);
+        
         @include mobile-f (sm){
 
             width: $max-width;
-            height:250px;
-            
+            height:300px;      
         }
-        @include mobile-l (sm){
-            height: 250px;
-        }
+        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+            height: 350px;
         
+        }
+      
         .encabezado-h1{
             @include encabezado_h1(center,$color-h1);
+            @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                font-size :50px;
+            }
             &__textoLorem{
-                @include lorem (1rem,center,$color-texto,expanded);
+                @include lorem (2rem,center,$color-texto,expanded);
 
                 @include mobile-f(sm){
                     text-align:center;
+                    font-size: 20px;
                 }
-                @include mobile-l (sm){
-                    font-size: 1.5rem;
-                }
+                
             }
         }
     }
+
     .manIndex{
         padding-top: 5%;
-    
+        margin: 0 auto;
+        width: 100%;
         @include mobile-f(sm){
             width: $max-width;
         }
-        @include mobile-l (sm){
-            padding-bottom: 50px;
-        }
+        
         .container-fluid{
                 .row{
                     display:nth($displays, $n: 1);
                     position:nth($position, $n: 2);
                     justify-content: center;
+                    @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)) {
+                        display: flex;
+                        position: relative;
+                    }
                     @include mobile-f(sm){
                         display: flex;
                         justify-content: center;
                         position: relative;
                         height: 100px; 
                     }
-                    @include mobile-l(sm){
-                        display: block;
-                        justify-content: center;
-                        position: relative;
-                    }
+
+                    
                     .manIndex__h2{
                         @include man-h2(49.6px,center,$color-primary,$background-man,3px);
+                        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                            width:100%;
+                            height: 90px;
+                            text-align: center;
+                        }
                         @include mobile-f(sm) {
                             width:$max-width;
                             display: flex;
                             text-align: center;
                             padding: 20px; 
-                        @include mobile-l(sm){
-                            text-align: center;
-                            width: 100%;
-                            height: 90px;
-                        }
+                        
                     }
                 }
+            }
+        }
+        .contenedor-box{
+            width:100%;
+            height:500px;
+            .row{
+                display: flex;
+                display: wrap;
+                .bono{
+                    background-color: aqua;
+                    height: 200px;
+                    
+                }
+                .papach{
+                    background-color: black;
+                    height: 400px;
+                    .contenedorMan{
+                        @include contenedor-man(100%);
+                        
+                        @include mobile-f (sm) {
+                            position:nth($position, $n: 2);
+                        }
+                        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                            position:nth($position, $n: 2);
+                            padding-bottom: 10%;
+                        }
+                        figure{
+                            @include figura (relative,250px,300px,hidden);
+                            @include mobile-f(sm){
+                                padding-bottom: 50px;
+                            }
+                            &:hover>.capa{
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                            &:hover>.h3{
+                                margin-top: 60px;
+                                margin-bottom :20px; ;
+                            }
+                            img{
+                                width: $max-width;
+                                height: $max-height;
+                                @include transicion(all 500ms ease-out);
+                                @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                                    width: 400px;
+                                    height: 450px;
+                                    position:relative;
+                                    top:2%;
+                                }
+                            }
+                            .capa{
+                                width: $max-width;
+                                height: $max-height;
+                                @include capa(absolute,0,$backgroundMan-capa,center,0,hidden);
+                                @include transicion(all 500ms ease-out);
+                                @include mobile-f (sm){
+                                    height: 250px;
+                                }
+                                &:hover{
+                                    @include hover-capa(visible,1);
+                                    @include transicion(all 500ms ease-out);
+                                    padding-top: 80px;
+                                    
+                                }
+                                h3{
+                                    @include h3(20px,$color-parrafos,400px);
+                                    @include transicion(all 500ms ease-out);
+                                    &:hover>.h3{
+                                        
+                                        margin-top: 60px;
+                                        margin-bottom :20px; 
+                                    }
+                                }
+                                p{
+                                    @include p ($silver,15px,1.5,100%,$max-width,auto);
+                                }
+                                
+                            }
+                        }
+                    } 
+                }   
             }
         }
         
-        .contenedorMan{
-            @include contenedor-man(center,100%,50vh);
-            @include mobile-f (sm) {
-                position:nth($position, $n: 2);
-                
-            }
-            figure{
-                @include figura (relative,250px,300px,hidden);
-                @include mobile-f(sm){
-                    padding-bottom: 50px;
-                }
-                &:hover>.capa{
-                    opacity: 1;
-                    visibility: visible;
-                }
-                &:hover>.h3{
-                    margin-top: 60px;
-                    margin-bottom :20px; ;
-                }
-                img{
-                    width: $max-width;
-                    height: $max-height;
-                    @include transicion(all 500ms ease-out);
-                }
-                .capa{
-                    width: $max-width;
-                    height: $max-height;
-                    @include capa(absolute,0,$backgroundMan-capa,center,0,hidden);
-                    @include transicion(all 500ms ease-out);
-                    @include mobile-f (sm){
-                        height: 250px;
-                    }
-                    &:hover{
-                        @include hover-capa(visible,1);
-                        @include transicion(all 500ms ease-out);
-                        padding-top: 80px;
-                        
-                    }
-                    h3{
-                        @include h3(20px,$color-parrafos,400px);
-                        @include transicion(all 500ms ease-out);
-                        &:hover>.h3{
-                            
-                            margin-top: 60px;
-                            margin-bottom :20px; 
-                        }
-                    }
-                    p{
-                        @include p ($silver,15px,1.5,100%,$max-width,auto);
-                    }
-                    
-                }
-            }
-            
-        }
     }
     .kidIndex{
         padding-top: $paddingsIndex;
@@ -215,21 +249,14 @@ main{
                 display: flex;
                 
             }
-            @include mobile-l (sm){
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-            }
+           
             &__imag{
                 @include kidImag (80%,400px,400px);
                 @include mobile-f(sm){
                     width:150px;
                     height:200px;
                 }
-                @include mobile-l(sm){
-                    height: 300px;
-                    width: 250px;
-                }
+                
             }
         }
         &__niñoDescripcion{
@@ -242,6 +269,9 @@ main{
         padding-top: $paddingsIndex;
         margin:10px;
         width: $max-width;
+        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+            margin:0 auto;
+        }
         div{
             p{
                 @include mobile-f (sm){
@@ -261,10 +291,13 @@ main{
                 align-items: center;
     
             }
-            @include mobile-l (sm){
-                width: 200px;
-                height: 200px;
+            @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                width: 250px;
+                height:300px;
+                border-radius:5px;
             }
+            
+            
         }
         &__contenedor{
             @include womanContenedor(grid,33% 33% 33%,60px 0px,center);
@@ -275,19 +308,23 @@ main{
                 column-gap: 40px;
                 
             }
-            @include mobile-l(sm){
-                display: grid;
-                grid-template-columns: 30% 30% 30%;
-                grid-template-rows: 1fr;
-                column-gap: 40px;
-                row-gap: 30px;
+            @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                display: flex;
+                flex-direction: wrap;
+                justify-content: center;
+                justify-items: center;
+                flex-wrap: wrap;
+                column-gap:40px;
             }
+            
             grid-template-areas: "item1" "item2" "item3";
             &_1{
                 grid-area: "item1";
+                @include p-woman (50px,5px,1rem);
                 @include mobile-f(sm){
                     align-self: center;
                 }
+                
             }
 
             }
@@ -348,6 +385,12 @@ main{
     a{
         text-decoration:none;
         color:inherit;
+    }
+    hr{
+        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+            padding: 50px;
+            color: transparent;
+        }
     }
     .boton_footer{
         background:$background-index;

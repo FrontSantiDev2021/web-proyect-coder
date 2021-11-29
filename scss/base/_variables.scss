@@ -11,7 +11,19 @@ $teal:    #20c997;
 $cyan:    #0dcaf0;
 $silver:  silver;
 
+/*/paleta nueva de colores*/ 
+$color-1:rgb(249,248,251);
+$color-2:rgb(248,244,232);
+$color-3:#333231;
+$color-4:rgb(164,164,164);
+$color-5:rgb(167,83,90);
+
+
+
+
+
 /*/*/
+
 $color-texto:rgb(252,242,242);
 $color-gradiente: rgba(20,65,210,1) 31%, rgba(246,129,63,1) 56%, rgba(206,208,130,1) 75%;
 $color-primary:black;
@@ -83,8 +95,4 @@ $breakpoints:(
         @content;   
     }
 }
-@mixin mobile-l ($breakpoint) {
-    @media  screen and (min-width: map-get($breakpoints,$breakpoint)){
-        @content;
-    }
-}
+

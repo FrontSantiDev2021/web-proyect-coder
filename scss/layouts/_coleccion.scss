@@ -10,7 +10,7 @@
             height: 300px;
             padding-bottom: 50px;
         }
-        @include mobile-l(sm){
+        @include mobile-f(md){
             width: 200px;
             height: 200px;
         }
@@ -32,14 +32,14 @@
     &__gridColeccion{
         display: nth($displays, $n:2 );
         @include grid-coleccion (40% 40%,1fr,5%,center,60px 20px,center,center);
-        @media (max-width:480px) {
+        @include mobile-f(sm) {
             display: flex;
             flex-direction: column;
             justify-items: center;
             justify-content: space-around;   
 
         }
-        @include mobile-l(sm){
+        @include mobile-f(md){
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr;
@@ -51,7 +51,7 @@
         &_foto{
             position: nth($position, $n: 2);
             height: $height-min;
-            @include mobile-l(sm){
+            @include mobile-f(md){
                 display: grid;
                 grid-template-columns: 30% 30%;
                 grid-template-rows: 1fr;

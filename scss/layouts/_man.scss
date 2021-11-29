@@ -40,10 +40,7 @@ main{
                 @include mobile-f(sm){
                     padding-bottom: 30%;
                 }
-                @include mobile-l (sm){
-                    width: 250px;
-                    height: 200px;
-                }
+              
                 h5{
                     color:$color-texto;
                     @include h5 (0.8rem,oblique,capitalize,lighter);
