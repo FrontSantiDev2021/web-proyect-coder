@@ -31,7 +31,7 @@ header{
     }
     nav{
         .logoTitulo{
-            @include logoTitulo($font,2rem,$color-primary,left,$color-secundary,$width-logo);
+            @include logoTitulo($font,2rem,$color-primary,left,$width-logo);
             @include navIndex (1px,10px,);
             @include mobile-f(sm){
                 font-size:1.5rem;
@@ -75,7 +75,7 @@ header{
 main{
     
     .encabezado{
-        @include encabezado_content($color-primary,50px,10%,200px,100%,inline-block);
+        @include encabezado_content($color-primary,50px,10%,250px,100%,inline-block);
         
         @include mobile-f (sm){
 
@@ -108,6 +108,7 @@ main{
         padding-top: 5%;
         margin: 0 auto;
         width: 100%;
+        
         @include mobile-f(sm){
             width: $max-width;
         }
@@ -150,12 +151,18 @@ main{
             width:100%;
             height:500px;
             .row{
-                display: flex;
-                display: wrap;
+                row-gap: 20px;
+                column-gap:20px;
                 .bono{
                     background-color: aqua;
-                    height: 200px;
-                    
+                    height: 300px;
+                
+                }
+                .bonus{
+                    display: block;
+                    margin: 20px;    
+                    background-color: rgb(103, 172, 172);
+                    height: 100px;
                 }
                 .papach{
                     background-color: black;
@@ -171,6 +178,7 @@ main{
                             padding-bottom: 10%;
                         }
                         figure{
+                            margin: 0 auto;
                             @include figura (relative,250px,300px,hidden);
                             @include mobile-f(sm){
                                 padding-bottom: 50px;
@@ -244,14 +252,23 @@ main{
             }
         }
         &__contenedor{
-            @include kid-contenedor (50px,flex,nowrap,space-around);
+            @include kid-contenedor (50px,flex,nowrap,space-evenly);
             @include mobile-f (sm){
                 display: flex;
                 
             }
            
             &__imag{
-                @include kidImag (80%,400px,400px);
+                @include kidImag (400px,400px);  
+                transform:translate(0px);
+                -ms-transform:translate(0px);
+                transition: all 200ms ease-in;
+                &:hover{
+                    transform:translate(20px,0px);
+                    transform: scale(1.1);
+                    
+                }
+
                 @include mobile-f(sm){
                     width:150px;
                     height:200px;
@@ -282,8 +299,8 @@ main{
             }
         }
         .womanIndex__ropa{
-            width: 300px;
-            height: 300px;
+            margin: 0 auto;
+            height: 500px;
             @include mobile-f (sm){
                 width: 200px;
                 height: 200px;
@@ -300,7 +317,8 @@ main{
             
         }
         &__contenedor{
-            @include womanContenedor(grid,33% 33% 33%,60px 0px,center);
+            width: 100%;
+        
             @include mobile-f(sm){
                 display: grid;
                 grid-template-columns: 1fr;

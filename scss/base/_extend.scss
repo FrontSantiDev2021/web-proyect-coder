@@ -21,12 +21,11 @@
     letter-spacing: $letraEspacio;
     word-spacing: $palabraEspacio;
 }
-@mixin logoTitulo($letra,$size,$fondo,$alineacion,$color,$ancho) {
+@mixin logoTitulo($letra,$size,$fondo,$alineacion,$ancho) {
     font-family: $letra;
     font-size: $size;
     background-color: $fondo;
     text-align:$alineacion;
-    color: $color;
     width: $ancho;
 }
 @mixin menuIndex($display,$espacio,$ancho,$alineacion) {
@@ -179,15 +178,9 @@
     text-align: $align;
     color:$color;
 }
-@mixin kidImag($border,$ancho,$alto) {
-    border-radius: $border;
+@mixin kidImag($ancho,$alto) {
     width: $ancho;
     height:$alto;
-}
-%kidImag{
-    border-radius: 80%;
-    width: 400px;
-    height: 400px;
 }
 @mixin womanContenedor ($display,$columns,$margen,$items) {
     display: $display;
