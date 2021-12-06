@@ -1,9 +1,10 @@
 
 main{
-    .sectionTwo__subtitle{
+    .sectionTwo_subtitle{
         @include mujer-subtitle (3px,20px,8px);
-        color: $color-texto;
-        background-color: $color-primary;
+        padding-bottom: 50px;
+        color: $color-4;
+    
     }
     .sectionTwo__carouselImag{
         border-radius: 10%;

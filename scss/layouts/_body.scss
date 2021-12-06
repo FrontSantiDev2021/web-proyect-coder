@@ -2,9 +2,15 @@
     margin:0;
     padding:0;
 }
+
 body{
     font-family: $font;
-    @include cuerpo (hidden,$backgroundImage,repeat,100% 100%,center);
+    font-style: Thin 100 italic;
+    @include backgroundBody(linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%),1000);
+    color:#555;
+    transform: translate3d(0,0,0);
+   
+
     ul{
         list-style:none;
 

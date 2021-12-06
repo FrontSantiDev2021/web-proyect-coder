@@ -1,12 +1,4 @@
 
-@mixin cuerpo ($desbordamiento,$fondo,$fondo-rep,$fondo-tam,$fondo-pos){
-    overflow-x: $desbordamiento;
-    background: $fondo;
-    background-repeat: $fondo-rep;
-    background-size: $fondo-tam;
-    background-position: $fondo-pos;
-
-}
 @mixin text($estilo,$alineacion,$color,$ancho) {
     font-style: $estilo;
     text-align: $alineacion;
@@ -90,13 +82,12 @@
     list-style: $lista;
     position: $posicion;
 }
-@mixin encabezado_content($bg-color,$relleno-t,$relleno-b,$alto,$ancho,$display) {
+@mixin encabezado_content($bg-color,$relleno-t,$relleno-b,$alto,$ancho) {
     background-color: $bg-color;
     padding-top: $relleno-t;
     padding-bottom: $relleno-b;
     height:$alto;
     width: $ancho;
-    display: $display;
 }
 @mixin encabezado_h1($alineacion,$color){
     text-align: $alineacion;
@@ -159,12 +150,9 @@
     max-width: $max-ancho;
     margin: $margen;
 }
-@mixin kid-h2 ($alto,$alineacion,$color,$bg-color,$border){
+@mixin kid-h2 ($alto){
     height: $alto;
-    text-align: $alineacion;
-    color: $color;
-    background-color: $bg-color;
-    border-radius: $border;
+    
 }
 @mixin kid-contenedor ($relleno,$display,$flex,$justify){
     padding-top: $relleno;
@@ -216,24 +204,23 @@
     height: $alto;
     color: $color;
 }
-@mixin subtitleCategories($espaciado,$size,$borde,$color,$fondo-color){
+@mixin subtitleCategories($espaciado,$size,$color){
     letter-spacing: $espaciado;
     font-size: $size;
-    border-radius: $borde;
     color: $color;
-    background-color: $fondo-color;
+    text-align: center;
 }
 @mixin parrafo-style ($letra,$relleno) {
     font-size: $letra;
     padding: $relleno;
     text-align: center;
+    text-transform: capitalize;
 }
-@mixin modelsMan ($relleno-t,$relleno-b,$display,$justify,$margen-l,$alineacion) {
+@mixin modelsMan ($relleno-t,$relleno-b,$display,$justify,$alineacion) {
     padding-top: $relleno-t;
     padding-bottom: $relleno-b;
     display: $display;
     justify-content: $justify;
-    margin-left: $margen-l;
     align-content: $alineacion;
 }
 @mixin  Basis ($transition) {
@@ -243,11 +230,19 @@
     flex-basis: $basis;
     height: $alto;
 }
-@mixin imagenBasis ($sombra,$basis,$transformacion,$border){
+
+@mixin calzado_subtitulo ($alineacion,$ancho,$transformacion,$relleno) {
+    text-align: $alineacion;
+    width: $ancho;
+    text-transform: $transformacion;
+    padding: $relleno;
+  
+}
+@mixin imagenBasis ($sombra,$basis,$transformacion){
     box-shadow: $sombra;
     flex-basis: $basis;
     transform: $transformacion;
-    border: $border;
+   
 }
 @mixin transicionBasis ($transition){
     transition: ($transition);
@@ -331,11 +326,10 @@
 
 
 /*/-------------------------------------*/
-@mixin boton($border,$color,$cursor,$alto,$ancho,$borde) {
+@mixin boton($border,$color,$cursor,$ancho,$borde) {
     border-radius: $border;
     color: $color;
     cursor: $cursor;
-    height: $alto;
     width: $ancho;
     border: $borde;
 }
@@ -352,22 +346,9 @@
     letter-spacing: $spacing;
     font-size: $size;
     border-radius: $radius;
+    
 }
-@mixin div-grid ($borde,$justify,$alineacion) {
-    border-radius: $borde;
-    justify-content: $justify;
-    align-items: $alineacion;
-}
-@mixin grid-coleccion ($columns,$filas,$espacio,$justify,$margen,$alineacion,$alineacion-c) {
-    grid-template-columns: $columns;
-    grid-template-rows: $filas;
-    grid-column-gap:$espacio ;
-    justify-content: $justify;
-    margin: $margen;
-    align-items: $alineacion;
-    align-content:$alineacion-c;
 
-}
 @mixin hover-japon ($ancho,$alto,$transformacion) {
     width: $ancho;
     height: $alto;
@@ -409,5 +390,35 @@
     background-clip: $bg-clip;
     -webkit-text-fill-color: $text-fill;
 }
+@mixin keyframe ($property){
+    @-webkit-keyframes #{$property} {
+        @content;
+    }
+    
+    @-moz-keyframes #{$property} {
+        @content;
+    }
+    
+    @-o-keyframes #{$property} {
+        @content;
+    }
+    @keyframes #{$property} {
+        @content;
+      }
+}
+@mixin backgroundBody ($background,$persepctive) {
+    background: $background;
+    perspective: $persepctive;
+    font-style:Thin 100 italic;
+    
+}
+@mixin box-col ($display,$alineacion,$justify,$size){
+    display: $display;
+    align-items: $alineacion;
+    justify-items: $justify;
+    font-size: $size;
+}
+
+
 
 

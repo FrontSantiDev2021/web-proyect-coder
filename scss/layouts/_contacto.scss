@@ -1,20 +1,28 @@
 .formulary{
     @include formulario (20%,300px);
     position: nth($position, $n:2);
-    .line-wipe{     
-        @media (max-width:480px) {
-            display: block;
-            padding: 40%;
-        }   
-        background: $background-index;
-        @include line-wipe (200% auto,text,transparent);      
-        animation: shine 5s linear infinite;
-        @keyframes shine {
-            to {
-            background-position: 200% center;
-            }
+    .formulary__title{
+        display: block;
+        margin: 0;
+        p{
+            color:$color-3;
+            font-weight: bolder;
         }
-        
+        .line-wipe{     
+            @media (max-width:480px) {
+                display: block;
+                padding: 40%;
+            }   
+            background: $background-index;
+            @include line-wipe (200% auto,text,transparent);      
+            animation: shine 5s linear infinite;
+            @keyframes shine {
+                to {
+                background-position: 200% center;
+                }
+            }
+            
+        }
     }
     &__style{
         background: $background-index;

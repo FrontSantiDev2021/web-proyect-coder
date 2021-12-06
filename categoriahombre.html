@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
@@ -66,7 +67,7 @@
                             <a class="nav-link dropdown-item" href="contacto.html">Contacto </a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link  dropdown-toggle dropdown-item" href="categoriacoleccion.html"> Collecion </a>
+                            <a class="nav-link  dropdown-item" href="categoriacoleccion.html"> Collecion </a>
                         </li>
                     </ul>
                 </div> <!-- navbar-collapse.// -->
@@ -77,47 +78,47 @@
 
     <main>
         <section class="sectionThree">
-            <div class="sectionThree__subtitle bg-gradient">
-                <h1>Hombre</h1>
+            <div class="sectionThree__subtitle">
+                <h1 class="animate__animated animate__fadeInLeft">Hombre</h1>
             </div>
             <p class="sectionThree_parrafoStyle"> variedad exclusiva de productos y todo relacionado con el, pensamos en vos y en tu comodidad.</p>
-
-            <div class="sectionThree__modelsMan">
-                <div class="fotoBig">
-                    <div>
+            <div class="skewed"></div>
+            <div class="sectionThree__modelsMan container-fluid">
+                <div class="fotoBig row">
+                    <div class="col">
                         <img class="sectionThree__basis" src="IMAGENES-seccion-hombre/pexels-bruno-felix-4286956.jpg" alt="bruno-felix-model">
                         <span class="d-block fotoBig_capa " tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="HOLAAAA">
-                            <a href="#" class="link-white">Rever Flow </a>
+                            <a href="" class="link-white">Rever Flow </a>
                         </span>
                     </div>
+                    
                     <h5>Camisas y Accesorios</h5>
-                    <button type="button" class="btn btn-secondary btn-grad " data-bs-container="sectionThree__basis" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+                    <button type="button" class="btn boton " data-bs-container="sectionThree__basis" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
                         comprar
                     </button>
                 </div>
-                <div class="vl "></div>
-                <div class="Fotos">
-                    <div>
+                <div class="Fotos row">
+                    <div class="col" >
                         <img class="sectionThree__imageh" src="IMAGENES-seccion-hombre/pexels-hassan-ouajbir-1306248.jpg" alt="zapatillas-fluor-naranja">
                             <span class="d-block Fotos__capa " tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="HOLAAAA">
-                                <a href="#" class="link-dark">Jean Blast</a>
+                                <a href="#" class="link-white">Jean Blast</a>
                             </span>
                     </div>
                     <h5>Jeanes & Indumentaria</h5>
-                    <button type="button" class="btn btn-secondary btn-grad " data-bs-container="sectionThree__imageh" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Bottom popover">
+                    <button type="button" class="btn boton " data-bs-container="sectionThree__imageh" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Bottom popover">
                         Comprar
                     </button>
                 </div>
-                <div class="Fotos">
-                    <div>
+                <div class="Fotos row">
+                    <div class="col">
                         <img class="sectionThree__imageh" src="IMAGENES-seccion-hombre/pexels-pnw-production-7576564.jpg" alt="pantalon-beige">
                         <span class="d-block Fotos__capa " tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="HOLAAAA">
-                            <a href="#" class="link-dark">Jogger Brown Stylus</a>
+                            <a href="#" class="link-white">Jogger Brown Stylus</a>
                         </span>
                     </div>
                     <h5>Joggers</h5>
-                    <button type="button" class="btn btn-secondary btn-grad " data-bs-container="sectionThree__imageh" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Bottom popover">
-                        Comprar
+                    <button type="button" class="btn boton" data-bs-container="sectionThree__imageh" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Bottom popover">
+                        <span>Comprar</span>
                     </button>
                 </div>
             </div>
@@ -126,9 +127,9 @@
         
 
         <section class="contenedorCalzado">
-            <h2 class=" contenedorCalzado__subtitulo text-white">calzado</h2>
-            
-            <div class="row contenedorCalzado__urbans  ">
+            <h2 class=" contenedorCalzado__subtitulo ">calzado</h2>
+            <div class="h-divider"></div>
+            <div class="row contenedorCalzado__urbans ">
                 <div class="col contenedorCalzado__adidas">
                 <div class="card border-dark cards">
                     <img src="IMAGENES-seccion-hombre/pexels-matthew-barra-812871.jpg" class="card-img-top contenedorCalzado__shoe" alt="...">
@@ -169,36 +170,9 @@
             
         </section>
     </main>
-    <article class="backgroundAnimated">
-        <div>
-            <!-- Button trigger modal -->
-            <div class="text-center backgroundAnimated__botoNosotros">
-                <button type="button" class=" btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Nosotros
-                </button>
-            </div>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Place of Body</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                    Bienvenido, esta tienda se dedica basicamente a la venta de Indumentaria basada en Hombres,Mujeres y Niños ,
-                    con un amplio inventario de ellos, Disfrutala
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
 
-    </article>
-
-    <footer class="bg-black text-center py-5">
+    <footer class="bg-black banner py-5 ">
         <div class="container px-5">
             <div class="text-white-50 small">
                 <div class="mb-2">seguinos en</div>

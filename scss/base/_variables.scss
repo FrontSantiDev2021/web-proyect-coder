@@ -18,16 +18,16 @@ $color-3:#333231;
 $color-4:rgb(164,164,164);
 $color-5:rgb(167,83,90);
 
-
+$color-gradiente: rgb(164,164,164) 31%, rgb(167,83,90) 56%, rgba(206,208,130,1) 75%;
 
 
 
 /*/*/
 
 $color-texto:rgb(252,242,242);
-$color-gradiente: rgb(164,164,164) 31%, rgb(167,83,90) 56%, rgba(206,208,130,1) 75%;
+
 $color-primary:black;
-$font: "Bebas Neue",cursive;
+$font: 'Montserrat', sans-serif;
 $color-secundary: #ffba79;
 $color-submenu:rgb(255,255,255);
 $color-h1: rgb(247,211,211);
@@ -36,7 +36,7 @@ $color-divider: rgb(114,96,102);
 $paddingsIndex:52px;
 
 
-$background-index:linear-gradient(40deg, rgb(164,164,164) 31%, rgb(167,83,90) 56%, rgba(206,208,130,1) 75%);
+$background-index:linear-gradient(90deg,  #333231 5%, rgb(167,83,90) 56%, rgb(248,244,232) 100%);
 $background-coleccion:rgba(205,255,226,0.6);
 $background-btn:linear-gradient(to right,#CC95C0 0%, #DBD4B4  51%, #CC95C0  100%);
 $backgroundMan-capa:rgba(102, 97, 104, 0.6);

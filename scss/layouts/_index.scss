@@ -1,467 +1,693 @@
-
-header{  
-    top: 0;
-    width:$width-menu ;
-    @include mobile-f(sm){
-        width: $max-width;
-    }
-    @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
-
-    }
-    .presentacion{
-        .presentacion_texto{
-            @include presentacionTexto(1rem,italic,center,$color-texto,2px,absolute,50%,50%,translate(-50%,-50%));
-        }
-        background:$background-index;
-        @include presentacion(100%,30px,200% 200%,relative);
-        @include anima (degradado, 8s ,ease-in-out, infinite);
+body{
+    header{  
+        top: 0;
+        width:$width-menu ;
         
-        @include keyframes(degradado) {
-            0%{
-                background-position: 0% 50%;
-            }
-            50%{
-                background-position: 100% 50%;
-            }
-            100%{
-                background-position: 0% 50%;
-            }
-        }
-        
-    }
-    nav{
-        .logoTitulo{
-            @include logoTitulo($font,2rem,$color-primary,left,$width-logo);
-            @include navIndex (1px,10px,);
-            @include mobile-f(sm){
-                font-size:1.5rem;
-                overflow-x:visible;
-            }
+        @include mobile-f(sm){
+            width: $max-width;
         }
         @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
-            width: $max-width;
-            margin: auto;
+
         }
-        .navBar{
-            .baka{
-                @include menus(none,relative,$color-h1);
-                @include menuIndex(flex,space-evenly,100%,center);
+        .presentacion{
+            .presentacion_texto{
+                @include presentacionTexto(1rem,italic,center,$color-texto,2px,absolute,50%,50%,translate(-50%,-50%));
+            }
+            background:$background-index;
+            @include presentacion(100%,30px,200% 200%,relative);
+            @include anima (degradado, 8s ,ease-in-out, infinite);
+            
+            @include keyframes(degradado) {
+                0%{
+                    background-position: 0% 50%;
+                }
+                50%{
+                    background-position: 100% 50%;
+                }
+                100%{
+                    background-position: 0% 50%;
+                }
+            }
+            
+        }
+        nav{
+            .active{
+                &:hover a{
+                color: rgb(0, 0, 0) !important;
+                }
+            }
+            .nav-item{
+                &:hover a{
+                    color: rgb(0, 0, 0) !important;
+                }
+            }
+            .logoTitulo{
+                @include logoTitulo($font,2rem,$color-1,left,$width-logo);
                 
-                .submenuBaka{
-                    @include submenus(none,absolute,none,$color-submenu);
-                    @include mobile-f(sm){
-                        display: none;
-                        overflow: hidden;
-                    }
-                        &:hover{
-                            display: block;
-                            text-align: left;
+                @include navIndex (1px,10px,);
+                @include mobile-f(sm){
+                    font-size:1.5rem;
+                    overflow-x:visible;
+                }
+            }
+            @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                width: $max-width;
+                margin: auto;
+            }
+            .navBar{
+                .baka{
+                    @include menus(none,relative,$color-h1);
+                    @include menuIndex(flex,space-evenly,100%,center);
+                    
+                    .submenuBaka{
+                        @include submenus(none,absolute,none,$color-submenu);
+                        @include mobile-f(sm){
+                            display: none;
+                            overflow: hidden;
                         }
-                    li{
-                        @include lista(inline-block,0,none,relative);
-                        &:hover{
-                            display: block;
-                            text-align: left;
-                            color: $color-texto;
+                            &:hover{
+                                display: block;
+                                text-align: left;
+                            }
+                        li{
+                            @include lista(inline-block,0,none,relative);
+                            &:hover{
+                                display: block;
+                                text-align: left;
+                                color: $color-texto;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    main{
+        
+        .encabezado{
+            @include encabezado_content($color-primary,50px,10%,250px,100%);
+            
+            @include mobile-f (sm){
+
+                width: $max-width;
+                height:300px;      
+            }
+            @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                height: 350px;
+            
+            }
+            div{
+                display:block; 
+                overflow:hidden;
+                white-space:nowrap;
+                span{
+                    color:$color-1;
+                    font-weight: lighter;
+                }
+                .encabezado-h1{
+                    @include encabezado_h1(center,$color-h1);
+                    @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                        font-size :50px;
+                    }
+                        
+                }
+                &:first-of-type{
+                    animation: showup 7s infinite;
+                }
+                &:last-of-type{
+                    width:0px;
+                    animation: reveal 7s infinite;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+                &:last-of-type span {
+                    margin-left:-355px;
+                    animation: slidein 7s infinite;
+                }
+                @keyframes showup{
+                    0% {
+                        opacity:0;
+                    }
+                    20% {
+                        opacity:1;
+                    }
+                    80% {
+                        opacity:1;
+                    }
+                    100% {
+                        opacity:0;
+                    }
+                }
+                @keyframes slidein {
+                    0% { 
+                        margin-left:-800px; 
+                    }
+                    20% { 
+                        margin-left:-800px;
+                    }
+                    35% {
+                        margin-left:0px;
+                        }
+                    100% { 
+                        margin-left:0px;
+                    }
+                }
+                @keyframes reveal {
+                    0% {
+                        opacity:0;
+                        width:0px;
+                    }
+                    20% {
+                        opacity:1;
+                        width:0px;
+                    }
+                    30% {
+                        width:355px;
+                    }
+                    80% {
+                        opacity:1;
+                    }
+                    100% {
+                        opacity:0;
+                        width:355px;
+                    }
+                }
+                
+            }
+            
+                
+            
+        }
+
+        .manIndex{
+            padding-top: 5%;
+            margin: 0 auto;
+            width: 100%;
+            
+            @include mobile-f(sm){
+                width: $max-width;
+            }
+            
+            .container-fluid{
+                    .row{
+                        display:nth($displays, $n: 1);
+                        position:nth($position, $n: 2);
+                        justify-content: center;
+                        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)) {
+                            display: flex;
+                            position: relative;
+                        }
+                        @include mobile-f(sm){
+                            display: flex;
+                            justify-content: center;
+                            position: relative;
+                            height: 100px; 
+                        }
+
+                        
+                        .manIndex__h2{
+                            @include man-h2(49.6px,center,$color-primary,$background-man,3px);
+                            @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                                width:100%;
+                                height: 90px;
+                                text-align: center;
+                            }
+                            @include mobile-f(sm) {
+                                width:$max-width;
+                                display: flex;
+                                text-align: center;
+                                padding: 20px; 
                             
                         }
                     }
                 }
             }
-        }
-    }
-    
-}
-main{
-    
-    .encabezado{
-        @include encabezado_content($color-primary,50px,10%,250px,100%,inline-block);
-        
-        @include mobile-f (sm){
-
-            width: $max-width;
-            height:300px;      
-        }
-        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
-            height: 350px;
-        
-        }
-      
-        .encabezado-h1{
-            @include encabezado_h1(center,$color-h1);
-            @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
-                font-size :50px;
-            }
-            &__textoLorem{
-                @include lorem (2rem,center,$color-texto,expanded);
-
-                @include mobile-f(sm){
-                    text-align:center;
-                    font-size: 20px;
-                }
+            .contenedor-box{
+                width:100%;
+                height:500px;
                 
-            }
-        }
-    }
-
-    .manIndex{
-        padding-top: 5%;
-        margin: 0 auto;
-        width: 100%;
-        
-        @include mobile-f(sm){
-            width: $max-width;
-        }
-        
-        .container-fluid{
                 .row{
-                    display:nth($displays, $n: 1);
-                    position:nth($position, $n: 2);
-                    justify-content: center;
-                    @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)) {
-                        display: flex;
-                        position: relative;
+                    row-gap: 20px;
+                    column-gap:20px;
+                    position:nth($position, $n:2);
+                    .manIndex__title{
+                        height: 400px;
+                    
                     }
-                    @include mobile-f(sm){
+                    .manIndex__parrafo{
+                        display: block;
+                        margin: 20px;    
+                        height: 100px;
+                    }
+                    #box-col{
                         display: flex;
+                        align-items: center;
                         justify-content: center;
+                        color: white;
+                        font-size: 2.5rem;
+                    }
+                    
+                    .manIndex__imagen{
+                        height: 400px;
+                    }
+                    .contenedorBox{
                         position: relative;
-                        height: 100px; 
+                        @include backgroundBody (linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%),1000);
+                        --borderWidth: 8px;
+                        border-radius: var(--borderWidth);
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            top: calc(-1 * var(--borderWidth));
+                            left: calc(-1 * var(--borderWidth));
+                            height: calc(100% + var(--borderWidth) * 2);
+                            width: calc(100% + var(--borderWidth) * 2);
+                            background: linear-gradient(60deg, $color-4, $color-5, $color-3, $color-2);
+                            border-radius: calc(2 * var(--borderWidth));
+                            z-index: -1;
+                            animation: animatedgradient 3s ease alternate infinite;
+                            background-size: 300% 300%;
+                            opacity: 30%;
+                        }
+                        @keyframes animatedgradient {
+                            0% {
+                                background-position: 0% 50%;
+                            }
+                            50% {
+                                background-position: 100% 50%;
+                            }
+                            100% {
+                                background-position: 0% 50%;
+                            }
+                        }
                     }
 
-                    
-                    .manIndex__h2{
-                        @include man-h2(49.6px,center,$color-primary,$background-man,3px);
-                        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
-                            width:100%;
-                            height: 90px;
-                            text-align: center;
                         }
-                        @include mobile-f(sm) {
-                            width:$max-width;
-                            display: flex;
-                            text-align: center;
-                            padding: 20px; 
-                        
-                    }
-                }
-            }
-        }
-        .contenedor-box{
-            width:100%;
-            height:500px;
-            .row{
-                row-gap: 20px;
-                column-gap:20px;
-                .bono{
-                    background-color: aqua;
-                    height: 300px;
-                
-                }
-                .bonus{
-                    display: block;
-                    margin: 20px;    
-                    background-color: rgb(103, 172, 172);
-                    height: 100px;
-                }
-                .papach{
-                    background-color: black;
-                    height: 400px;
-                    .contenedorMan{
-                        @include contenedor-man(100%);
-                        
-                        @include mobile-f (sm) {
-                            position:nth($position, $n: 2);
-                        }
-                        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
-                            position:nth($position, $n: 2);
-                            padding-bottom: 10%;
-                        }
-                        figure{
-                            margin: 0 auto;
-                            @include figura (relative,250px,300px,hidden);
-                            @include mobile-f(sm){
-                                padding-bottom: 50px;
+                        .contenedorMan{
+                            @include contenedor-man(100%);
+                            background: transparent;
+                            padding:2rem;
+                            @include mobile-f (sm) {
+                                position:nth($position, $n: 2);
                             }
-                            &:hover>.capa{
-                                opacity: 1;
-                                visibility: visible;
+                            @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                                position:nth($position, $n: 2);
+                                padding-bottom: 10%;
                             }
-                            &:hover>.h3{
-                                margin-top: 60px;
-                                margin-bottom :20px; ;
-                            }
-                            img{
-                                width: $max-width;
-                                height: $max-height;
-                                @include transicion(all 500ms ease-out);
-                                @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
-                                    width: 400px;
-                                    height: 450px;
-                                    position:relative;
-                                    top:2%;
+                            figure{
+                                margin: 0 auto;
+                            
+                                @include figura (relative,250px,300px,hidden);
+                                @include mobile-f(sm){
+                                    padding-bottom: 50px;
                                 }
-                            }
-                            .capa{
-                                width: $max-width;
-                                height: $max-height;
-                                @include capa(absolute,0,$backgroundMan-capa,center,0,hidden);
-                                @include transicion(all 500ms ease-out);
-                                @include mobile-f (sm){
-                                    height: 250px;
+                                &:hover>.capa{
+                                    opacity: 1;
+                                    visibility: visible;
                                 }
-                                &:hover{
-                                    @include hover-capa(visible,1);
+                                &:hover>.h3{
+                                    margin-top: 60px;
+                                    margin-bottom :20px; ;
+                                }
+                                img{
+                                    width: $max-width;
+                                    height: $max-height;
                                     @include transicion(all 500ms ease-out);
-                                    padding-top: 80px;
-                                    
-                                }
-                                h3{
-                                    @include h3(20px,$color-parrafos,400px);
-                                    @include transicion(all 500ms ease-out);
-                                    &:hover>.h3{
-                                        
-                                        margin-top: 60px;
-                                        margin-bottom :20px; 
+                                    @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                                        width: 400px;
+                                        height: 450px;
+                                        position:relative;
+                                        top:2%;
                                     }
                                 }
-                                p{
-                                    @include p ($silver,15px,1.5,100%,$max-width,auto);
+                                .capa{
+                                    width: $max-width;
+                                    height: $max-height;
+                                    @include capa(absolute,0,$backgroundMan-capa,center,0,hidden);
+                                    @include transicion(all 500ms ease-out);
+                                    @include mobile-f (sm){
+                                        height: 250px;
+                                    }
+                                    &:hover{
+                                        @include hover-capa(visible,1);
+                                        @include transicion(all 500ms ease-out);
+                                        padding-top: 80px;
+                                        
+                                    }
+                                    h3{
+                                        @include h3(20px,$color-parrafos,400px);
+                                        @include transicion(all 500ms ease-out);
+                                        &:hover>.h3{
+                                            
+                                            margin-top: 60px;
+                                            margin-bottom :20px; 
+                                        }
+                                    }
+                                    p{
+                                        @include p ($silver,15px,1.5,100%,$max-width,auto);
+                                    }
+                                    
                                 }
+                            }
+                        } 
+                    }   
+                }
+            }
+            
+        
+        .kidIndex{
+            padding-top: $paddingsIndex;
+            position:relative;
+            .kidIndex__title{
+                height: 200px;
+                
+            }
+            .kid-box{
+                position: relative;
+                @include backgroundBody (linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%),1000);
+                --borderWidth: 4px;
+                border-radius: var(--borderWidth);
+                &:after{
+                    content: '';
+                    position: absolute;
+                    top: calc(-1 * var(--borderWidth));
+                    left: calc(-1 * var(--borderWidth));
+                    height: calc(100% + var(--borderWidth) * 2);
+                    width: calc(100% + var(--borderWidth) * 2);
+                    background: linear-gradient(60deg, $color-4, $color-5, $color-3, $color-2);
+                    border-radius: calc(2 * var(--borderWidth));
+                    z-index: -1;
+                    animation: animatedgradient 3s ease alternate infinite;
+                    background-size: 300% 300%;
+                    opacity: 30%;
+                }
+                @keyframes animatedgradient {
+                    0% {
+                        background-position: 0% 50%;
+                    }
+                    50% {
+                        background-position: 100% 50%;
+                    }
+                    100% {
+                        background-position: 0% 50%;
+                    }
+                }
+            }
+            @include mobile-f(sm){
+                width: $max-width;
+                padding-top: 50px;
+            }
+            &__h2{
+                @include kid-h2(49.6px);
+                @include mobile-f(sm){
+                    display: flex;
+                    text-align: center;
+                    padding: 20px; 
+                }
+            }
+            &__contenedor{
+                @include kid-contenedor (50px,flex,nowrap,space-evenly);
+                @include mobile-f (sm){
+                display: flex;
+                    
+                }
+                &-1{
+                    position: relative;
+                    overflow: hidden;
+                    &:hover>.kidIndex__capa h3{
+                        margin-top: 100px;
+                    
+                    }
+                    
+                    .kidIndex__contenedor__imag-1{
+                        @include kidImag (400px,400px);
+                        transform:translate(0px);
+                    }
+                    &:hover>.kidIndex__capa{
+                        opacity: 1;
+                        visibility: visible;
+                        
+                    }
+                    
+                    .kidIndex__capa{
+                        width: $max-width;
+                        height: $max-height;
+                        @include capa(absolute,0,$backgroundMan-capa,center,0,hidden);
+                        @include transicion(all 500ms ease-out);
+                        &:hover{
+                            @include hover-capa(visible,1);
+                            @include transicion(all 500ms ease-out);
+                            
+                        }
+                        
+                        h3{
+                            @include h3(20px,$color-parrafos,400px);
+                            @include transicion(all 500ms ease-out);
+                            &:hover{
+                                margin-top: 100px;
                                 
                             }
                         }
-                    } 
-                }   
-            }
-        }
+                        
+                        
+                    }
         
-    }
-    .kidIndex{
-        padding-top: $paddingsIndex;
-        @include mobile-f(sm){
-            width: $max-width;
-            padding-top: 50px;
-        }
-        &__h2{
-            @include kid-h2(49.6px,center,$color-primary,$background-man,3px);
-            @include mobile-f(sm){
-                display: flex;
-                text-align: center;
-                padding: 20px; 
-            }
-        }
-        &__contenedor{
-            @include kid-contenedor (50px,flex,nowrap,space-evenly);
-            @include mobile-f (sm){
-                display: flex;
+                }
+                &-2{
+                    position: relative;
+                    overflow: hidden;
+                    &:hover>.kidIndex__capa-2 h3{
+                        margin-top: 100px;
+                    
+                    }
+                    .kidIndex__contenedor__imag-2{
+                        @include kidImag (400px,400px);  
+                        transform:translate(0px);
+                    
+                    }
+                    &:hover>.kidIndex__capa-2{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    .kidIndex__capa-2{
+                        width: $max-width;
+                        height: $max-height;
+                        @include capa(absolute,0,$backgroundMan-capa,center,0,hidden);
+                        @include transicion(all 500ms ease-out);
+                        &:hover{
+                            @include hover-capa(visible,1);
+                            @include transicion(all 500ms ease-out);
+                            cursor: pointer;
+                            
+                        }
+                        h3{
+                            @include h3(20px,$color-parrafos,400px);
+                            @include transicion(all 500ms ease-out);
+                            &:hover{
+                                margin-top: 100px;
+                                
+                            }
+                        }
+                    }
+                    
+                    
+                }
                 
             }
-           
-            &__imag{
-                @include kidImag (400px,400px);  
-                transform:translate(0px);
-                -ms-transform:translate(0px);
-                transition: all 200ms ease-in;
-                &:hover{
-                    transform:translate(20px,0px);
-                    transform: scale(1.1);
+            &__niñoDescripcion{
+                @include kid-descripcion(32px,1rem,center,$color-primary);
+
+            }
+            
+        }
+        .womanIndex{
+            padding-top: $paddingsIndex;
+            margin:10px;
+            width: $max-width;
+            color:$color-primary;
+            @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                margin:0 auto;
+            }
+            div{
+                p{
+                    @include mobile-f (sm){
+                        font-size: 2.5vh;
+                        text-align: center;
+                        margin: 12px;
+                    }
+                }
+            }
+            .womanIndex__ropa{
+                margin: 0 auto;
+                height: 500px;
+                @include mobile-f (sm){
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 5px;
+                    align-items: center;
+        
+                }
+                @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                    width: 250px;
+                    height:300px;
+                    border-radius:5px;
+                }
+                
+                
+            }
+            &__contenedor{
+                width: 100%;
+                text-align: center;
+                @include mobile-f(sm){
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 20% 20% 20%;
+                    column-gap: 40px;
+                    
+                }
+                @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                    display: flex;
+                    flex-direction: wrap;
+                    justify-content: center;
+                    justify-items: center;
+                    flex-wrap: wrap;
+                    column-gap:40px;
+                }
+                
+                grid-template-areas: "item1" "item2" "item3";
+                &_1{
+                    grid-area: "item1";
+                    @include p-woman (50px,5px,1rem);
+                    @include mobile-f(sm){
+                        align-self: center;
+                    }
                     
                 }
 
-                @include mobile-f(sm){
-                    width:150px;
-                    height:200px;
                 }
-                
-            }
-        }
-        &__niñoDescripcion{
-            @include kid-descripcion(32px,1rem,center,$color-texto);
+                &_2{
+                    grid-area: "item2";
+                    @include mobile-f(sm){
+                        align-self: center;
+                    }
 
-        }
+                }
+                &_3{
+                    grid-area: "item3";
+                    @include mobile-f(sm){
+                        align-self: center;
+                    }
+                }
+            }
         
-    }
-    .womanIndex{
-        padding-top: $paddingsIndex;
-        margin:10px;
-        width: $max-width;
-        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
-            margin:0 auto;
-        }
-        div{
-            p{
-                @include mobile-f (sm){
-                    font-size: 2.5vh;
+
+        
+        
+        
+        .container-fluid{
+            .textProducts{
+                color: $color-texto;
+                padding:80px;
+                font-size: 3rem;
+                @include mobile-f(sm){
+                    font-size: 2rem;
                     text-align: center;
-                    margin: 12px;
+                    
+                }
+            }
+            table{
+                @include mobile-f (sm){
+                    font-size: 15px;
+                    display: block;
+                    text-align: left;
+                    
+                }
+            }
+            .tablaTodo{
+                width: $max-width;
+                color: $color-texto;
+                padding: $maxPadding;
+            }
+            .tablaProducts__model{
+                @include model-tabla(10px,5%,350px,$color-primary);
+                @include mobile-f(sm){
+                    width: 150px;
+                    height: 150px;
                 }
             }
         }
-        .womanIndex__ropa{
-            margin: 0 auto;
-            height: 500px;
-            @include mobile-f (sm){
-                width: 200px;
-                height: 200px;
-                border-radius: 5px;
-                align-items: center;
-    
-            }
+        .banner{
+            text-align: center;
+            position: static;
+        }
+        ul{
+            list-style:none;
+
+        }
+        a{
+            text-decoration:none;
+            color:inherit;
+        }
+        hr{
             @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
-                width: 250px;
-                height:300px;
-                border-radius:5px;
+                padding: 50px;
+                color: transparent;
             }
-            
+        }
+        .boton_footer{
+            background:$background-index;
+            border:none;
             
         }
-        &__contenedor{
-            width: 100%;
-        
+        .boton{
+            display: nth($displays, $n: 5);
+            overflow: nth($overflow, $n: 2 );
+            position: nth($position , $n: 2);
+            background: hsl(0, 3%, 6%);
+            @include transicion (all 500ms ease-out);
+            @include boton (5%,$color-parrafos,pointer,100px,none);
             @include mobile-f(sm){
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: 20% 20% 20%;
-                column-gap: 40px;
-                
+                display:none;
             }
-            @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
-                display: flex;
-                flex-direction: wrap;
-                justify-content: center;
-                justify-items: center;
-                flex-wrap: wrap;
-                column-gap:40px;
-            }
-            
-            grid-template-areas: "item1" "item2" "item3";
-            &_1{
-                grid-area: "item1";
-                @include p-woman (50px,5px,1rem);
-                @include mobile-f(sm){
-                    align-self: center;
-                }
-                
-            }
-
-            }
-            &_2{
-                grid-area: "item2";
-                @include mobile-f(sm){
-                    align-self: center;
-                }
-
-            }
-            &_3{
-                grid-area: "item3";
-                @include mobile-f(sm){
-                    align-self: center;
-                }
-            }
-        }
-    }
-    
-    
-    
-    .container-fluid{
-        .textProducts{
-            color: $color-texto;
-            padding:80px;
-            font-size: 3rem;
-            @include mobile-f(sm){
-                font-size: 2rem;
-                text-align: center;
-                
-            }
-        }
-        table{
-            @include mobile-f (sm){
-                font-size: 15px;
-                display: block;
-                text-align: left;
-                
-            }
-        }
-        .tablaTodo{
-            width: $max-width;
-            color: $color-texto;
-            padding: $maxPadding;
-        }
-        .tablaProducts__model{
-            @include model-tabla(10px,5%,350px,$color-primary);
-            @include mobile-f(sm){
-                width: 150px;
-                height: 150px;
-            }
-        }
-    }
-    ul{
-        list-style:none;
-
-    }
-    a{
-        text-decoration:none;
-        color:inherit;
-    }
-    hr{
-        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
-            padding: 50px;
-            color: transparent;
-        }
-    }
-    .boton_footer{
-        background:$background-index;
-        border:none;
-        
-    }
-    .boton{
-        display: nth($displays, $n: 5);
-        overflow: nth($overflow, $n: 2 );
-        position: nth($position , $n: 2);
-        background: hsl(0, 3%, 6%);
-        @include transicion (all 500ms ease-out);
-        @include boton (5%,$color-parrafos,pointer,49.6px,100px,none);
-        @include mobile-f(sm){
-            display:none;
-        }
-        &::before{
-            content: "";
-            display:nth($displays, $n:3 );
-            position: nth($position, $n: 1);
-            background: $background-index;
-            @include botonBefore (0,0,100%,100%,scaleX(0),100% 100%,);
-            transition: transform 0.6s cubic-bezier(0.53, 0.21, 0,1);
-            
-        }
-        &:hover{
-            position: nth($position, $n: 2);
-            transition: color 0.6s cubic-bezier(0.53, 0.21, 0, 1);
             &::before{
-                transform-origin: 0 0;
-                transform: scaleX(1); 
+                content: "";
+                display:nth($displays, $n:3 );
+                position: nth($position, $n: 1);
+                background: $background-index;
+                @include botonBefore (0,0,100%,100%,scaleX(0),100% 100%,);
+                transition: transform 0.6s cubic-bezier(0.53, 0.21, 0,1);
+                
             }
-        }
-        &:hover::before{
-            transform-origin: 0 0;
-            transform: scaleX(1);  
-
-        }
-        span{
-            position: nth($position, $n: 2);
-            transition: color 0.6s cubic-bezier(0.53, 0.21, 0, 1);
             &:hover{
+                position: nth($position, $n: 2);
+                transition: color 0.6s cubic-bezier(0.53, 0.21, 0, 1);
+                &::before{
+                    transform-origin: 0 0;
+                    transform: scaleX(1); 
+                }
+            }
+            &:hover::before{
+                transform-origin: 0 0;
+                transform: scaleX(1);  
+
+            }
+            span{
+                position: nth($position, $n: 2);
+                transition: color 0.6s cubic-bezier(0.53, 0.21, 0, 1);
+                &:hover{
+                    color:$color-h1;
+                }
+            
+            }
+
+            &:hover >span{
                 color:$color-h1;
             }
-           
         }
-
-        &:hover >span{
-            color:$color-h1;
-        }
-    }
-
     
+}
 
 
 

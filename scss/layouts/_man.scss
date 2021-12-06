@@ -1,15 +1,16 @@
 main{
+    
     .sectionThree{
         padding-top: 2%;
+        position: relative;
         @include mobile-f (sm){
             width: 100%;
         }
         &__subtitle{
-            @include subtitleCategories (3px,20px,8px,$color-submenu,rgb(0,0,0));
+            @include subtitleCategories (1px,1rem,$color-1);
             
         }
         &_parrafoStyle{
-            color: $color-parrafos;
             
             @include parrafo-style (2rem,5%);
             @include mobile-f (sm){
@@ -26,24 +27,44 @@ main{
             
             
         }
+        .skewed{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background:$color-4;
+            z-index: -1;
+            transform: skewY(0deg);
+            transform-origin: top right;
+        }
         &__modelsMan{
-            @include modelsMan (34px,120px,flex,space-evenly,30px,center);
+            row-gap: 20px;
+            column-gap:20px;
+            margin: 0 auto;
+            @include modelsMan (34px,120px,flex,space-evenly,center);
             @include mobile-f (sm){
                 display: nth($displays, $n: 1);
                 flex-direction: column;
                 justify-items: center;
                 justify-content: space-around;
             }
+    
             .fotoBig{
                 position: nth($position, $n:2 );
-                height: 400px;
+                background: $color-1;
+                padding:20px;
+                width: 30%;
                 @include mobile-f(sm){
                     padding-bottom: 30%;
                 }
-              
+                
                 h5{
-                    color:$color-texto;
-                    @include h5 (0.8rem,oblique,capitalize,lighter);
+                    color:$color-3;
+                   
+                    @include h5 (0.9rem,oblique,capitalize,bold);
                 }
                 div{
                     position:nth($position, $n:2 ) ;
@@ -57,6 +78,7 @@ main{
                     }
                     .sectionThree__basis{
                         @include transicionBasis (all 300ms ease-in-out);
+                
                         @include sectionBasis (500px,400px);
                         @include mobile-f(sm) {
                             width: 250px;
@@ -66,7 +88,8 @@ main{
                         
     
                         &:hover{
-                            @include imagenBasis(10px 10px 5px grey,550px,translate(0,-7px),$color-primary);
+                            @include imagenBasis(10px 10px 5px grey,550px,translate(0,-7px));
+                            
                         
                         }
                     
@@ -74,8 +97,9 @@ main{
                     
                     .fotoBig_capa{
                         background: $backgroundMan-capa;
-                        @include transicionBasis (all 500ms ease-out);
-                        @include big-capa (absolute,0,100%,100%,start,0,hidden);
+                        color:$color-1;
+                        @include transicionBasis (all 300ms ease-out);
+                        @include big-capa (absolute,0,max-content,100%,start,0,hidden);
                         @include mobile-f (sm) {
                             width: 250px;
                             height: 200px;
@@ -85,26 +109,24 @@ main{
                     }
                 }
             }
-
-            .vl{
-                border-left: 10px solid rgb(114, 96, 102);
-                height: 400px;
-                @media (max-width:480px) {
-                    display: none;
-                }
-            }  
                 
         
             .Fotos{
                 position: nth($position, $n:2 );
-                @include fotos(250px,1px black,bold);
+                width: 20%;;
+                height:400px;
+                background: $color-1;
+                padding:20px;
+                &:hover{
+                    border: 1px solid black;
+                }
                 @include mobile-f (sm){
                     padding-bottom: 30%;
                 }
 
                 h5{
-                    color:$color-texto;
-                    @include h5 (0.8rem,oblique,capitalize,lighter);
+                    color:$color-3;
+                    @include h5 (0.9rem,oblique,capitalize,bold);
                 }
                 
                 div{
@@ -116,8 +138,8 @@ main{
                         
                     }
                     &:hover>.sectionThree__imageh{
-                        height: 20rem;
-                        width: 15rem;
+                
+                        transform: translate(0,-7px);
                         @include transicionBasis (all 300ms ease-in-out);
                         @include mobile-f (sm){
                             width: 230px;
@@ -138,8 +160,10 @@ main{
                     }
                     .Fotos__capa{
                         background: $backgroundMan-capa;
+                        color:$color-1;
+                        font-weight: bold;
                         @include transicionCapa (all 500ms ease-out);
-                        @include imageh-capa (absolute,0,100%,100%,center,0,hidden);
+                        @include imageh-capa (absolute,0,max-content,100%,center,0,hidden);
                         @include mobile-f (sm) {
                             width: 200px;
                             height: 200px;
@@ -158,9 +182,27 @@ main{
             width: 100%;
             margin-right: 100px;
         }
+        .h-divider{
+            color: rgb(17, 17, 17);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: border-bottom .2s ease-in-out;
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                height: 0.30em;
+                min-width: 30vw;
+                border-bottom: 1px solid $color-4;
+            }
+         
+        }
         &__subtitulo{
-            text-align: center;
-            padding: 15vh;
+            @include calzado_subtitulo(center,$max-width,capitalize,5vh);
+            text-rendering: optimizeLegibility;
+            font-weight: bolder;
+            
             @include mobile-f(sm){
                 font-size: 1rem;
             }
@@ -193,8 +235,12 @@ main{
                 grid-area: "item4";
             
             }
+            .card{
+                background:transparent;
+            }
             .cards{
                 overflow: nth($overflow, $n: 2);
+                
                 @include transicionBasis(all 300ms ease-in-out);
                 @include boxShadow (0 2px 4px $color-divider,8px);
                 @include  mobile-f(sm) {
