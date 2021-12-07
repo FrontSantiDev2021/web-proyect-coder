@@ -1929,4 +1929,13 @@ body .nav-item {
   color: #333231;
   font-weight: bold;
 }
+
+body .navbar-toggler {
+  color: #333231;
+  border-color: #a4a4a4;
+}
+
+body .navbar-toggler .navbar-toggler-icon {
+  color: black;
+}
 /*# sourceMappingURL=main.css.map */

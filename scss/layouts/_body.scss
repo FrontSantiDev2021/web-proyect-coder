@@ -58,4 +58,12 @@ body{
         color:$color-3;
         font-weight: bold;
     }
+    .navbar-toggler{
+        color:$color-3;
+        border-color:$color-4;
+        .navbar-toggler-icon{
+            color: black;
+        }
+    }
+    
 }
