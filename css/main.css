@@ -1247,13 +1247,13 @@ main .sectionThree .skewed {
 
 @media screen and (max-width: 480px) {
   main .sectionThree .skewed {
-    display: none;
+    overflow: hidden;
   }
 }
 
 @media (min-width: 480px) and (max-width: 1024px) {
   main .sectionThree .skewed {
-    display: none;
+    overflow: hidden;
   }
 }
 
@@ -1837,13 +1837,13 @@ main .sectionTwo__womanRopa {
 
 @media screen and (max-width: 480px) {
   .formulary__title .line-wipe {
-    display: none;
+    overflow: hidden;
   }
 }
 
 @media (min-width: 480px) and (max-width: 1024px) {
   .formulary__title .line-wipe {
-    display: none;
+    overflow: hidden;
   }
 }
 

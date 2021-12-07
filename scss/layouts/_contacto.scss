@@ -35,11 +35,11 @@
                 }
             }
             @include mobile-f(sm){
-                display:none;
+                overflow: hidden;
 
             }
             @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
-                display: none;
+                overflow:hidden;
             }
             
         }
