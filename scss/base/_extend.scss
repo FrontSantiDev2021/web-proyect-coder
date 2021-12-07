@@ -183,10 +183,10 @@
     font-size: $size;
 
 }
-@mixin formulario($relleno,$relleno-b,$posicion) {
+@mixin formulario($relleno,$relleno-b) {
     padding-top: $relleno;
     padding-bottom: $relleno-b;
-    position: $posicion;
+    
 }
 @mixin formulario-style($alineacion,$relleno,$font-s,$border,$posicion,$top,$left) {
     text-align: $alineacion;

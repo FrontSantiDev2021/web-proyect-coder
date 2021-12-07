@@ -10,11 +10,12 @@ main{
             @include subtitleCategories (1px,1rem,$color-1);
             
         }
-        &_parrafoStyle{
+        &__parrafoStyle{
             
             @include parrafo-style (2rem,5%);
             @include mobile-f (sm){
-                font-size: 50px;
+                padding-top: 30px;
+                font-size: 1.5rem;
             }
             background: $background-index;
             @include line-wipe (200% auto,text,transparent);      
@@ -39,6 +40,13 @@ main{
             z-index: -1;
             transform: skewY(0deg);
             transform-origin: top right;
+            @include mobile-f (sm){
+                height:300px
+            }
+            @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                height: 350px;
+               
+            }
         }
         &__modelsMan{
             row-gap: 20px;
@@ -49,18 +57,31 @@ main{
                 display: nth($displays, $n: 1);
                 flex-direction: column;
                 justify-items: center;
-                justify-content: space-around;
+                
             }
-    
+            @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                display:flex;
+                flex-direction: row;
+                row-gap: 20px;
+                column-gap: 40px;
+                width: 100%;
+                flex-wrap: wrap;
+            }
             .fotoBig{
                 position: nth($position, $n:2 );
                 background: $color-1;
                 padding:20px;
                 width: 30%;
                 @include mobile-f(sm){
-                    padding-bottom: 30%;
+                    padding-bottom: 50px;
+                    width: 100%;
+                    height:300px;
+                    margin: 5px 5px;
                 }
-                
+                @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                    width: 50%;
+                   
+                }
                 h5{
                     color:$color-3;
                    
@@ -85,6 +106,10 @@ main{
                             height: 200px;
                             padding-bottom: 15%;
                         }
+                        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                            
+                            height:350px;
+                        }
                         
     
                         &:hover{
@@ -104,6 +129,10 @@ main{
                             width: 250px;
                             height: 200px;
                         }
+                        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                            
+                            height:350px;
+                        }
                         
                         
                     }
@@ -121,7 +150,16 @@ main{
                     border: 1px solid black;
                 }
                 @include mobile-f (sm){
-                    padding-bottom: 30%;
+                    
+                    padding-bottom: 50px;
+                    width: 100%;
+                    height:300px;
+                    margin: 5px 5px;
+                    
+                }
+                @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                    width: 50%;
+                   
                 }
 
                 h5{
@@ -142,8 +180,7 @@ main{
                         transform: translate(0,-7px);
                         @include transicionBasis (all 300ms ease-in-out);
                         @include mobile-f (sm){
-                            width: 230px;
-                            height:230px;
+                            
                         }
                         
                     }
@@ -151,10 +188,9 @@ main{
                         @include imageh (200px,300px,center);
                         @include transicion (all 500ms ease-out);
                         @include mobile-f(sm){
-                            width: 200px;
+                           
                             height: 200px;
-                            padding-bottom: 15%;
-                            padding-top :15%; 
+                            
                         }
                         
                     }
@@ -213,12 +249,15 @@ main{
             grid-template-areas: "item1" "item2" "item3" "item4";
             @include mobile-f (sm){
                 display: grid;
-                grid-template-columns: 28% 28%;
+                grid-template-columns: 50% 50%;
                 grid-template-rows: 1fr 1fr;
                 justify-content: center;
                 align-items: center;
-                column-gap: 50px;
+                column-gap: 10px;
+                width: 100%;
+                flex-wrap: wrap;
             }
+            
             .contenedorCalzado__adidas{
                 grid-area: "item1";
             
@@ -244,9 +283,9 @@ main{
                 @include transicionBasis(all 300ms ease-in-out);
                 @include boxShadow (0 2px 4px $color-divider,8px);
                 @include  mobile-f(sm) {
-                    width:150px;
-                    margin:0;
+                    height: 250px;
                     align-self: center;
+                    overflow: scroll;
                 }
                 &:hover{
                     transform:translateY(-20px);
@@ -255,8 +294,8 @@ main{
                 .contenedorCalzado__shoe{
                     @include shoes(350px,300px,center,20px);
                     @include mobile-f (sm){
-                        width: 200px;
-                        height: 200px;
+                        width: 150px;
+                        height: 150px;
                     }
                 }
             }

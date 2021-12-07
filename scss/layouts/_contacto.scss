@@ -1,18 +1,31 @@
 .formulary{
-    @include formulario (20%,300px);
-    position: nth($position, $n:2);
-    .formulary__title{
+    @include formulario (20%,500px);
+    position: nth($position, $n: 2);
+    
+    &__title{
         display: block;
         margin: 0;
         p{
             color:$color-3;
             font-weight: bolder;
         }
+        @include mobile-f (sm){
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 300px;
+        }
+        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 300px;
+            text-align: center;
+            width: 100%;
+           
+        }
         .line-wipe{     
-            @media (max-width:480px) {
-                display: block;
-                padding: 40%;
-            }   
+           
             background: $background-index;
             @include line-wipe (200% auto,text,transparent);      
             animation: shine 5s linear infinite;
@@ -29,7 +42,9 @@
         position: nth($position, $n:1);   
         width: 300px;
         @include formulario-style (center,10%,20px,5%,50%,50%,translate(-50%,-50%));
-        
+        @include mobile-f (sm){
+            margin-top: 50px;
+        }
         
         
     }

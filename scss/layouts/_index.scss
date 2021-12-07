@@ -43,7 +43,7 @@ body{
             }
             .logoTitulo{
                 @include logoTitulo($font,2rem,$color-1,left,$width-logo);
-                
+                color: $color-3;
                 @include navIndex (1px,10px,);
                 @include mobile-f(sm){
                     font-size:1.5rem;
@@ -90,12 +90,12 @@ body{
             @include encabezado_content($color-primary,50px,10%,250px,100%);
             
             @include mobile-f (sm){
-
                 width: $max-width;
-                height:300px;      
+                height:250px;  
+                text-align:center;    
             }
             @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
-                height: 350px;
+                height: 300px;
             
             }
             div{
@@ -105,11 +105,16 @@ body{
                 span{
                     color:$color-1;
                     font-weight: lighter;
+                    
                 }
                 .encabezado-h1{
                     @include encabezado_h1(center,$color-h1);
+                    @include mobile-f (sm){
+                        font-size:20px; 
+                          
+                    }
                     @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
-                        font-size :50px;
+                        font-size :2.5rem;
                     }
                         
                 }
@@ -125,6 +130,7 @@ body{
                 &:last-of-type span {
                     margin-left:-355px;
                     animation: slidein 7s infinite;
+                    
                 }
                 @keyframes showup{
                     0% {
@@ -189,21 +195,26 @@ body{
             @include mobile-f(sm){
                 width: $max-width;
             }
+            @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)) {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+                margin: 0 auto;
+            }
             
             .container-fluid{
                     .row{
                         display:nth($displays, $n: 1);
                         position:nth($position, $n: 2);
                         justify-content: center;
-                        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)) {
-                            display: flex;
-                            position: relative;
-                        }
+        
                         @include mobile-f(sm){
                             display: flex;
+                            flex-direction: column;
                             justify-content: center;
-                            position: relative;
-                            height: 100px; 
+                            
+                           
                         }
 
                         
@@ -227,14 +238,30 @@ body{
             .contenedor-box{
                 width:100%;
                 height:500px;
-                
+                @include mobile-f (sm){
+                    display: flex;
+                    flex-direction: column;
+                      
+                }
+                @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                    
+                }
                 .row{
                     row-gap: 20px;
                     column-gap:20px;
                     position:nth($position, $n:2);
                     .manIndex__title{
                         height: 400px;
-                    
+                        @include mobile-f (sm){
+                           
+                            height:200px;   
+                            margin: 0 auto;   
+                        }
+                        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                            width: 400px;
+                            height: 200px;
+                            
+                        }
                     }
                     .manIndex__parrafo{
                         display: block;
@@ -251,12 +278,21 @@ body{
                     
                     .manIndex__imagen{
                         height: 400px;
+                        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                            width: 400px;
+                            height: 400px;
+                        }
+                
                     }
                     .contenedorBox{
                         position: relative;
                         @include backgroundBody (linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%),1000);
                         --borderWidth: 8px;
                         border-radius: var(--borderWidth);
+                        @include mobile-f (sm){
+                            width: 250px;
+
+                        }
                         &:after{
                             content: '';
                             position: absolute;
@@ -291,17 +327,25 @@ body{
                             padding:2rem;
                             @include mobile-f (sm) {
                                 position:nth($position, $n: 2);
+                                display: flex;
+                                flex-wrap: wrap;
+                                padding-bottom: 50px;
                             }
                             @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
                                 position:nth($position, $n: 2);
-                                padding-bottom: 10%;
+                                padding-bottom: 5%;
                             }
                             figure{
                                 margin: 0 auto;
                             
                                 @include figura (relative,250px,300px,hidden);
                                 @include mobile-f(sm){
-                                    padding-bottom: 50px;
+                                    
+                                    height: 300px;
+                                }
+                                @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                                    height: 400px;
+                                    
                                 }
                                 &:hover>.capa{
                                     opacity: 1;
@@ -316,8 +360,8 @@ body{
                                     height: $max-height;
                                     @include transicion(all 500ms ease-out);
                                     @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
-                                        width: 400px;
-                                        height: 450px;
+                                        width: 300px;
+                                        height: 400px;
                                         position:relative;
                                         top:2%;
                                     }
@@ -328,7 +372,7 @@ body{
                                     @include capa(absolute,0,$backgroundMan-capa,center,0,hidden);
                                     @include transicion(all 500ms ease-out);
                                     @include mobile-f (sm){
-                                        height: 250px;
+                                        height: 300px;
                                     }
                                     &:hover{
                                         @include hover-capa(visible,1);
@@ -354,14 +398,25 @@ body{
                         } 
                     }   
                 }
-            }
             
-        
+            
+        }
         .kidIndex{
             padding-top: $paddingsIndex;
             position:relative;
+            
+            &__box{
+                @include mobile-f (sm){
+                    padding-top:100px;
+                    
+                }
+                
+            }
             .kidIndex__title{
                 height: 200px;
+                @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                    margin:40px 40px;
+                }
                 
             }
             .kid-box{
@@ -369,6 +424,15 @@ body{
                 @include backgroundBody (linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%),1000);
                 --borderWidth: 4px;
                 border-radius: var(--borderWidth);
+                @include mobile-f (sm){
+                    
+                    height: 50px;
+                    margin:20px 20px;
+                }
+                @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                    margin:0 auto;
+                    height: 150px;
+                }
                 &:after{
                     content: '';
                     position: absolute;
@@ -410,8 +474,17 @@ body{
             &__contenedor{
                 @include kid-contenedor (50px,flex,nowrap,space-evenly);
                 @include mobile-f (sm){
-                display: flex;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    row-gap:50px;
                     
+                }
+                @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                    display:grid;
+                    grid-template-columns: 1fr 1fr;
+                    column-gap: 50px;
+                    grid-column: 30% 30%;
                 }
                 &-1{
                     position: relative;
@@ -424,6 +497,14 @@ body{
                     .kidIndex__contenedor__imag-1{
                         @include kidImag (400px,400px);
                         transform:translate(0px);
+                        @include mobile-f (sm){
+                            width: 250px;
+                            height: 200px;
+                        }
+                        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                            width:300px;
+                            height:300px;
+                        }
                     }
                     &:hover>.kidIndex__capa{
                         opacity: 1;
@@ -465,6 +546,14 @@ body{
                     .kidIndex__contenedor__imag-2{
                         @include kidImag (400px,400px);  
                         transform:translate(0px);
+                        @include mobile-f (sm){
+                            width: 250px;
+                            height: 200px;
+                        }
+                        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                            width:300px;
+                            height:300px;
+                        }
                     
                     }
                     &:hover>.kidIndex__capa-2{
@@ -476,6 +565,7 @@ body{
                         height: $max-height;
                         @include capa(absolute,0,$backgroundMan-capa,center,0,hidden);
                         @include transicion(all 500ms ease-out);
+                        
                         &:hover{
                             @include hover-capa(visible,1);
                             @include transicion(all 500ms ease-out);
@@ -530,9 +620,9 @@ body{
         
                 }
                 @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
-                    width: 250px;
+                    width: 300px;
                     height:300px;
-                    border-radius:5px;
+                   
                 }
                 
                 
@@ -548,12 +638,8 @@ body{
                     
                 }
                 @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
-                    display: flex;
-                    flex-direction: wrap;
-                    justify-content: center;
-                    justify-items: center;
-                    flex-wrap: wrap;
-                    column-gap:40px;
+                    width: 100%;
+                    height:500px;
                 }
                 
                 grid-template-areas: "item1" "item2" "item3";
@@ -588,7 +674,7 @@ body{
         
         .container-fluid{
             .textProducts{
-                color: $color-texto;
+                color: $color-4;
                 padding:80px;
                 font-size: 3rem;
                 @include mobile-f(sm){
@@ -649,7 +735,7 @@ body{
             @include transicion (all 500ms ease-out);
             @include boton (5%,$color-parrafos,pointer,100px,none);
             @include mobile-f(sm){
-                display:none;
+                display:visible;
             }
             &::before{
                 content: "";

@@ -9,8 +9,28 @@ body{
     @include backgroundBody(linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%),1000);
     color:#555;
     transform: translate3d(0,0,0);
-   
-
+    .nav{
+        
+        .active{
+            &:hover a{
+            color: rgb(0, 0, 0) !important;
+            }
+        }
+        .nav-item{
+            &:hover a{
+                color: rgb(0, 0, 0) !important;
+            }
+        }
+    }
+    .logoTitulo{
+        @include logoTitulo($font,2rem,$color-1,left,$width-logo);
+        color:$color-4;
+        @include navIndex (1px,10px,);
+        @include mobile-f(sm){
+            font-size:1.5rem;
+            overflow-x:visible;
+        }
+    }
     ul{
         list-style:none;
 
@@ -24,9 +44,18 @@ body{
             display:none;
         }
     }
+   
     .boton_footer{
         background:$background-index;
         border:none;
         
+    }
+    .nav-link{
+        color:$color-3;
+        font-weight: bold;
+    }
+    .nav-item{
+        color:$color-3;
+        font-weight: bold;
     }
 }

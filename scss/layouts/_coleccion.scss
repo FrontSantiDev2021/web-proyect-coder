@@ -23,6 +23,23 @@
         margin: 0 auto;
         width: 800px;
         height: 533px;
+        @include mobile-f (sm){
+            max-width:250px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height: 300px;
+            justify-content: center;
+            margin-bottom:50px ;
+        }
+        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+            display:flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            margin-bottom:100px ;
+            max-width: 400px;
+        }
     
         &:hover>.fotoAfter{
             width: 100%;
@@ -46,16 +63,20 @@
                 width:800px;
                 height:500px;
                 margin: 0 auto;
+                @include mobile-f (sm){
+                    width:250px;
+                    height: 300px;
+                    
+                    
+                }
+                @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
+                    width:400px;
+                    height: 500px;
+                }
                
             }
-            @include mobile-f(md){
-                display: grid;
-                grid-template-columns: 30% 30%;
-                grid-template-rows: 1fr;
-                column-gap: 100px;
-                justify-content: center;
-    
-            }
+            
+            
             
             
             
