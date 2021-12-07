@@ -1247,15 +1247,13 @@ main .sectionThree .skewed {
 
 @media screen and (max-width: 480px) {
   main .sectionThree .skewed {
-    height: 300px;
-    z-index: -1;
+    display: none;
   }
 }
 
 @media (min-width: 480px) and (max-width: 1024px) {
   main .sectionThree .skewed {
-    height: 350px;
-    z-index: -1;
+    display: none;
   }
 }
 
@@ -1834,6 +1832,18 @@ main .sectionTwo__womanRopa {
 @keyframes shine {
   to {
     background-position: 200% center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .formulary__title .line-wipe {
+    display: none;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .formulary__title .line-wipe {
+    display: none;
   }
 }
 

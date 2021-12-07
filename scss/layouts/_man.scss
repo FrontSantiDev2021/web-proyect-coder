@@ -41,12 +41,12 @@ main{
             transform: skewY(0deg);
             transform-origin: top right;
             @include mobile-f (sm){
-                height:300px;
-                z-index:-1;
+                
+                display: none;
             }
             @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
-                height: 350px;
-                z-index:-1;
+            
+                display: none;
             }
         }
         &__modelsMan{
