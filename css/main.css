@@ -30,6 +30,7 @@ body header .presentacion {
 }
 
 body header .presentacion .presentacion_texto {
+  text-transform: capitalize;
   font-size: 1rem;
   font-style: italic;
   text-align: center;

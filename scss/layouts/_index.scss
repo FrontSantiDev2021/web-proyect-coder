@@ -11,6 +11,7 @@ body{
         }
         .presentacion{
             .presentacion_texto{
+                text-transform: capitalize;
                 @include presentacionTexto(1rem,italic,center,$color-texto,2px,absolute,50%,50%,translate(-50%,-50%));
             }
             background:$background-index;
