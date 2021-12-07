@@ -1248,6 +1248,7 @@ main .sectionThree .skewed {
 @media screen and (max-width: 480px) {
   main .sectionThree .skewed {
     height: 300px;
+    z-index: -1;
   }
 }
 
