@@ -46,7 +46,7 @@ main{
             }
             @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
                 height: 350px;
-               
+                z-index:-1;
             }
         }
         &__modelsMan{
