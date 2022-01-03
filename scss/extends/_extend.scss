@@ -418,7 +418,31 @@
     justify-items: $justify;
     font-size: $size;
 }
+%designed{
+    background-color: inherit;
+    color: #FFFFFF;
+    display: none;
 
+    padding: 10px 20px;
+    left: -25px;
+    position: absolute;
+    top:-50px;
+}
+%before{
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #777777;
+    bottom: -6px;
+    content: "";
+    height: 0;
+    left: 50%;
+    margin-left: -4px;
+    position: absolute;
+    width: 0;
+}
+%hover-designed{
+    display: block;
+}
 
 
 
