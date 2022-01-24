@@ -1240,6 +1240,8 @@ main .sectionThree__parrafoStyle {
   background-size: 200% auto;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
   -webkit-animation: shine 5s linear infinite;
   -o-animmation: shine 5s linear infinite;
   animation: shine 5s linear infinite;
@@ -1715,6 +1717,8 @@ main .sectionTwo__womanRopa {
   background-size: 200% auto;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
   -webkit-animation: shine 5s linear infinite;
           animation: shine 5s linear infinite;
 }
@@ -1854,9 +1858,22 @@ main .sectionTwo__womanRopa {
   background-size: 200% auto;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
   -webkit-animation: shine 5s linear infinite;
   -o-animmation: shine 5s linear infinite;
   animation: shine 5s linear infinite;
+}
+
+@media screen and (max-width: 480px) {
+  .formulary__title .line-wipe {
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    visibility: visible;
+  }
 }
 
 @keyframes shine {

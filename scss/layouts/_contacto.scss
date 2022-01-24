@@ -33,7 +33,11 @@
             -o-animmation:shine 5s linear infinite;
             -moz-animation: shine 5s linear infinite;     
             animation: shine 5s linear infinite;
-            
+            @include mobile-f (sm){
+                
+                @include line-wipe (200% auto,text,transparent); 
+                visibility: visible;
+            }
             @keyframes shine {
                 
                 to {
