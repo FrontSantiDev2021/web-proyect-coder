@@ -1237,13 +1237,12 @@ main .sectionThree__parrafoStyle {
   text-transform: capitalize;
   background: -webkit-gradient(linear, left top, right top, color-stop(5%, #333231), color-stop(56%, #a7535a), to(#f8f4e8));
   background: linear-gradient(90deg, #333231 5%, #a7535a 56%, #f8f4e8 100%);
-  background-size: 200% auto;
+  background-size: 200%;
+  -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  -o-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+  -ms-text-fill-color: transparent;
   /*//**/
   -webkit-animation: shine 5s linear infinite;
   -o-animmation: shine 5s linear infinite;
@@ -1719,11 +1718,13 @@ main .sectionTwo__womanRopa {
   background: linear-gradient(90deg, #333231 5%, #a7535a 56%, #f8f4e8 100%);
   background-size: 200% auto;
   background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  -o-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+  -moz-animation: shine 5s linear infinite;
   -webkit-animation: shine 5s linear infinite;
-          animation: shine 5s linear infinite;
 }
 
 @keyframes shine {

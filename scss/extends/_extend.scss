@@ -385,13 +385,7 @@
     transform: $transformacion;
     
 }
-@mixin line-wipe ($bg-size,$bg-clip,$text-fill) {
-    background-size: $bg-size;
-    background-clip: $bg-clip;
-    -webkit-text-fill-color: $text-fill;
-    -moz-text-fill-color:transparent;
-    -o-text-fill-color:transparent;
-}
+
 @mixin keyframe ($property){
     @-webkit-keyframes #{$property} {
         @content;
