@@ -88,7 +88,8 @@ $overflow:(
 $breakpoints:(
     sm:480px,
     md:730px,
-    lg:1024px,
+    lg:1224px,
+    xl:1200px,
 );
 @mixin mobile-f ($breakpoint) {
     @media screen and (max-width: map-get($breakpoints,$breakpoint)) {

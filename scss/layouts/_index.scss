@@ -5,9 +5,14 @@ body{
         
         @include mobile-f(sm){
             width: $max-width;
+            
         }
-        @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
-
+        .navbar-index{
+            @include mobile-f(sm){
+                height:30px;
+                margin-bottom:60px;
+                
+            }
         }
         .presentacion{
             .presentacion_texto{
@@ -47,10 +52,12 @@ body{
                 color: $color-3;
                 @include navIndex (1px,10px,);
                 @include mobile-f(sm){
-                    font-size:1.5rem;
+                    font-size:1rem;
                     overflow-x:visible;
+                    
                 }
             }
+           
             @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
                 width: $max-width;
                 margin: auto;
@@ -64,12 +71,13 @@ body{
                         @include submenus(none,absolute,none,$color-submenu);
                         @include mobile-f(sm){
                             display: none;
+                           
                             overflow: hidden;
                         }
-                            &:hover{
-                                display: block;
-                                text-align: left;
-                            }
+                        &:hover{
+                            display: block;
+                            text-align: left;
+                        }
                         li{
                             @include lista(inline-block,0,none,relative);
                             &:hover{

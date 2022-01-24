@@ -45,6 +45,13 @@ body header {
   }
 }
 
+@media screen and (max-width: 480px) {
+  body header .navbar-index {
+    height: 30px;
+    margin-bottom: 60px;
+  }
+}
+
 body header .presentacion {
   background: -webkit-gradient(linear, left top, right top, color-stop(5%, #333231), color-stop(56%, #a7535a), to(#f8f4e8));
   background: linear-gradient(90deg, #333231 5%, #a7535a 56%, #f8f4e8 100%);
@@ -115,12 +122,12 @@ body header nav .logoTitulo {
 
 @media screen and (max-width: 480px) {
   body header nav .logoTitulo {
-    font-size: 1.5rem;
+    font-size: 1rem;
     overflow-x: visible;
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   body header nav {
     width: 100%;
     margin: auto;
@@ -189,7 +196,7 @@ body main .encabezado {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   body main .encabezado {
     height: 300px;
   }
@@ -217,7 +224,7 @@ body main .encabezado div .encabezado-h1 {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   body main .encabezado div .encabezado-h1 {
     font-size: 2.5rem;
   }
@@ -356,7 +363,7 @@ body main .manIndex {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   body main .manIndex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -405,7 +412,7 @@ body main .manIndex .container-fluid .row .manIndex__h2 {
   border-radius: 3px;
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   body main .manIndex .container-fluid .row .manIndex__h2 {
     width: 100%;
     height: 90px;
@@ -459,7 +466,7 @@ body main .manIndex .contenedor-box .row .manIndex__title {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   body main .manIndex .contenedor-box .row .manIndex__title {
     width: 400px;
     height: 200px;
@@ -490,7 +497,7 @@ body main .manIndex .contenedor-box .row .manIndex__imagen {
   height: 400px;
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   body main .manIndex .contenedor-box .row .manIndex__imagen {
     width: 400px;
     height: 400px;
@@ -571,7 +578,7 @@ body main .manIndex .contenedor-box .contenedorMan {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   body main .manIndex .contenedor-box .contenedorMan {
     position: relative;
     padding-bottom: 5%;
@@ -598,7 +605,7 @@ body main .manIndex .contenedor-box .contenedorMan figure {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   body main .manIndex .contenedor-box .contenedorMan figure {
     height: 400px;
   }
@@ -621,7 +628,7 @@ body main .manIndex .contenedor-box .contenedorMan figure img {
   transition: all 500ms ease-out;
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   body main .manIndex .contenedor-box .contenedorMan figure img {
     width: 300px;
     height: 400px;
@@ -694,7 +701,7 @@ body .kidIndex .kidIndex__title {
   height: 200px;
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   body .kidIndex .kidIndex__title {
     margin: 40px 40px;
   }
@@ -717,7 +724,7 @@ body .kidIndex .kid-box {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   body .kidIndex .kid-box {
     margin: 0 auto;
     height: 150px;
@@ -800,7 +807,7 @@ body .kidIndex__contenedor {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   body .kidIndex__contenedor {
     display: -ms-grid;
     display: grid;
@@ -835,7 +842,7 @@ body .kidIndex__contenedor-1 .kidIndex__contenedor__imag-1 {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   body .kidIndex__contenedor-1 .kidIndex__contenedor__imag-1 {
     width: 300px;
     height: 300px;
@@ -902,7 +909,7 @@ body .kidIndex__contenedor-2 .kidIndex__contenedor__imag-2 {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   body .kidIndex__contenedor-2 .kidIndex__contenedor__imag-2 {
     width: 300px;
     height: 300px;
@@ -961,7 +968,7 @@ body .womanIndex {
   color: black;
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   body .womanIndex {
     margin: 0 auto;
   }
@@ -991,7 +998,7 @@ body .womanIndex .womanIndex__ropa {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   body .womanIndex .womanIndex__ropa {
     width: 300px;
     height: 300px;
@@ -1017,7 +1024,7 @@ body .womanIndex__contenedor {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   body .womanIndex__contenedor {
     width: 100%;
     height: 500px;
@@ -1118,7 +1125,7 @@ body a {
   color: inherit;
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   body hr {
     padding: 50px;
     color: transparent;
@@ -1234,7 +1241,8 @@ main .sectionThree__parrafoStyle {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: shine 5s linear infinite;
-          animation: shine 5s linear infinite;
+  -o-animmation: shine 5s linear infinite;
+  animation: shine 5s linear infinite;
 }
 
 @media screen and (max-width: 480px) {
@@ -1272,13 +1280,7 @@ main .sectionThree .skewed {
           transform-origin: top right;
 }
 
-@media screen and (max-width: 480px) {
-  main .sectionThree .skewed {
-    overflow: hidden;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   main .sectionThree .skewed {
     overflow: hidden;
   }
@@ -1314,7 +1316,7 @@ main .sectionThree__modelsMan {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   main .sectionThree__modelsMan {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1348,7 +1350,7 @@ main .sectionThree__modelsMan .fotoBig {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   main .sectionThree__modelsMan .fotoBig {
     width: 50%;
   }
@@ -1390,7 +1392,7 @@ main .sectionThree__modelsMan .fotoBig div .sectionThree__basis {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   main .sectionThree__modelsMan .fotoBig div .sectionThree__basis {
     height: 350px;
   }
@@ -1428,7 +1430,7 @@ main .sectionThree__modelsMan .fotoBig div .fotoBig_capa {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   main .sectionThree__modelsMan .fotoBig div .fotoBig_capa {
     height: 350px;
   }
@@ -1455,7 +1457,7 @@ main .sectionThree__modelsMan .Fotos:hover {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   main .sectionThree__modelsMan .Fotos {
     width: 50%;
   }
@@ -1750,7 +1752,7 @@ main .sectionTwo__womanRopa {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   .sectionFour__Coleccion {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1803,7 +1805,7 @@ main .sectionTwo__womanRopa {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   .sectionFour__Coleccion .ColeccionBox .japon_foto {
     width: 400px;
     height: 500px;
@@ -1835,7 +1837,7 @@ main .sectionTwo__womanRopa {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   .formulary__title {
     position: absolute;
     top: 0;
@@ -1853,7 +1855,8 @@ main .sectionTwo__womanRopa {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: shine 5s linear infinite;
-          animation: shine 5s linear infinite;
+  -o-animmation: shine 5s linear infinite;
+  animation: shine 5s linear infinite;
 }
 
 @keyframes shine {
@@ -1868,7 +1871,7 @@ main .sectionTwo__womanRopa {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1224px) {
   .formulary__title .line-wipe {
     overflow: hidden;
   }

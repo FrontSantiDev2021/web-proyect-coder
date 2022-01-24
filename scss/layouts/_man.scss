@@ -18,7 +18,10 @@ main{
                 font-size: 1.5rem;
             }
             background: $background-index;
-            @include line-wipe (200% auto,text,transparent);      
+            @include line-wipe (200% auto,text,transparent);     
+            -webkit-animation: shine 5s linear infinite;
+            -o-animmation:shine 5s linear infinite;
+            -moz-animation: shine 5s linear infinite;    
             animation: shine 5s linear infinite;
             @keyframes shine {
                 to {
@@ -40,10 +43,7 @@ main{
             z-index: -1;
             transform: skewY(0deg);
             transform-origin: top right;
-            @include mobile-f (sm){
-                
-                overflow:hidden;
-            }
+          
             @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
             
                 overflow:hidden;

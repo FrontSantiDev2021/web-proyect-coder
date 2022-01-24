@@ -24,10 +24,14 @@
             width: 100%;
            
         }
+        
         .line-wipe{     
            
             background: $background-index;
-            @include line-wipe (200% auto,text,transparent);      
+            @include line-wipe (200% auto,text,transparent); 
+            -webkit-animation: shine 5s linear infinite;
+            -o-animmation:shine 5s linear infinite;
+            -moz-animation: shine 5s linear infinite;     
             animation: shine 5s linear infinite;
             @keyframes shine {
                 to {
