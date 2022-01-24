@@ -1860,9 +1860,6 @@ main .sectionTwo__womanRopa {
 }
 
 @keyframes shine {
-  from {
-    background-position: 0% right;
-  }
   to {
     background-position: 200% center;
   }
