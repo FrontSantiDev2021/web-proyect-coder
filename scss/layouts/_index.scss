@@ -399,7 +399,7 @@ body{
                                         }
                                     }
                                     p{
-                                        @include p ($silver,15px,1.5,100%,$max-width,auto);
+                                        @include p ($color-4,15px,1.5,100%,$max-width,auto);
                                     }
                                     
                                 }
