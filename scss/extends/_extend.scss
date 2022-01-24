@@ -404,7 +404,7 @@
     }
     @keyframes #{$property} {
         @content;
-      }
+    }
 }
 @mixin backgroundBody ($background,$persepctive) {
     background: $background;

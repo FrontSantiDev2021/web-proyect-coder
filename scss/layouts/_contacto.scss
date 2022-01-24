@@ -33,15 +33,16 @@
             -o-animmation:shine 5s linear infinite;
             -moz-animation: shine 5s linear infinite;     
             animation: shine 5s linear infinite;
+            
             @keyframes shine {
+                from{
+                    background-position: 0% right;
+                }
                 to {
                 background-position: 200% center;
                 }
             }
-            @include mobile-f(sm){
-                overflow: hidden;
-
-            }
+        
             @media (min-width:map-get($breakpoints,sm)) and (max-width: map-get($breakpoints,lg)){
                 overflow:hidden;
             }
