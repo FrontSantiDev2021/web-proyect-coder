@@ -1816,24 +1816,19 @@ main .sectionTwo__womanRopa {
   }
 }
 
-.formulary {
+main .formulary {
   padding-top: 20%;
   padding-bottom: 500px;
   position: relative;
 }
 
-.formulary__title {
+main .formulary-title {
   display: block;
   margin: 0;
 }
 
-.formulary__title p {
-  color: #333231;
-  font-weight: bolder;
-}
-
 @media screen and (max-width: 480px) {
-  .formulary__title {
+  main .formulary-title {
     position: absolute;
     top: 0;
     left: 0;
@@ -1842,7 +1837,7 @@ main .sectionTwo__womanRopa {
 }
 
 @media (min-width: 480px) and (max-width: 1224px) {
-  .formulary__title {
+  main .formulary-title {
     position: absolute;
     top: 0;
     left: 0;
@@ -1852,43 +1847,28 @@ main .sectionTwo__womanRopa {
   }
 }
 
-.formulary__title .line-wipe {
+main .formulary-title__gradient {
   background: -webkit-gradient(linear, left top, right top, color-stop(5%, #333231), color-stop(56%, #a7535a), to(#f8f4e8));
   background: linear-gradient(90deg, #333231 5%, #a7535a 56%, #f8f4e8 100%);
-  background-size: 200% auto;
+  background: -webkit-gradient(linear, left top, right top, from(#a7535a), to(#a4a4a4));
+  background: linear-gradient(to right, #a7535a, #a4a4a4);
+  -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  -o-text-fill-color: transparent;
-  -webkit-animation: shine 5s linear infinite;
-  -o-animmation: shine 5s linear infinite;
-  animation: shine 5s linear infinite;
+  text-align: left;
 }
 
-@media screen and (max-width: 480px) {
-  .formulary__title .line-wipe {
-    background-size: 200% auto;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    -o-text-fill-color: transparent;
-    visibility: visible;
-  }
+main .formulary-title__gradient h2 {
+  font-size: 2rem;
+  font-weight: 800;
 }
 
-@keyframes shine {
-  to {
-    background-position: 200% center;
-  }
+main .formulary-title__gradient p {
+  font-size: 1rem;
+  font-weight: bolder;
 }
 
-@media (min-width: 480px) and (max-width: 1224px) {
-  .formulary__title .line-wipe {
-    overflow: hidden;
-  }
-}
-
-.formulary__style {
+main .formulary__style {
   background: -webkit-gradient(linear, left top, right top, color-stop(5%, #333231), color-stop(56%, #a7535a), to(#f8f4e8));
   background: linear-gradient(90deg, #333231 5%, #a7535a 56%, #f8f4e8 100%);
   position: absolute;
@@ -1904,7 +1884,7 @@ main .sectionTwo__womanRopa {
 }
 
 @media screen and (max-width: 480px) {
-  .formulary__style {
+  main .formulary__style {
     margin-top: 50px;
   }
 }
