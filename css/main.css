@@ -1699,8 +1699,65 @@ main .sectionTwo__womanRopa {
   height: 450px;
 }
 
+:root {
+  --underline-intrinsic-width: 8;
+  --underline-width: 12;
+  --underline-color: #f1a1e3;
+  --underline-cap-width: 4px;
+  --underline-offset-y: -2px;
+  --underline-padding-x: 0.12em;
+  --cap-image-left: url(https://files-d4s40otz1.now.sh/left.svg);
+  --cap-image-right: url(https://files-4vvqilj8v.now.sh/right.svg);
+}
+
 .sectionFour {
   width: 100%;
+}
+
+.sectionFour .arrow-top {
+  margin-top: 100px;
+  width: 40px;
+  height: 30px;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 30px solid black;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  position: relative;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 480px) {
+  .sectionFour .arrow-top {
+    overflow: visible;
+    visibility: visible;
+  }
+}
+
+.sectionFour .arrow-top p {
+  position: absolute;
+  width: 200px;
+  height: 30px;
+  top: -30px;
+  left: 50%;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: inline;
+  --underline-width-scale: calc(var(--underline-width) / var(--underline-intrinsic-width));
+  padding: 0 calc(var(--underline-padding-x) + calc(var(--underline-cap-width) * var(--underline-width-scale)));
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+  background-repeat: no-repeat;
+  color: #1221ff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--underline-color)), to(var(--underline-color))), var(--cap-image-left), var(--cap-image-right);
+  background-image: linear-gradient(180deg, var(--underline-color), var(--underline-color)), var(--cap-image-left), var(--cap-image-right);
+  background-position-x: calc(var(--underline-cap-width) * var(--underline-width-scale)), 0, 100%;
+  background-position-y: calc(100% - var(--underline-offset-y) * -1);
+  background-size: calc(100% - calc(var(--underline-cap-width) * var(--underline-width-scale) * 2)) calc(var(--underline-width) * 1px), auto calc(var(--underline-width) * 1px), auto calc(var(--underline-width) * 1px);
 }
 
 .sectionFour__subtitle {
@@ -1738,6 +1795,7 @@ main .sectionTwo__womanRopa {
   margin: 0 auto;
   width: 800px;
   height: 533px;
+  margin-bottom: 100px;
 }
 
 @media screen and (max-width: 480px) {
