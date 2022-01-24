@@ -1242,6 +1242,9 @@ main .sectionThree__parrafoStyle {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   -o-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  /*//**/
   -webkit-animation: shine 5s linear infinite;
   -o-animmation: shine 5s linear infinite;
   animation: shine 5s linear infinite;

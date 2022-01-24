@@ -18,7 +18,12 @@ main{
                 font-size: 1.5rem;
             }
             background: $background-index;
-            @include line-wipe (200% auto,text,transparent);     
+            @include line-wipe (200% auto,text,transparent);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -o-background-clip:text;
+            background-clip: text; 
+            /*//**/ 
             -webkit-animation: shine 5s linear infinite;
             -o-animmation:shine 5s linear infinite;
             -moz-animation: shine 5s linear infinite;    
